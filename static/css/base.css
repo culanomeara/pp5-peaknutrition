@@ -1,16 +1,58 @@
+/* CSS HEX from Coolors
+--vivid-sky-blue: #56cbf9ff;
+--maya-blue: #7fbeebff;
+--powder-blue: #afbed1ff;
+--lapis-lazuli: #2f6690ff;
+--gunmetal: #16262eff;
+*/
+
 html {
     height: 100%;
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: rgba(86, 203, 249, 0.5);
+    font-family: 'Raleway', sans-serif;
+    color: #16262eff;
 }
 
-/* from Bulma */
+header {
+    background: rgba(86, 203, 249, 0.5);
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-weight: 700;
+    color: #16262eff;
+    font-size: 45px;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-left: 5px solid #56CBF9;
+    padding-left: 15px;
+}
+
+.collapse {
+    background-color: rgba(86, 203, 249, 0.5);
+}
+
+a.dropdown-item.active {
+    background: white;
+    color: #16262eff;
+}
+
+.navbar {
+    max-width: 1600px;
+    background-color: rgba(86, 203, 249, 0.3);
+}
+
+
+/* from Bulma via CI Boutique Ado Walkthru
+for Font Awesome icons */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -28,13 +70,13 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: #16262eff;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: #16262eff;
     color: white;
 }
 
@@ -44,16 +86,16 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: #16262eff;
     color: white;
 }
 
 .text-black {
-    color: #000 !important;
+    color: #16262eff !important;
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #16262eff !important;
 }
 
 /* -------------------------------- Media Queries */

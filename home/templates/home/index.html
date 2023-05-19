@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static '/css/index.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -28,58 +32,45 @@
           <div class="main">
             <div class="container">
               <div class="hexagon">
-                <a href="" aria-label="">
-                  <!--div class="img-wrapper"
-                    style=""></div-->
+                <a href="#" aria-label="Teams need expert advice and guidance to reach their full potential">
+                  <div class="img-wrapper"
+                    style="background-image: url('/static/images/shane-walsh-3511501_640.jpg');"></div>
                   <div class="hexagon-text">Teams</div>
                 </a>
               </div>
               <div class="hexagon">
-                <a href="" aria-label="">
-                  <!--div class="img-wrapper"
-                    style=";"-->
-                  </div>
+                <a href="#" aria-label="Clubs need the best advice from experts in their field: members nutrition is fundamental">
+                  <div class="img-wrapper"
+                    style="background-image: url('/static/images/child-613199_640.jpg');"></div>
+                  <div class="hexagon-text">Clubs</div>
+                </a>
+              </div>
+              <div class="hexagon">
+                <a href="#" aria-label="Through Wellbeing talks and iniatives, health eating can be encouraged in schools ">
+                  <div class="img-wrapper"
+                    style="background-image: url('/static/images/classroom-2093744_640.jpg');"></div>
                   <div class="hexagon-text">Schools</div>
                 </a>
               </div>
               <div class="hexagon">
-                <a href="" aria-label="">
-                  <!--div class="img-wrapper"
-                    style=""-->
-                  </div>
-                  <div class="hexagon-text">Wellbeing</div>
-                </a>
-              </div>
-              <div class="hexagon">
-                <a href="" aria-label="">
-                  <!--div class="img-wrapper"
-                    style=""-->
-                  </div>
+                <a href="#" aria-label="Company wellbeing is a key priority now and nutrition plays a crucial role">
+                  <div class="img-wrapper"
+                    style="background-image: url('/static/images/conference-5308938_640.jpg');"></div>
                   <div class="hexagon-text">Corporate</div>
                 </a>
               </div>
               <div class="hexagon">
-                <a href="" aria-label="">
-                  <!--div class="img-wrapper"
-                    style=""-->
-                  </div>
+                <a href="#" aria-label="Athletes need the best advice from experts in their field: athlete nutrition is fundamental">
+                  <div class="img-wrapper"
+                    style="background-image: url('/static/images/bike-585247_640.jpg');"></div>
                   <div class="hexagon-text">Athlete 1-to-1</div>
                 </a>
               </div>
               <div class="hexagon">
-                <a href="" aria-label="">
-                  <!--div class="img-wrapper"
-                    style=""-->
-                  </div>
-                  <div class="hexagon-text">Corporate</div>
-                </a>
-              </div>
-              <div class="hexagon">
-                <a href="" aria-label="">
-                  <!--div class="img-wrapper"
-                    style=""-->
-                  </div>
-                  <div class="hexagon-text">View All</div>
+                <a href="#" aria-label="Whether you are looking to reshape your diet or try something new, a consultation is the starting point">
+                  <div class="img-wrapper"
+                    style="background-image: url('/static/images/model-4669520_640.jpg');"></div>
+                  <div class="hexagon-text">Individual 1-to-1</div>
                 </a>
               </div>
             </div>

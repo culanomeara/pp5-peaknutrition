@@ -15,7 +15,7 @@ body {
     margin: 0 auto;
     background-color: rgba(86, 203, 249, 0.5);
     font-family: 'Raleway', sans-serif;
-    color: #16262eff;
+    color: #2f6690ff;
 }
 
 header {
@@ -28,7 +28,7 @@ h1 {
 
 h2 {
     font-weight: 700;
-    color: #16262eff;
+    color: #2f6690ff;
     font-size: 45px;
     margin-left: 10px;
     margin-top: 20px;
@@ -70,7 +70,7 @@ for Font Awesome icons */
 }
 
 .shop-now-button {
-    background: #16262eff;
+    background: #2f6690ff;
     color: white;
     min-width: 260px;
 }
@@ -86,7 +86,7 @@ for Font Awesome icons */
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #16262eff;
+    background:  black;
     color: white;
 }
 
@@ -117,7 +117,7 @@ for Font Awesome icons */
         z-index: 1030;
     }
 
-    .header-container {
+    /* .header-container {
         padding-top: 164px;
-    }
+    } */
 }

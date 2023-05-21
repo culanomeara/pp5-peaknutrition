@@ -17,7 +17,7 @@ from os import path
 if path.exists("env.py"):
     import env
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 

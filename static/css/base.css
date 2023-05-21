@@ -18,9 +18,9 @@ body {
     color: #2f6690ff;
 }
 
-header {
+/* header {
     background: rgba(86, 203, 249, 0.5);
-}
+} */
 
 h1 {
     font-size: 32px;
@@ -47,7 +47,7 @@ a.dropdown-item.active {
 
 .navbar {
     max-width: 1600px;
-    background-color: rgba(86, 203, 249, 0.3);
+    /* background-color: rgba(86, 203, 249, 0.3); */
 }
 
 
@@ -90,9 +90,9 @@ for Font Awesome icons */
     border: 1px solid #16262eff !important;
 }
 
-/* -------------------------------- Media Queries */
+/* -- Media Queries -- */
 
-/* Slightly larger container on xl screens */
+/* xl screens */
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
@@ -108,8 +108,4 @@ for Font Awesome icons */
         left: 0;
         z-index: 1030;
     }
-
-    /* .header-container {
-        padding-top: 164px;
-    } */
 }

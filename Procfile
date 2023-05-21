@@ -1,1 +1,1 @@
-web: gunicorn peak-nutrition.wsgi:application
+web: gunicorn peaknutrition.wsgi:application

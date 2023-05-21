@@ -61,14 +61,6 @@ for Font Awesome icons */
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
 .shop-now-button {
     background: #2f6690ff;
     color: white;

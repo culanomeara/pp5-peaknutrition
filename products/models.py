@@ -1,4 +1,5 @@
 from django.db import models
+from taggit.managers import TaggableManager
 
 
 class Category(models.Model):
@@ -39,6 +40,8 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     featured_image = models.ImageField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+
+    tags = TaggableManager()
 
     def __str__(self):
         return self.name

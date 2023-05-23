@@ -23,7 +23,7 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-class CategoryAdmin(admin.ModelAdmin):
+class TypeAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',

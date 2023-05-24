@@ -34,7 +34,7 @@ class Product(models.Model):
         'Type', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=0)
     featured_image = models.ImageField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 

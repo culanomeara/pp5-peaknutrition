@@ -25,7 +25,7 @@
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
-                        <a href="">
+                        <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{% get_media_prefix %}{{ product.featured_image }}" alt="{{ product.name }}">
                         </a>
                         <div class="card-body pb-0">
@@ -35,7 +35,7 @@
                             <div class="row">
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
-                                    <small class="text-muted"><i class="fa-regular fa-file"></i> {{ product.type }}</small>
+                                    <small class="text-muted"><i class="fa-regular fa-file"></i> File Type: {{ product.type }}</small>
                                 </div>
                             </div>
                         </div>

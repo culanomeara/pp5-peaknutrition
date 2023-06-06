@@ -90,6 +90,11 @@ for Font Awesome icons */
     border: 1px solid #16262eff !important;
 }
 
+a.category-badge > span.badge:hover {
+    background: #16262eff !important;
+    color: #fff !important;
+}
+
 /* -- Media Queries -- */
 
 /* xl screens */

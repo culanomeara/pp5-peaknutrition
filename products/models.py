@@ -36,7 +36,6 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=0)
     featured_image = models.ImageField(default='media/default.jpg')
-    image = models.ImageField(null=True, blank=True)
 
     tags = TaggableManager()
 

@@ -78,6 +78,11 @@ for Font Awesome icons */
     border: 1px solid black;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {

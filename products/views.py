@@ -44,8 +44,7 @@ def all_products(request):
                 return redirect(reverse('products'))
             # i here makes it case-insensitive. Q is built in to django and
             # this searches for term in name OR description
-            queries =
-                      Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'

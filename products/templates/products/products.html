@@ -14,7 +14,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Products</h2>
+            <a class="nav-item nav-link" href="{% url 'products' %}">
+                <h2 class="logo-font">Products</h2>
+            </a>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.name }}</span>
@@ -44,6 +46,10 @@
                                 Category (A-Z)</option>
                             <option value="category_desc"
                                 {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                            <option value="discount_asc" {% if current_sorting == 'discount_asc' %}selected{% endif %}>
+                                Discount (low - high)</option>
+                            <option value="discount_desc"
+                                {% if current_sorting == 'discount_desc' %}selected{% endif %}>Discount (high - low))</option>
                         </select>
                     </div>
                 </div>
@@ -116,33 +122,33 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
 
-            var selectedVal = selector.val();
-            if(selectedVal != "reset"){
-                var sort = selectedVal.split("_")[0];
-                var direction = selectedVal.split("_")[1];
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
 
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
 
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
 
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}

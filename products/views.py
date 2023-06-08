@@ -26,6 +26,8 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
+            # if sortkey == 'discount':
+            #     sortkey = 'discount'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -36,6 +38,9 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
+        # if 'discount' in request.GET:
+        #     products = products.filter(discount != 0)
 
         if 'srchq' in request.GET:
             query = request.GET['srchq']
@@ -68,3 +73,15 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def special_offers(request):
+    """ A view to show special offers """
+    discount = Product.discount
+    products = Product.objects.exclude(discount=0)
+
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'products/products.html', context)

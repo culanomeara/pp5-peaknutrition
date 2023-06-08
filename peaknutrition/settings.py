@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['peak-nutrition.herokuapp.com', '8000-culanomeara-pp5peaknutr-06r9ptkluv2.ws-eu98.gitpod.io']
+ALLOWED_HOSTS = ['peak-nutrition.herokuapp.com', '8000-culanomeara-pp5peaknutr-06r9ptkluv2.ws-eu99.gitpod.io']
 
 
 # Application definition

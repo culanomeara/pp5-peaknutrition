@@ -26,8 +26,6 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
-            # if sortkey == 'discount':
-            #     sortkey = 'discount'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -39,16 +37,15 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-        # if 'discount' in request.GET:
-        #     products = products.filter(discount != 0)
-
         if 'srchq' in request.GET:
             query = request.GET['srchq']
             if not query:
                 messages.error(request, "You need to enter something!")
                 return redirect(reverse('products'))
-            # i here makes it case-insensitive. Q is built in to django and this searches for term in name OR descr
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            # i here makes it case-insensitive. Q is built in to django and
+            # this searches for term in name OR description
+            queries =
+                      Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -77,8 +74,32 @@ def product_detail(request, product_id):
 
 def special_offers(request):
     """ A view to show special offers """
+    query = None
+    categories = None
+    sort = None
+    direction = None
     discount = Product.discount
     products = Product.objects.exclude(discount=0)
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
+
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
     context = {
         'products': products,

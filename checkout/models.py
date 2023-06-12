@@ -35,9 +35,9 @@ class Order(models.Model):
         accounting for discounts/special offers.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
-        self.order_discount_total = self.lineitems.aggregate(Sum('lineitem_discount_total'))['lineitem_discount_total__sum']
+        self.discount_total = self.lineitems.aggregate(Sum('lineitem_discount_total'))['lineitem_discount_total__sum']
         # need to add discount total here on next line when ready
-        self.grand_total = self.order_total
+        self.grand_total = self.order_total - self.discount_total
         self.save()
 
     def save(self, *args, **kwargs):

@@ -36,6 +36,10 @@ h2 {
     padding-left: 15px;
 }
 
+#special {
+    color: red;
+}
+
 .collapse {
     background-color: rgba(86, 203, 249, 1);
 }

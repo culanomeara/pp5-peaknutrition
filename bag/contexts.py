@@ -23,11 +23,12 @@ def bag_contents(request):
         })
 
     grand_total = total - discount_total
-
+    print({total}, {discount_total}, {grand_total})
     context = {
         'bag_items': bag_items,
         'total': total,
         'discount_total': discount_total,
+        'grand_total': grand_total,
         'product_count': product_count,
     }
 

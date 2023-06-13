@@ -34,8 +34,8 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for discounts/special offers.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
-        self.discount_total = self.lineitems.aggregate(Sum('lineitem_discount_total'))['lineitem_discount_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.discount_total = self.lineitems.aggregate(Sum('lineitem_discount_total'))['lineitem_discount_total__sum'] or 0
         # need to add discount total here on next line when ready
         self.grand_total = self.order_total - self.discount_total
         self.save()
@@ -69,5 +69,5 @@ class OrderLineItem(models.Model):
         self.lineitem_discount_total = self.product.price * (self.product.discount/100) * self.quantity
         super().save(*args, **kwargs)
 
-    def __str__(self):
-        return f'Product ID {self.product.ID} on order {self.order.order_number}'
+    # def __str__(self):
+    #     return f'Product ID {self.product.ID} on order {self.order.order_number}'

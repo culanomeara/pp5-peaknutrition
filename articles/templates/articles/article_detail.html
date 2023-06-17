@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="masthead">
+    <div class="container">
+        <div class="card-body">
+            <div class="image-container">
+                <!-- If the featured image URL contains "placeholder", a default image is displayed. If not, the actual image URL is displayed -->
+                {% if "placeholder" in article.featured_image.url %}
+                    <img class="card-img-top" src="default.jpg" alt="{{ article.title }}">
+                {% else %}
+                    <img src=" {{ article.featured_image.url }}" alt="{{ article.title }}">
+                {% endif %}
+                <div class="image-flash">
+                    <p class="author">{{ article.author }} | {{ article.created_on }}
+                </div>
+            </div>
+            <h2 class="card-title">{{ article.title }}</h2>
+            <p class="card-text">{{ article.excerpt }}</p>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4 mt-3 left top">
+            <div class="card-body">
+                <p class="card-text ">{{ article.content | safe }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

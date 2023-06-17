@@ -23,7 +23,7 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <a href="" class="p-link">
+                            <a href="{% url 'article_detail' article.slug %}" class="p-link">
                             <div class="image-container">
                                 {% if "placeholder" in article.featured_image.url %}
                                 <img class="card-img-top"

@@ -18,18 +18,17 @@ def all_articles(request):
     )
 
 
-def article_detail(request):
+def article_detail(request, slug):
     """
     Article Detail view
     """
-    def get(self, request, slug, *args, **kwargs):
-        queryset = Article.objects.all()
-        article = get_object_or_404(queryset, slug=slug)
+    queryset = Article.objects.all()
+    article = get_object_or_404(queryset, slug=slug)
 
-        return render(
-            request,
-            "article_detail.html",
-            {
-                "article": article,
-            },
-        )
+    return render(
+        request,
+        "articles/article_detail.html",
+        {
+            "article": article,
+        },
+    )

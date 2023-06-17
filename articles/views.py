@@ -1,27 +1,26 @@
-from django.shortcuts import render
-
-from django.views.generic import (View,
-                                  ListView,
-                                  DetailView,
-                                  CreateView,
-                                  DeleteView,
-                                  UpdateView)
+from django.shortcuts import render, get_object_or_404
 
 from .models import Article
 
 
-class all_articles(ListView):
+def all_articles(request):
     """
-    A class for the Article List view
+    Article view
     """
-    model = Article
-    queryset = Article.objects.all()
-    template_name = 'articles.html'
+    articles = Article.objects.all()
+
+    return render(
+        request,
+        "articles/articles.html",
+        {
+            "articles": articles,
+        },
+    )
 
 
-class article_detail(DetailView):
+def article_detail(request):
     """
-    A class for the Article Detail view
+    Article Detail view
     """
     def get(self, request, slug, *args, **kwargs):
         queryset = Article.objects.all()

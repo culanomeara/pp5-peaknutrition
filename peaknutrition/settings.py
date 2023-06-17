@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'taggit',
     'bag',
     'checkout',
+    'articles',
 
     # Other
     'crispy_forms',

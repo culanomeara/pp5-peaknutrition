@@ -19,8 +19,8 @@
             <div class="bag-notification-wrapper">
                 {% for item in bag_items %}
                     <div class="row">
-                        {% if item.product.image %}
-                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                        {% if item.product.featured_image %}
+                        <img class="w-100" src="{{ item.product.featured_image.url }}" alt="{{ item.product.name }}">
                         {% else %}
                         <img class="w-100" src="{{ MEDIA_URL }}default.jpg" alt="{{ item.product.name }}">
                         {% endif %}

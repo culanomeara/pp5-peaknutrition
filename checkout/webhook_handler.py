@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.core.mail import EmailMessage
+from django.db.models.fields.files import FieldFile
 from django.template.loader import render_to_string
 from django.conf import settings
 
@@ -17,7 +18,7 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
-    def _send_confirmation_email(self, order, attachments):
+    def _send_confirmation_email(self, order, files_to_attach):
         """Send the user a confirmation email"""
         cust_email = order.email
         attachments = attachments
@@ -34,8 +35,9 @@ class StripeWH_Handler:
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email],
-            attachments,
         )
+        for file_to_attach in files_to_attach:
+            email.attach_file(file_to_attach)
         email.send()
 
     def handle_event(self, event):
@@ -117,16 +119,20 @@ class StripeWH_Handler:
                         quantity=item_data,
                         file_attach=product.digital_file,
                     )
-                    attachments.append(product.digital_file)
+                    file_to_attach = FieldFile.path(product.digital_file)
+                    # content = open(filename, 'rb').read()
+                    files_to_attach = files_to_attach.append(file_to_attach)
+                    # attachments.append(attachment)
                     order_line_item.save()
+                    print('else')
+                    print(attachments)
             except Exception as e:
                 if order:
                     order.delete()
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-        print('else')
-        print(attachments)
+       
         self._send_confirmation_email(order, attachments)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',

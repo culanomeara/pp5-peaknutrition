@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from django.conf import settings
 
@@ -8,6 +8,7 @@ from products.models import Product
 
 import json
 import time
+import stripe
 
 
 class StripeWH_Handler:
@@ -26,12 +27,15 @@ class StripeWH_Handler:
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
-        send_mail(
+        # https://docs.djangoproject.com/en/dev/topics/email/#emailmessage-objects
+        email = EmailMessage(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
-            [cust_email]
+            [cust_email],
         )
+        email.attach_file("media/40501-1_duck.jpeg")
+        email.send()
 
     def handle_event(self, event):
         """
@@ -50,8 +54,13 @@ class StripeWH_Handler:
         bag = intent.metadata.bag
         # save_info = intent.metadata.save_info
 
-        billing_details = intent.charges.data[0].billing_details
-        grand_total = round(intent.charges.data[0].amount / 100, 2)
+        # Get the Charge object
+        stripe_charge = stripe.Charge.retrieve(
+            intent.latest_charge
+        )
+
+        billing_details = stripe_charge.billing_details  # updated
+        grand_total = round(stripe_charge.amount / 100, 2)  # updated
 
         order_exists = False
         attempt = 1
@@ -62,7 +71,7 @@ class StripeWH_Handler:
                     email__iexact=billing_details.email,
                     phone_number__iexact=billing_details.phone,
                     country__iexact=billing_details.address.country,
-                    postcode__iexact=billing_details.address.postal_code,
+                    postcode_eircode__iexact=billing_details.address.postal_code,
                     town_or_city__iexact=billing_details.address.city,
                     street_address1__iexact=billing_details.address.line1,
                     street_address2__iexact=billing_details.address.line2,
@@ -86,11 +95,10 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.create(
                     full_name=billing_details.name,
-                    user_profile=profile,
                     email=billing_details.email,
                     phone_number=billing_details.phone,
                     country=billing_details.address.country,
-                    postcode=billing_details.address.postal_code,
+                    postcode_eircode=billing_details.address.postal_code,
                     town_or_city=billing_details.address.city,
                     street_address1=billing_details.address.line1,
                     street_address2=billing_details.address.line2,

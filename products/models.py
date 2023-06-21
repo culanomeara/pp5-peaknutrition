@@ -1,5 +1,4 @@
 from django.db import models
-from taggit.managers import TaggableManager
 
 
 class Category(models.Model):
@@ -32,8 +31,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=0)
     discount = models.DecimalField(max_digits=2, decimal_places=0, default=0)
     featured_image = models.ImageField(default='default.jpg')
-
-    tags = TaggableManager()
+    digital_file = models.FileField()
 
     def __str__(self):
         return self.name

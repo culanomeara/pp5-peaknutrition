@@ -17,9 +17,10 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
-    def _send_confirmation_email(self, order):
+    def _send_confirmation_email(self, order, attachments):
         """Send the user a confirmation email"""
         cust_email = order.email
+        attachments = attachments
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
             {'order': order})
@@ -33,8 +34,8 @@ class StripeWH_Handler:
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email],
+            attachments,
         )
-        email.attach_file("media/40501-1_duck.jpeg")
         email.send()
 
     def handle_event(self, event):
@@ -52,6 +53,7 @@ class StripeWH_Handler:
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
+        attachments = []
         # save_info = intent.metadata.save_info
 
         # Get the Charge object
@@ -86,6 +88,7 @@ class StripeWH_Handler:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
+            print('order_exists')
             self._send_confirmation_email(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
@@ -112,7 +115,9 @@ class StripeWH_Handler:
                         order=order,
                         product=product,
                         quantity=item_data,
+                        file_attach=product.digital_file,
                     )
+                    attachments.append(product.digital_file)
                     order_line_item.save()
             except Exception as e:
                 if order:
@@ -120,7 +125,9 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-        self._send_confirmation_email(order)
+        print('else')
+        print(attachments)
+        self._send_confirmation_email(order, attachments)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)

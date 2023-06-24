@@ -31,7 +31,6 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=0)
     discount = models.DecimalField(max_digits=2, decimal_places=0, default=0)
     featured_image = models.ImageField(default='default.jpg')
-    digital_file = models.FileField()
 
     def __str__(self):
         return self.name

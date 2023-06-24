@@ -9,7 +9,6 @@ class ProductAdmin(admin.ModelAdmin):
         'type',
         'price',
         'featured_image',
-        'digital_file',
     )
 
     ordering = ('type',)

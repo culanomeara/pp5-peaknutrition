@@ -7,7 +7,7 @@ import taggit.managers
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('taggit', '0005_auto_20220424_2025'),
+        # ('taggit', '0005_auto_20220424_2025'),
         ('products', '0001_initial'),
     ]
 
@@ -20,9 +20,9 @@ class Migration(migrations.Migration):
             model_name='product',
             name='rating',
         ),
-        migrations.AddField(
-            model_name='product',
-            name='tags',
-            field=taggit.managers.TaggableManager(help_text='A comma-separated list of tags.', through='taggit.TaggedItem', to='taggit.Tag', verbose_name='Tags'),
-        ),
+        # migrations.AddField(
+        #     model_name='product',
+        #     name='tags',
+        #     field=taggit.managers.TaggableManager(help_text='A comma-separated list of tags.', through='taggit.TaggedItem', to='taggit.Tag', verbose_name='Tags'),
+        # ),
     ]

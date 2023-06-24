@@ -18,10 +18,9 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
-    def _send_confirmation_email(self, order, files_to_attach):
+    def _send_confirmation_email(self, order):
         """Send the user a confirmation email"""
         cust_email = order.email
-        # attachments = attachments
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
             {'order': order})
@@ -36,8 +35,6 @@ class StripeWH_Handler:
             settings.DEFAULT_FROM_EMAIL,
             [cust_email],
         )
-        for file_to_attach in files_to_attach:
-            email.attach_file(file_to_attach)
         email.send()
 
     def handle_event(self, event):
@@ -65,6 +62,11 @@ class StripeWH_Handler:
         billing_details = stripe_charge.billing_details  # updated
         shipping_details = intent.shipping
         grand_total = round(stripe_charge.amount / 100, 2)  # updated
+
+        # Clean data in the shipping details
+        for field, value in shipping_details.address.items():
+            if value == "":
+                shipping_details.address[field] = None
 
         order_exists = False
         attempt = 1
@@ -139,4 +141,3 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
-

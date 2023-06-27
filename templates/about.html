@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_meta %}
+<meta name="description" content="Find out more about Trish Garrett, Nutritionist at Peak Nutrition. ">
+{% endblock %}
+
+{% block extra_title%}About{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h2 class="mt-5">About Trish Garrett</h2>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6 mb-3">
+            <img src="{{ MEDIA_URL }}trish_garrett_nutrition.jpeg" alt="Trish Garrett, Nutritionist" img-fluid">
+        </div>
+        <!-- Text and button on the right -->
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+
+            <h3>Background, Qualifications and Experience</h3>
+            <p>
+                With 20 years experience teaching Physical Education in Ireland, I constantly came across students and
+                athletes who
+                were ill-informed about the proper nutrition needs and requirements for their own individual situation.
+                So
+                often, I
+                heard stories of misguided coaches, parents giving advice that was not evidence-based. I completed a
+                Masters. I have
+                worked with Galway WFC, Galway Corinthians Rugby, Connacht Women's Rugby, Colga FC, Bray Emmets GAA,
+                individual athletes.
+            </p>
+            <a href="{% url 'articles' %}" class="btn btn-black rounded">Read Tips and Advice on Nutrition</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

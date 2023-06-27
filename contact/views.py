@@ -16,9 +16,10 @@ def contact(request):
                 'Thank you for contacting Peak Nutrition!'
                 ' We will be in touch soon.'
                 )
-            return redirect('contact')
+            return redirect('home')
     else:
         form = ContactForm()
 
-    template = 'contact/contact.html'
-    return render(request, template, {'form': form})
+    template = 'contact.html'
+    context = {'form': form}
+    return render(request, template, context)

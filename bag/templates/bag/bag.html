@@ -29,20 +29,18 @@
                     <thead class="text-black">
                         <tr>
                             <th scope="col">Product Info</th>
-                            <th scope="col"></th>
+                            <!-- <th scope="col"></th> -->
                             <th scope="col">Price</th>
                             <th scope="col">Qty</th>
-                            <th scope="col">Subtotal</th>
-                            <th scope="col">Discount</th>
-                            <th scope="col">Item total</th>
+                            <th scope="col">Line total</th>
                         </tr>
                     </thead>
 
                     {% for item in bag_items %}
                     <tr>
-                        <td class="p-3 w-25">
+                        <!-- <td class="p-3 w-25">
                             <img class="img-fluid rounded" src="{{ item.product.featured_image.url }}">
-                        </td>
+                        </td> -->
                         <td class="py-3">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small text-muted">File Type: {{ item.product.type }}</p>
@@ -59,7 +57,7 @@
                                             <button class="decrement-qty btn btn-sm btn-black rounded"
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
-                                                    <i class="fas fa-minus fa-sm"></i>
+                                                    <i class="fa-solid fa-minus fa-2xs"></i>
                                                 </span>
                                             </button>
                                         </div>
@@ -70,7 +68,7 @@
                                             <button class="increment-qty btn btn-sm btn-black rounded"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                 <span>
-                                                    <i class="fas fa-plus fa-sm"></i>
+                                                    <i class="fa-solid fa-plus fa-2xs"></i>
                                                 </span>
                                             </button>
                                         </div>
@@ -81,13 +79,13 @@
                             <a class="remove-item text-danger float-right"
                                 id="remove_{{ item.item_id }}"><small>Remove</small></a>
                         </td>
-                        <td class="py-3">
+                        <!-- <td class="py-3">
                             <p> €{% calc_subtotal item.product.price item.quantity %}</p>
                         </td>
                         <td class="py-3">
                             <p class="my-0">
                                 €{% calc_discount_subtotal item.product.price item.product.discount item.quantity %}</p>
-                        </td>
+                        </td> -->
                         <td class="py-3">
                             <p class="my-0"> €{% calc_item_total %}</p>
                         </td>
@@ -95,9 +93,9 @@
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
-                            <h6><strong>Subtotal: €{{ total|floatformat:2 }}</strong></h6>
-                            <h7 id="discount"><strong> Discount Total: €{{ discount_total|floatformat:2 }}</strong></h7>
-                            <h6><strong>Bag Total: €{{ grand_total|floatformat:2 }}</strong></h6>
+                            <h6><strong>Subtotal: €{{ total|floatformat:0 }}</strong></h6>
+                            <h7 id="discount"><strong> Discount Total: €{{ discount_total|floatformat:0 }}</strong></h7>
+                            <h6><strong>Bag Total: €{{ grand_total|floatformat:0 }}</strong></h6>
                         </td>
                     </tr>
                     <tr>

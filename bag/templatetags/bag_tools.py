@@ -8,14 +8,14 @@ register = template.Library()
 @register.simple_tag
 def calc_subtotal(price, quantity):
     global tot
-    tot = round(price * quantity, 2)
+    tot = round(price * quantity, 0)
     return tot
 
 
 @register.simple_tag
 def calc_discount_subtotal(price, discount, quantity):
     global disc_tot
-    disc_tot = round(price * discount/100 * quantity, 2)
+    disc_tot = round(price * discount/100 * quantity, 0)
     return disc_tot
 
 

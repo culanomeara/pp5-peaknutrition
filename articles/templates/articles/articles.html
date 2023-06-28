@@ -2,54 +2,110 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'articles/css/articles.css' %}">
+<link rel="stylesheet" href="{% static 'articles/css/articles.css' %}">
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
 <div class="container-fluid">
+    <div class="col text-center mt-3">
+        <h2 class="logo-font nav-item nav-link">Tips and Advice</h2>
+        <hr class="w-50 mb-1">
+    </div>
     <div class="row">
-        <div class="col-12 mt-3 left">
-            <div class="row">
+        <div class="article-container col-10 offset-1">
+            <div class="col-12 mt-3 left">
+                <div class="row">
+                    {% for article in articles %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0">
+                            <a href="{% url 'article_detail' article.slug %}">
+                                <img class="card-img-top img-fluid"
+                                    src="{% get_media_prefix %}{{ article.featured_image }}" alt="{{ article.title }}">
+                            </a>
+                            <h3 class="card-title ml-2">{{ article.title }}</h3>
+                            <p class="card-text ml-2">{{ article.excerpt }}</p>
+                            <small class="author ml-2">Author: {{ article.author }}</small>
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        {% if request.user.is_superuser %}
+                                        <hr>
+                                        <small class="ml-1">
+                                            <p>Article Management: <a
+                                                    href="{% url 'edit_article' article.slug %}">Edit</a> |
+                                                <a class="text-danger"
+                                                    href="{% url 'delete_article' article.slug %}">Delete</a></p>
+                                        </small>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:1 %}
+                    <div class="col-12 d-sm-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:2 %}
+                    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:3 %}
+                    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:4 %}
+                    <div class="col-12 d-none d-xl-block mb-5">
+                        <hr>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!-- <div class="row">
                 {% for article in articles %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <a href="{% url 'article_detail' article.slug %}" class="p-link">
-                            <div class="image-container">
-                                {% if "placeholder" in article.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="default.jpg" alt="{{ article.title }}">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ article.featured_image.url }}" alt="{{ article.title }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ article.author }}</p>
+                            <a href="{% url 'article_detail' article.slug %}" class="p-link" style="text-decoration: none;">
+                                <div class="image-container">
+                                    {% if "placeholder" in article.featured_image.url %}
+                                    <img class="card-img-top img-thumbnail" src="default.jpg" alt="{{ article.title }}">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ article.featured_image.url }}"
+                                        alt="{{ article.title }}">
+                                    {% endif %}
+                                    <div class="image-flash">
+                                        <p class="author">Author: {{ article.author }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <h2 class="card-title">{{ article.title }}</h2>
-                            <p class="card-text">{{ article.excerpt }}</p>
-                            <hr>
-                            <p class="card-text text-muted h6">{{ article.created_on}}</p>
+                                <h3 class="card-title text-center">{{ article.title }}</h3>
+                                <p class="card-text text-center">{{ article.excerpt }}</p>
+                                <hr>
+                                <p class="card-text text-muted h6">{{ article.created_on}}</p>
                             </a>
                         </div>
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
+            </div> -->
+                <!-- <div class="row">
                 {% endif %}
                 {% endfor %}
+            </div> -->
             </div>
-           
         </div>
     </div>
 </div>

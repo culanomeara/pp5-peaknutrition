@@ -49,7 +49,8 @@
                             <option value="discount_asc" {% if current_sorting == 'discount_asc' %}selected{% endif %}>
                                 Discount (low - high)</option>
                             <option value="discount_desc"
-                                {% if current_sorting == 'discount_desc' %}selected{% endif %}>Discount (high - low))</option>
+                                {% if current_sorting == 'discount_desc' %}selected{% endif %}>Discount (high - low))
+                            </option>
                         </select>
                     </div>
                 </div>
@@ -90,10 +91,11 @@
                                     </p>
                                     {% endif %}
                                     {% if request.user.is_superuser %}
-                                        <small class="ml-3">
-                                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                        </small>
+                                    <hr>
+                                    <small class="ml-3">
+                                        <p>Product Management: <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a></p>
+                                    </small>
                                     {% endif %}
                                 </div>
                             </div>

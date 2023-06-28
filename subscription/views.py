@@ -13,8 +13,8 @@ def subscription_list(request):
 
         if form.is_valid():
             form.save()
-
             messages.success(request, 'Thank you for subscribing!')
+            return redirect('home')
 
     form = SubscriptionForm
 

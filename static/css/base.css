@@ -195,6 +195,14 @@ a.category-badge > span.badge:hover {
   }
 }
 
+/* l screens */
+@media (min-width: 992px) {
+    .container {
+      max-width: 1080px !important; 
+    }
+  }
+
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {

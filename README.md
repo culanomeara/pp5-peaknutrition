@@ -259,7 +259,7 @@ The product details page is a template used to display the full information on a
 
 #### Form Validation
 
-The built-in validation is used to validate the comment form. The form is checked for required fields and passwords require a level of difficulty. A notification appears on the users screen to advise them about the failure. The user can then rectify their mistake and submit the form again. When the comment form is filled out correctly the form submits successfully, and the page is refreshed.
+The built-in validation is used to validate the comment form. The form is checked for required fields and passwords require a level of difficulty. A notification appears on the users screen to advise them about the failure. The user can then rectify their mistake and submit the form again. When the comment form is filled out correctly the form submits successfully.
 
 - Form Validation: Field Required
 
@@ -275,7 +275,7 @@ The built-in validation is used to validate the comment form. The form is checke
 
 #### Sign Up
 
-A user can navigate to the sign-up page via the site navigation bars if they are not logged in. The Peak Nutrition sign up page is a built-in template from the [Django Allauth Package](https://django-allauth.readthedocs.io/en/latest/installation.html). Allauth provides the basic functionality for the user authorisation used in Peak Nutrition. However, the basic allauth template have been customised and styled to match the site design. Once a user submits the form correctly, they are redirected back to the homepage as a logged in user. For each action, they are notified of that action: via a message at the top of the page. These messages can be removed by clicking on the X.
+A user can navigate to the sign-up page via the site navigation bars if they are not logged in. The Peak Nutrition sign up page is a built-in template from the [Django Allauth Package](https://django-allauth.readthedocs.io/en/latest/installation.html). Allauth provides the basic functionality for the user authorisation used in Peak Nutrition. Once a user submits the form correctly, they are redirected back to the homepage as a logged in user. For each action, they are notified of that action: via a message at the top of the page. These messages can be removed by clicking on the X.
 
 - Sign Up Form
 ![Sign Up](media/readme/images/sign_up_form.png)
@@ -314,81 +314,59 @@ A user can navigate to the Sign Out page via the site navigation bars if they ar
 
 [Back to top](<#contents>)
 
-### Create a new project or post
+### Add a new product
 
-#### Create form
+#### Add form
 
-The Create template form is a page which features a project/post form to enable users to submit a project/post to the Peak Nutrition site. This page is only visible to logged in users and appears in the navigation menu. The page features similar styling to the rest of the site for consistency. It uses SummerNote so that users can add formatting to their new project/posts.
+The Add Product template form is a page which features a product form to enable users to add a product to the Peak Nutrition site. This page is only visible to logged in users and appears in the navigation menu. The page features similar styling to the rest of the site for consistency.
 
-- Project Create Form
+- Product Add Form
 
-![Create A Project Form](media/readme/images/project_create_form.png)
-
-- Post Create Form
-
-![Create A Post Form](media/readme/images/post_create_form.png)
+![Product Add Form](media/readme/images/project_create_form.png)
 
 [Back to top](<#contents>)
 
-#### Create notification
+#### Add product notification
 
-When a user submits a project/post successfully, a message appears at the top of the page confirming the submission of the project/post.
+When a user adds a product successfully, a toast message appears confirming the submission of the project/post.
 
-- Project Submission Notification
+- Add product notification
 
-![Project Submission Confirmation](media/readme/images/project_create_notification.png)
-
-- Post Submission Notification
-
-![Post Submission Confirmation](media/readme/images/post_create_notification.png)
+![Add product notification](media/readme/images/project_create_notification.png)
 
 [Back to top](<#contents>)
 
-### Update project or post
+### Edit Product
 
-The Update project/post page is available to logged in users. The Update option appears below the summary on the list page and details page. When the Update option is clicked, the user is navigated to the edit project page. The page styling and content is exactly the same as the create page. The only difference is the form is prefilled out with the content. The user can then use this form to edit the content and submit the amendments to overwrite the previous content.
+The Edit product page is available to logged in users. The Edit option appears below the summary on the list page and details page. When the Update option is clicked, the user is navigated to the edit product page. The page styling and content is exactly the same as the add page. The only difference is the form is prefilled out with the content. The user can then use this form to edit the content and submit the amendments to overwrite the previous content.
 
-- Update Project Form
+- Edit Product Form
 
-![Update Project Form](media/readme/images/project_update_form.png)
+![Edit Product Form](media/readme/images/project_update_form.png)
 
-- Update Post Form
+#### Edit Notification
 
-![Update Post Form](media/readme/images/post_update_form.png)
+If a user successfully submits the update form the page is refreshed. A message is displayed to the user which confirms the successful form submission. The user is redirected to the list page for products.
 
-#### Update Notification
+- Edit Product Notification
 
-If a user successfully submits the update form the page is refreshed. A message is displayed to the user which confirms the successful form submission. The user is redirected to the list page for projects/posts.
-
-- Update Project Notification
-
-![Update Project Notification](media/readme/images/project_update_notification.png)
-
-- Update Post Notification
-
-![Update Post Notification](media/readme/images/post_update_notification.png)
+![Edit Product Notification](media/readme/images/project_update_notification.png)
 
 [Back to top](<#contents>)
 
-### Delete Project or Post
+### Delete Product
 
-A user can delete their project or post easily from the relevant list page or details page. This option is only visible to the author of the project or post. If a user clicks on delete, a delete confirmation is displayed seeking confirmation from the user for deletion. The user has the option to cancel the delete by clicking the cancel button or to confirm deletion by clicking the delete button. If the user clicks the cancel button the user is reverted back to the previous page. If the user clicks the delete button the project/post is deleted from the database and the page is refreshed showing it removed from the list.
+A user can delete their product easily from the relevant list page or details page. This option is only visible to a superuser. If a user clicks on delete, a delete confirmation toast is displayed.
 
-- Delete Option
+- Delete Product
 
-![Delete Option](media/readme/images/update_delete.png)
-
-#### Delete Confirmation Page
-
-- Delete Confirmation Page
-
-![Delete](media/readme/images/delete.png)
+![Delete Product](media/readme/images/update_delete.png)
 
 [Back to top](<#contents>)
 
 #### Delete Notification
 
-If a user confirms the deletion of a project or post, a notification is displayed to the user at the top of the page. This notification confirms the deletion of the project. The user can hide this notification by clicking the x icon. 
+If a user deletes a product, a notification is displayed to the user at the top of the page. This notification confirms the deletion of the project. The user can hide this notification by clicking the x icon. 
 
 - Delete Confirmation Notification
 
@@ -396,13 +374,13 @@ If a user confirms the deletion of a project or post, a notification is displaye
 
 [Back to top](<#contents>)
 
-### 403 Page
+### 404 Page
 
-The 403 page is triggered when a user navigates to a site URL which they don't have permission to access. This could be because of a number of reasons, mainly if they are not logged in or not the author of a particular project or post. An example is if they manually typed in .../delete when on a project or post page. Only the author of the project/post can update/delete it.
+The 403 page is triggered when a user navigates to a site URL which doesn't exist. This could be because of a number of reasons, mainly if they mistype something.
 
-- 403 Page
+- 404 Page
 
-![403 Page](media/readme/images/403.png)
+![404 Page](media/readme/images/403.png)
 
 [Back to top](<#contents>)
 
@@ -412,7 +390,7 @@ I believe the Peak Nutrition site has a lot of potential for expansion in the fu
 
 ### Admin Area
 
-I would like to add an admin area for administrators so they wouldn't have to log into the Django admin area. The basic concept would be to have an admin navigation option on the main site navigation bar that is only visible to users with admin privileges. Navigating to this page would open a dashboard for administrators to view the basic site stats like number of posts and comments and new users. They would also be able to execute basic tasks and actions like approving comments and adding a featured project. This page would have to be secured and hidden from other site users.
+I would like to add an admin area for administrators so they wouldn't have to log into the Django admin area. The basic concept would be to have an admin navigation option on the main site navigation bar that is only visible to users with admin privileges. Navigating to this page would open a dashboard for administrators to view the basic site stats like number of site visits. This page would have to be secured and hidden from other site users.
 
 [Back to top](<#contents>)
 
@@ -422,33 +400,15 @@ Another feature that would improve the site would be a customisable user profile
 
 [Back to top](<#contents>)
 
-### Notification Feature
-
-Another future feature I would like is a notification option where users can sign up to email notifications when there is activity on the site(new project/post/comment on their work).
-
-[Back to top](<#contents>)
-
 ### Categories
 
 The Peak Nutrition site currently features category fields which don't have any usable functionality. These fields were originally intended to group projects together to be displayed in project category lists/sections.
 
 [Back to top](<#contents>)
 
-### Search feature
-
-In the future I would like a user to be able to use the search bar field on the nav bar to search for specific projects, posts, categories or keywords. Submitting this field would then return a search results page with a list of any matching results. This would be a better experience for the user rather than having to manually scroll through each page.
-
-[Back to top](<#contents>)
-
-### Print project instructions
-
-I did plan to include the ability to print out the project instructions so they could be more useable outdoors etc.
-
-[Back to top](<#contents>)
-
 ### Enhanced Form Validation
 
-I did plan to add enhanced form validation above the built-in ones. Validation for typos, numbers instead of letters, etc
+I would like to add enhanced form validation above the built-in ones. Validation for typos, numbers instead of letters, etc
 
 [Back to top](<#contents>)
 
@@ -476,7 +436,8 @@ I did plan to add enhanced form validation above the built-in ones. Validation f
 * [GitHub](https://github.com/) - An internet hosting service used for version control. Used to host the Peak Nutrition repository and for the project board used for project management and user stories.
 * [GitPod](https://www.gitpod.io/) - A cloud development environment used as the primary site code editor.
 * [Heroku](https://dashboard.heroku.com/) - A cloud platform used to host the Peak Nutrition full stack application.
-* [Cloudinary](https://cloudinary.com/?&utm_campaign=1329&utm_content=instapagelogocta-selfservetest) - A cloud-based video and image management platform used to store the site images.
+* [Stripe](https://stripe.com/) - Ecommerce software and APIs to accept payments, send payouts, and manage shop orders
+* [Amazon Web Services](https://aws.amazon.com/) - a cloud platform that allows you to store and retrieve static files
 * [Slack](https://slack.com/intl/en-gb/) - An online instant messaging program used for site feedback and guidance from the [Code Institute](https://codeinstitute.net/) community.
 * [App Diagrams](https://app.diagrams.net/) - An online diagram software used for the database schemas.
 * [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - A set of web developer tools built directly into the chrome browser. Used for responsiveness tests and further testing.
@@ -493,13 +454,10 @@ I did plan to add enhanced form validation above the built-in ones. Validation f
 This is a list of the Python / Django libraries used in this project.
 
 * [asgiref](https://github.com/django/asgiref) - A standard Python library to allow for asynchronous web apps and servers to communicate with each other.
-* [cloudinary](https://pypi.org/project/cloudinary/) - A Python package allowing integration between the application and Cloudinary.
 * [dj-database-url](https://pypi.org/project/dj-database-url/) - A Django utility to utilise the DATABASE_URL environment variable to configure the Django application. Used with PostgreSQL.
-* [dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/) - A Django package that facilitates integration with Cloudinary storage.
 * [Django](https://www.djangoproject.com/) - A python package for the Django framework.
 * [django-allauth](https://django-allauth.readthedocs.io/en/latest/) - An integrated set of Django applications addressing user authentication, registration and account management.
 * [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - A Django package that provides tags and filters to control the rendering behaviour of Django forms.
-* [django-summernote](https://pypi.org/project/django-summernote/) - A Django package to allow for the embedding of the summernote text editor into Django.
 * [gunicorn](https://gunicorn.org/) - A Python WSGI HTTP Server for UNIX.
 * [oauthlib](https://github.com/oauthlib/oauthlib) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
 * [psycopg2](https://pypi.org/project/psycopg2/) - A PostgreSQL database adapter for Python.

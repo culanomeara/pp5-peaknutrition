@@ -1,1 +1,1 @@
-Peak Nutrition Digital Download for Order Number {{ order.order_number }}
+Peak Nutrition Order Confirmation for Order Number {{ order.order_number }}

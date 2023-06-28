@@ -454,18 +454,24 @@ I would like to add enhanced form validation above the built-in ones. Validation
 This is a list of the Python / Django libraries used in this project.
 
 * [asgiref](https://github.com/django/asgiref) - A standard Python library to allow for asynchronous web apps and servers to communicate with each other.
+* [boto3](https://pypi.org/project/boto3/) - Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2.
+* [botocore](https://pypi.org/project/botocore/) - A low-level interface to a growing number of Amazon Web Services. The botocore package is the foundation for the AWS CLI as well as boto3
 * [dj-database-url](https://pypi.org/project/dj-database-url/) - A Django utility to utilise the DATABASE_URL environment variable to configure the Django application. Used with PostgreSQL.
 * [Django](https://www.djangoproject.com/) - A python package for the Django framework.
 * [django-allauth](https://django-allauth.readthedocs.io/en/latest/) - An integrated set of Django applications addressing user authentication, registration and account management.
+* [django-countries](https://pypi.org/project/django-countries/) - Provides a country field for Django models.
+* [django-storages](https://pypi.org/project/django-storages/) - Collection of custom storage backends for Django.
 * [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - A Django package that provides tags and filters to control the rendering behaviour of Django forms.
 * [gunicorn](https://gunicorn.org/) - A Python WSGI HTTP Server for UNIX.
+* [jmespath](https://jmespath.org/) - JMESPath is a query language for JSON.
 * [oauthlib](https://github.com/oauthlib/oauthlib) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
 * [psycopg2](https://pypi.org/project/psycopg2/) - A PostgreSQL database adapter for Python.
-* [PyJWT](https://pyjwt.readthedocs.io/en/latest/) - A Python library that allows for encoding and decoding of JSON Web Tokens (JWT).
+* [Pillow](https://pypi.org/project/Pillow/) - The Python Imaging Library adds image processing capabilities to your Python interpreter.
 * [python3-openid](https://pypi.org/project/python3-openid/) - A set of Python packages to support use of the OpenID decentralized identity system.
 * [pytz](https://pypi.org/project/pytz/) - A Python package for world timezone definitions, modern and historical.
 * [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - A Python package for OAuthlib authentication support for Requests.
 * [sqlparse](https://pypi.org/project/sqlparse/) - A non-validating SQL parser for Python.
+* [urllib3](https://pypi.org/project/urllib3/) - HTTP library with thread-safe connection pooling, file post, and more.
 
 [Back to top](<#contents>)
 

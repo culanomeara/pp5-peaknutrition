@@ -22,6 +22,6 @@ def subscription_list(request):
         'form': form,
     }
 
-    template = 'subscription/subscription_list.html'
+    template = 'subscription/subscription.html'
 
     return render(request, template, context)

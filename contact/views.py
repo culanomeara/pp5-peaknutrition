@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import Contact_Form
-from subscription.models import Subscription
+from subscription.forms import SubscriptionForm
 
 
 def contact(request):
@@ -13,8 +13,10 @@ def contact(request):
         if form.is_valid():
             contact_form = form.save(commit=False)
             if contact_form.newsletter:
-                Subscription.full_name = contact_form.full_name
-                Subscription.email = contact_form.email
+                sub_form = SubscriptionForm(request.POST)
+                sub_form.full_name = contact_form.full_name
+                sub_form.email = contact_form.email
+                sub_form.save()
             contact_form = form.save()
             messages.success(
                 request,
@@ -37,7 +39,13 @@ def free_consult(request):
     if request.method == 'POST':
         form = Contact_Form(request.POST)
         if form.is_valid():
-            form.save()
+            contact_form = form.save(commit=False)
+            if contact_form.newsletter:
+                sub_form = SubscriptionForm(request.POST)
+                sub_form.full_name = contact_form.full_name
+                sub_form.email = contact_form.email
+                sub_form.save()
+            contact_form = form.save()
             messages.success(
                 request,
                 'Thank you for requesting a FREE 15 minute consultation with Peak Nutrition!'

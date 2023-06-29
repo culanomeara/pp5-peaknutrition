@@ -13,6 +13,12 @@ def calc_subtotal(price, quantity):
 
 
 @register.simple_tag
+def calc_discount_price(price, discount):
+    discount_price = round(price - (price * discount/100), 0)
+    return discount_price
+
+
+@register.simple_tag
 def calc_discount_subtotal(price, discount, quantity):
     global disc_tot
     disc_tot = round(price * discount/100 * quantity, 0)
@@ -23,3 +29,12 @@ def calc_discount_subtotal(price, discount, quantity):
 def calc_item_total():
     item_total = tot - disc_tot
     return item_total
+
+
+@register.simple_tag
+def strike(text):
+    str_text = str(text)
+    result = ''
+    for c in str_text:
+        result = result + c + '\u0336'
+    return result

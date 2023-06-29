@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -79,7 +80,11 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
+                                    {% if product.discount != 0 %}
+                                    <p class="lead mb-0 text-left font-weight-bold">€{% strike product.price %} €{% calc_discount_price product.price product.discount %}</p>
+                                    {% else %}
                                     <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                    {% endif %}
                                     <small class="text-muted"><i class="fa-regular fa-file"></i> File Type:
                                         {{ product.type }}</small>
                                     {% if product.category %}

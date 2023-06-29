@@ -14,8 +14,8 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
     * [Objective](<#objective>)
     * [Site User Goals](<#site-user-goals>)
     * [Site Owner Goals](<#site-owner-goals>)
-    * [**Project Management**](<#project-management>)
-        * [GitHub Project Board](<#github-project-board>)
+    * [**product Management**](<#product-management>)
+        * [GitHub product Board](<#github-product-board>)
         * [Database Schema](<#database-schema>)
 * [**User Experience UX**](<#user-experience-ux>)
     * [User Stories](<#user-stories>)
@@ -26,43 +26,46 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
     * [**Existing Features**](<#existing-features>)
         * [**Homepage**](<#homepage>)
             * [Navigation](<#navigation>)
-            * [Carousel](<#carousel>)
-            * [Intro](<#intro>)
-            * [Most Popular projects List](<#most-popular-projects-list>)
-        * [**Project and Post Pages**](<#projects-and-posts-pages>)
-            * [Project](<#projects>)
-            * [Post](<#posts>)
-        * [**Project and Post Details**](<#project-and-post-details>)
-            * [Project Details](<#project-details>)
-            * [Post Details](<#post-details>)
-            * [Like Unlike Project](<#like-unlike-project>)
-            * [Project Comments](<#project-comments>)
-            * [Comment Form](<#comment-form>)
+            * [Free Consult Call](<#free-consult-call>)
+            * [Hexagon Product Display](<#hexagon-product-display>)
+        * [**Product Pages**](<#product-pages>)
+            * [Products](<#products>)
+        * [**Product Details**](<#product-details>)
+            * [Product Details](<#product-details>)
             * [Form Validation](<#form-validation>)
+        * [**Add Product**](<#add-product>)
+            * [Add Product Form](<#add-product-form>)
+            * [Add Product Notification](<#add-product-notification>)
+        * [**Edit Product**](<#edit-product>)
+            * [Edit Product Form](<#edit-product-form>)
+            * [Edit Product Notification](<#edit-product-notification>)
+        * [**Delete Product**](<#delete-product>)
+            * [Delete Notification](<#delete-notification>)
+        * [**Article Pages**](<#article-pages>)
+            * [Articles](<#articles>)
+        * [**Article Details**](<#article-details>)
+            * [Article Details](<#article-details>)
+            * [Form Validation](<#form-validation>)
+        * [**Add Article**](<#add-article>)
+            * [Add Article Form](<#add-article-form>)
+            * [Add Article Notification](<#add-article-notification>)
+        * [**Edit Article**](<#edit-article>)
+            * [Edit Article Form](<#edit-article-form>)
+            * [Edit Article Notification](<#edit-article-notification>)
+        * [**Delete Article**](<#delete-article>)
+            * [Delete Notification](<#delete-notification>)
         * [**Authorisation**](<#authorisation>)
             * [Sign Up](<#sign-up>)
             * [Sign Up Notification](<#sign-up-notification>)
             * [Sign In](<#sign-in>)
             * [Sign In Notification](<#sign-in-notification>)
             * [Sign Out](<#sign-out>)
-            * [Sign Out Notification](<#sign-out-notification>)
-        * [**Create A Project or Post**](<#create-a-project-or-post>)
-            * [Create Form](<#create-form>)
-            * [Create Notification](<#create-notification>)
-        * [**Update Project or Post**](<#update-project-or-post>)
-            * [Update Form](<#update-form>)
-            * [Update Notification](<#update-notification>)
-        * [**Delete Project or Post**](<#delete-project-or-post>)
-            * [Delete Confirmation Page](<#delete-confirmation-page>)
-            * [Delete Notification](<#delete-notification>)   
-        * [**403 Page**](<#403-page>)
+            * [Sign Out Notification](<#sign-out-notification>)  
+        * [**404 Page**](<#404-page>)
     * [**Future Features**](<#future-features>)
         * [Admin Area](<#admin-area>)
         * [User Profile](<#user-profile>)
-        * [Notification feature](<#notification-feature>)
         * [Categories](<#categories>)
-        * [Search feature](<#search-feature>)
-        * [Print Project instructions](<#print-project-instructions>)
         * [Enhanced Form Validation](<#enhanced-form-validation>)
 * [**Technologies Used**](<#technologies-used>)
     * [Languages](<#languages>)
@@ -76,8 +79,8 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
         * [W3C (CSS)](<#w3c-css>)
         * [PEP8 (Python)](<#pep8-python>)
     * [**Input Validation Tests**](<#input-validation-tests>)
-        * [Post project Form Tests](<#post-project-form-tests>)
-        * [Edit project Form Tests](<#edit-project-form-tests>)
+        * [Add Product Form Tests](<#post-product-form-tests>)
+        * [Edit product Form Tests](<#edit-product-form-tests>)
         * [Comment Form Tests](<#comment-form-tests>)
     * [**Additional Tests**](<#additional-tests>)
         * [Manual Tests](<#manual-tests>)
@@ -104,7 +107,7 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
 
 ## Objective
 
-This project was created for Portfolio Project Five submission for the Full Stack Software Development Higher National Diploma at [Code Institute](https://codeinstitute.net/). Amongst other assessment criteria, the project had to be built using HTML, CSS, JavaScript, Python and Django and feature full ecommerce ability, CRUD functionality and user authorisation. The project also had to be planned and designed using Agile methodologies. 
+This product was created for Portfolio product Five submission for the Full Stack Software Development Higher National Diploma at [Code Institute](https://codeinstitute.net/). Amongst other assessment criteria, the product had to be built using HTML, CSS, JavaScript, Python and Django and feature full ecommerce ability, CRUD functionality and user authorisation. The product also had to be planned and designed using Agile methodologies. 
 
 
 [Back to top](<#contents>)
@@ -125,9 +128,9 @@ This project was created for Portfolio Project Five submission for the Full Stac
 
 [Back to top](<#contents>)
 
-## Project Management
+## product Management
 
-### Github Project Board
+### Github product Board
 
 Agile methodology was used to plan and design the Peak Nutrition application. User stories were created on GitHub and added to the board in the TODO section. They then moved across the board into IN PROGRESS when they were being actioned, and then into the DONE section when they were completed. This helped greatly in tracking progress and organising and allocating work.
 
@@ -145,23 +148,23 @@ Database scheme was drawn up using [App Diagrams.net](https://app.diagrams.net/)
 
 ## User Stories
 
-In terms of project management, user stories are an integral part of the software development creative process. Peak Nutrition consists of ?? user stories. 
+In terms of product management, user stories are an integral part of the software development creative process. Peak Nutrition consists of ?? user stories. 
 
-A full list of user stories can be found in the [Peak Nutrition GitHub Project Board](https://github.com/users/culanomeara/projects/4/views/1).
+A full list of user stories can be found in the [Peak Nutrition GitHub product Board](https://github.com/users/culanomeara/products/4/views/1).
 
 [Back to top](<#contents>)
 
 ## Site Design 
 
-The Peak Nutrition app features a simple and user friendly design. Balsamiq was used to do some wireframe mock ups for the homepage and projects/posts pages.
+The Peak Nutrition app features a simple and user friendly design. Balsamiq was used to do some wireframe mock ups for the homepage and products/posts pages.
 
 -Index.html wireframe
 
 ![Peak Nutrition index.html](media/readme/images/aww_wireframe_index.png)
 
--Projects.html wireframe
+-products.html wireframe
 
-![Peak Nutrition projects.html](media/readme/images/aww_wireframe_projects_page.png)
+![Peak Nutrition products.html](media/readme/images/aww_wireframe_products_page.png)
 
 [Back to top](<#contents>)
 
@@ -189,17 +192,14 @@ The homepage is the first page of the site that a user will see when they naviga
 
 ![Navigation bar](media/readme/images/index.jpg)
 
-- Who We are
-![Who We are](media/readme/images/index_who_we_are.png)
-
 - Free Consult Call
-![Free Consult Call](media/readme/images/index_most_popular_projects.jpg)
+![Free Consult Call](media/readme/images/index_most_popular_products.jpg)
 
 [Back to top](<#contents>)
 
 #### Navigation
 
-Site navigation is present at all times on every page of the site in the form of header nav bars. These navigational elements change depending on whether a user is logged in or not. Non logged in users only have viewing access to projects and posts. They are unable to comment or like a project. These elements are also fully responsive and the header collapses to become a mobile menu on small screen sizes.
+Site navigation is present at all times on every page of the site in the form of header nav bars. These navigational elements change depending on whether a user is logged in or not. Non logged in users only have viewing access to products and posts. They are unable to comment or like a product. These elements are also fully responsive and the header collapses to become a mobile menu on small screen sizes.
 
 - Navigation Bar - Not Logged in - Full
 
@@ -238,22 +238,22 @@ The unique styling draws the users attention. Each hexagon represents one catego
 ### Product Pages
 
 #### Products
-The product page is a template used to display the list of ALL projects or a specific category of products. Each product has a summary. These pages are available for all users to view, including non-logged in users. The main purpose of the page is to display the brief product overview. Users will generally navigate to a full product detail page by clicking on the product from the product card. As the user has now shown a specific interest in the product, all the information about the product is displayed on the details page.
+The product page is a template used to display the list of ALL products or a specific category of products. Each product has a summary. These pages are available for all users to view, including non-logged in users. The main purpose of the page is to display the brief product overview. Users will generally navigate to a full product detail page by clicking on the product from the product card. As the user has now shown a specific interest in the product, all the information about the product is displayed on the details page.
 
 - Product Page
 
-![Product page](media/readme/images/projects_page.png)
+![Product page](media/readme/images/products_page.png)
 
 [Back to top](<#contents>)
 
 ### Product Details
 
 #### Product Details
-The product details page is a template used to display the full information on a product. Each product has a details page. These pages are available for all users to view, including non-logged in users. The main purpose of the page is to display the product information and price. Users will generally navigate to a full product page by clicking the product image on the project card either on the product page. As the user has now shown a specific interest in the product, all the information about the product is displayed here.
+The product details page is a template used to display the full information on a product. Each product has a details page. These pages are available for all users to view, including non-logged in users. The main purpose of the page is to display the product information and price. Users will generally navigate to a full product page by clicking the product image on the product card either on the product page. As the user has now shown a specific interest in the product, all the information about the product is displayed here.
 
 - Product Details
 
-![Product Details](media/readme/images/project_details.png)
+![Product Details](media/readme/images/product_details.png)
 
 [Back to top](<#contents>)
 
@@ -302,11 +302,7 @@ A user can navigate to the Sign in page via the site navigation bars if they are
 
 #### Sign Out
 
-A user can navigate to the Sign Out page via the site navigation bars if they are logged in. They are prompted on this page to confirm if wish to log out. Upon confirmation the user is logged out and redirected to the homepage. If they click on Cancel, they are brought back to the previous page. 
-
-- Sign Out Confirmation Page
-
-![Sign Up](media/readme/images/sign_out_confirm.png)
+A user can navigate to the Sign Out page via the site navigation bars if they are logged in. They are prompted on this page to confirm if wish to log out. Upon confirmation the user is logged out and redirected to the homepage. If they click on Cancel, they are brought back to the previous page.
 
 - Sign Out Notification
 
@@ -322,17 +318,17 @@ The Add Product template form is a page which features a product form to enable 
 
 - Product Add Form
 
-![Product Add Form](media/readme/images/project_create_form.png)
+![Product Add Form](media/readme/images/product_create_form.png)
 
 [Back to top](<#contents>)
 
 #### Add product notification
 
-When a user adds a product successfully, a toast message appears confirming the submission of the project/post.
+When a user adds a product successfully, a toast message appears confirming the submission of the product/post.
 
 - Add product notification
 
-![Add product notification](media/readme/images/project_create_notification.png)
+![Add product notification](media/readme/images/product_create_notification.png)
 
 [Back to top](<#contents>)
 
@@ -342,7 +338,7 @@ The Edit product page is available to logged in users. The Edit option appears b
 
 - Edit Product Form
 
-![Edit Product Form](media/readme/images/project_update_form.png)
+![Edit Product Form](media/readme/images/product_update_form.png)
 
 #### Edit Notification
 
@@ -350,7 +346,7 @@ If a user successfully submits the update form the page is refreshed. A message 
 
 - Edit Product Notification
 
-![Edit Product Notification](media/readme/images/project_update_notification.png)
+![Edit Product Notification](media/readme/images/product_update_notification.png)
 
 [Back to top](<#contents>)
 
@@ -366,7 +362,7 @@ A user can delete their product easily from the relevant list page or details pa
 
 #### Delete Notification
 
-If a user deletes a product, a notification is displayed to the user at the top of the page. This notification confirms the deletion of the project. The user can hide this notification by clicking the x icon. 
+If a user deletes a product, a notification is displayed to the user at the top of the page. This notification confirms the deletion of the product. The user can hide this notification by clicking the x icon. 
 
 - Delete Confirmation Notification
 
@@ -374,9 +370,73 @@ If a user deletes a product, a notification is displayed to the user at the top 
 
 [Back to top](<#contents>)
 
+- Sign Out Notification
+
+![Sign Out Notification](media/readme/images/sign_out_notification.png)
+
+[Back to top](<#contents>)
+
+### Add a new Article
+
+#### Add form
+
+The Add Article template form is a page which features a Article form to enable users to add a Article to the Peak Nutrition site. This page is only visible to logged in users and appears in the navigation menu. The page features similar styling to the rest of the site for consistency.
+
+- Article Add Form
+
+![Article Add Form](media/readme/images/product_create_form.png)
+
+[Back to top](<#contents>)
+
+#### Add Article notification
+
+When a user adds a Article successfully, a toast message appears confirming the submission of the product/post.
+
+- Add Article notification
+
+![Add Article notification](media/readme/images/product_create_notification.png)
+
+[Back to top](<#contents>)
+
+### Edit Article
+
+The Edit Article page is available to logged in users. The Edit option appears below the summary on the list page and details page. When the Update option is clicked, the user is navigated to the edit Article page. The page styling and content is exactly the same as the add page. The only difference is the form is prefilled out with the content. The user can then use this form to edit the content and submit the amendments to overwrite the previous content.
+
+- Edit Article Form
+
+![Edit Article Form](media/readme/images/product_update_form.png)
+
+#### Edit Notification
+
+If a user successfully submits the update form the page is refreshed. A message is displayed to the user which confirms the successful form submission. The user is redirected to the list page for Articles.
+
+- Edit Article Notification
+
+![Edit Article Notification](media/readme/images/product_update_notification.png)
+
+[Back to top](<#contents>)
+
+### Delete Article
+
+A user can delete their Article easily from the relevant list page or details page. This option is only visible to a superuser. If a user clicks on delete, a delete confirmation toast is displayed.
+
+- Delete Article
+
+![Delete Article](media/readme/images/update_delete.png)
+
+[Back to top](<#contents>)
+
+#### Delete Notification
+
+If a user deletes an article, a notification is displayed to the user at the top of the page. This notification confirms the deletion of the article. The user can hide this notification by clicking the x icon. 
+
+- Delete Confirmation Notification
+
+![Delete](media/readme/images/delete_notification.png)
+
 ### 404 Page
 
-The 403 page is triggered when a user navigates to a site URL which doesn't exist. This could be because of a number of reasons, mainly if they mistype something.
+The 404 page is triggered when a user navigates to a site URL which doesn't exist. This could be because of a number of reasons, mainly if they mistype something.
 
 - 404 Page
 
@@ -402,7 +462,7 @@ Another feature that would improve the site would be a customisable user profile
 
 ### Categories
 
-The Peak Nutrition site currently features category fields which don't have any usable functionality. These fields were originally intended to group projects together to be displayed in project category lists/sections.
+The Peak Nutrition site currently features category fields which don't have any usable functionality. These fields were originally intended to group products together to be displayed in product category lists/sections.
 
 [Back to top](<#contents>)
 
@@ -427,13 +487,13 @@ I would like to add enhanced form validation above the built-in ones. Validation
 ## Frameworks
 
 * [Bootstrap](https://getbootstrap.com/) - Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
-* [Django](https://www.djangoproject.com/) - Django is a free and open-source, Python-based web framework that follows the model–template–views architectural pattern.
+* [Django](https://www.djangoproduct.com/) - Django is a free and open-source, Python-based web framework that follows the model–template–views architectural pattern.
 
 [Back to top](<#contents>)
 
 ## Software
 
-* [GitHub](https://github.com/) - An internet hosting service used for version control. Used to host the Peak Nutrition repository and for the project board used for project management and user stories.
+* [GitHub](https://github.com/) - An internet hosting service used for version control. Used to host the Peak Nutrition repository and for the product board used for product management and user stories.
 * [GitPod](https://www.gitpod.io/) - A cloud development environment used as the primary site code editor.
 * [Heroku](https://dashboard.heroku.com/) - A cloud platform used to host the Peak Nutrition full stack application.
 * [Stripe](https://stripe.com/) - Ecommerce software and APIs to accept payments, send payouts, and manage shop orders
@@ -451,27 +511,27 @@ I would like to add enhanced form validation above the built-in ones. Validation
 
 ## Libraries
 
-This is a list of the Python / Django libraries used in this project.
+This is a list of the Python / Django libraries used in this product.
 
 * [asgiref](https://github.com/django/asgiref) - A standard Python library to allow for asynchronous web apps and servers to communicate with each other.
-* [boto3](https://pypi.org/project/boto3/) - Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2.
-* [botocore](https://pypi.org/project/botocore/) - A low-level interface to a growing number of Amazon Web Services. The botocore package is the foundation for the AWS CLI as well as boto3
-* [dj-database-url](https://pypi.org/project/dj-database-url/) - A Django utility to utilise the DATABASE_URL environment variable to configure the Django application. Used with PostgreSQL.
-* [Django](https://www.djangoproject.com/) - A python package for the Django framework.
+* [boto3](https://pypi.org/product/boto3/) - Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2.
+* [botocore](https://pypi.org/product/botocore/) - A low-level interface to a growing number of Amazon Web Services. The botocore package is the foundation for the AWS CLI as well as boto3
+* [dj-database-url](https://pypi.org/product/dj-database-url/) - A Django utility to utilise the DATABASE_URL environment variable to configure the Django application. Used with PostgreSQL.
+* [Django](https://www.djangoproduct.com/) - A python package for the Django framework.
 * [django-allauth](https://django-allauth.readthedocs.io/en/latest/) - An integrated set of Django applications addressing user authentication, registration and account management.
-* [django-countries](https://pypi.org/project/django-countries/) - Provides a country field for Django models.
-* [django-storages](https://pypi.org/project/django-storages/) - Collection of custom storage backends for Django.
+* [django-countries](https://pypi.org/product/django-countries/) - Provides a country field for Django models.
+* [django-storages](https://pypi.org/product/django-storages/) - Collection of custom storage backends for Django.
 * [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - A Django package that provides tags and filters to control the rendering behaviour of Django forms.
 * [gunicorn](https://gunicorn.org/) - A Python WSGI HTTP Server for UNIX.
 * [jmespath](https://jmespath.org/) - JMESPath is a query language for JSON.
 * [oauthlib](https://github.com/oauthlib/oauthlib) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
-* [psycopg2](https://pypi.org/project/psycopg2/) - A PostgreSQL database adapter for Python.
-* [Pillow](https://pypi.org/project/Pillow/) - The Python Imaging Library adds image processing capabilities to your Python interpreter.
-* [python3-openid](https://pypi.org/project/python3-openid/) - A set of Python packages to support use of the OpenID decentralized identity system.
-* [pytz](https://pypi.org/project/pytz/) - A Python package for world timezone definitions, modern and historical.
-* [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - A Python package for OAuthlib authentication support for Requests.
-* [sqlparse](https://pypi.org/project/sqlparse/) - A non-validating SQL parser for Python.
-* [urllib3](https://pypi.org/project/urllib3/) - HTTP library with thread-safe connection pooling, file post, and more.
+* [psycopg2](https://pypi.org/product/psycopg2/) - A PostgreSQL database adapter for Python.
+* [Pillow](https://pypi.org/product/Pillow/) - The Python Imaging Library adds image processing capabilities to your Python interpreter.
+* [python3-openid](https://pypi.org/product/python3-openid/) - A set of Python packages to support use of the OpenID decentralized identity system.
+* [pytz](https://pypi.org/product/pytz/) - A Python package for world timezone definitions, modern and historical.
+* [requests-oauthlib](https://pypi.org/product/requests-oauthlib/) - A Python package for OAuthlib authentication support for Requests.
+* [sqlparse](https://pypi.org/product/sqlparse/) - A non-validating SQL parser for Python.
+* [urllib3](https://pypi.org/product/urllib3/) - HTTP library with thread-safe connection pooling, file post, and more.
 
 [Back to top](<#contents>)
 
@@ -484,17 +544,17 @@ The testing approach is as follows:
 ### User Story Tests
 
 ### Users
-1. I want to get inspiration for DIY wooden projects
+1. I want to get inspiration for DIY wooden products
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/ | Home page main body loads with carousel, site introduction and most popular projects | Works as expected |
+Navigate to https://adventureswithwood.herokuapp.com/ | Home page main body loads with carousel, site introduction and most popular products | Works as expected |
 
-2. As a user, I can view all projects
+2. As a user, I can view all products
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/projects | All projects should be visible | Works as expected |
+Navigate to https://adventureswithwood.herokuapp.com/products | All products should be visible | Works as expected |
 
 3. As a user, I can view all posts 
 
@@ -502,18 +562,18 @@ Navigate to https://adventureswithwood.herokuapp.com/projects | All projects sho
 ------------ | ------------ | ------------ |
 Navigate to https://adventureswithwood.herokuapp.com/posts | Posts page main body loads with all Posts displayed | Works as expected |
 
-4. As a site user I want to be able to view the most popular Projects
+4. As a site user I want to be able to view the most popular products
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/ and scroll down to most popular Projects section | Projects with likes appear in three panels on homepage | Works as expected |
+Navigate to https://adventureswithwood.herokuapp.com/ and scroll down to most popular products section | products with likes appear in three panels on homepage | Works as expected |
 
-5. As a user, I want to be able to view details of a particular project
+5. As a user, I want to be able to view details of a particular product
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/ and click on project image on carousel or most popular projects section | click on any picture to be brought to details page | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/projects/ and click on a project to see project details page | User can see projects displayed and click on any picture to be brought to details page | Works as expected |
+Navigate to https://adventureswithwood.herokuapp.com/ and click on product image on carousel or most popular products section | click on any picture to be brought to details page | Works as expected |
+Navigate to https://adventureswithwood.herokuapp.com/products/ and click on a product to see product details page | User can see products displayed and click on any picture to be brought to details page | Works as expected |
 
 6. As a user, I want to be able to view details of a particular post
 
@@ -527,13 +587,13 @@ Navigate to https://adventureswithwood.herokuapp.com/posts/ and click on a post 
 ------------ | ------------ | ------------ |
 Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ and submit user details | User is logged in | Works as expected |
 
-8. As a site user, I want to be able to create a new Project
+8. As a site user, I want to be able to create a new product
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on Login nav link and submit user details | User is logged in | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/project_create or click on Create New Project nav link | Create New Project Form is displayed | Works as expected |
-Enter details on Create New Project Form page then click submit| New project is created | Works as expected |
+Navigate to https://adventureswithwood.herokuapp.com/product_create or click on Create New product nav link | Create New product Form is displayed | Works as expected |
+Enter details on Create New product Form page then click submit| New product is created | Works as expected |
 
 9. As a site user, I want to be able to create a new Post
 
@@ -543,19 +603,19 @@ Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on
 Navigate to https://adventureswithwood.herokuapp.com/post_create or click on Create New Post nav link | Create New Post Form is displayed | Works as expected |
 Enter details on Create New Post Form page then click submit| New post is created | Works as expected |
 
-10. As a site user, I can view comments on an individual project
+10. As a site user, I can view comments on an individual product
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/Projects/ | Projects page loads | Works as expected |
-Click on Projects card for more information | Projects detail page loads with comments section at the bottom of the page | Works as expected |
+Navigate to https://adventureswithwood.herokuapp.com/products/ | products page loads | Works as expected |
+Click on products card for more information | products detail page loads with comments section at the bottom of the page | Works as expected |
 Logged in users can fill out the comment form and click submit button | Comment is submitted for approval | Works as expected |
 
-11. As a site user, I can comment on projects
+11. As a site user, I can comment on products
 ------------ | ------------ | ------------ |
 Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on Login nav link and submit user details | User is logged in | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/Projects/ | Projects page loads | Works as expected |
-Click on Projects card for more information | Projects detail page loads with comments section at the bottom of the page | Works as expected |
+Navigate to https://adventureswithwood.herokuapp.com/products/ | products page loads | Works as expected |
+Click on products card for more information | products detail page loads with comments section at the bottom of the page | Works as expected |
 Logged in users can fill out the comment form and click submit button | Comment is submitted | Works as expected |
 
 12. As a site user, I want to be aware of logged in status
@@ -565,14 +625,14 @@ Logged in users can fill out the comment form and click submit button | Comment 
 Navigate to any page and check nav bar | Logged in users see sign out link | Works as expected |
 Navigate to any page and check nav bar | Unauthenticated users see nav bar with Sign Up and Sign In options | Works as expected |
 
-13. As a site user, I want to be able to update one of my projects
+13. As a site user, I want to be able to update one of my products
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on Login nav link and submit user details | User is logged in | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/projects or navigate to project details page of specific project they want to update | Logged in user that is also author of that project will see Update option under project summary | Works as expected |
-Click on Update | Project Update form will be displayed with pre-filled content shown | Works as expected |
-Click on Submit | Project updates will be submitted, and confirmation message shown | Works as expected |
+Navigate to https://adventureswithwood.herokuapp.com/products or navigate to product details page of specific product they want to update | Logged in user that is also author of that product will see Update option under product summary | Works as expected |
+Click on Update | product Update form will be displayed with pre-filled content shown | Works as expected |
+Click on Submit | product updates will be submitted, and confirmation message shown | Works as expected |
 
 14. As a site user, I want to be able to update one of my Posts
 
@@ -583,14 +643,14 @@ Navigate to https://adventureswithwood.herokuapp.com/posts or navigate to post d
 Click on Update | Post Update form will be displayed with pre-filled content shown | Works as expected |
 Click on Submit | Post updates will be submitted, and confirmation message shown | Works as expected |
 
-15. As a site user, I want to be able to Delete one of my projects
+15. As a site user, I want to be able to Delete one of my products
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on Login nav link and submit user details | User is logged in | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/projects or navigate to project details page of specific project they want to delete | Logged in user that is also author of that project will see Delete option under Project summary | Works as expected |
-Click on Delete | Project Delete Confirm Page will be displayed | Works as expected |
-Click on Confirm | Project will be deleted, and confirmation message shown | Works as expected |
+Navigate to https://adventureswithwood.herokuapp.com/products or navigate to product details page of specific product they want to delete | Logged in user that is also author of that product will see Delete option under product summary | Works as expected |
+Click on Delete | product Delete Confirm Page will be displayed | Works as expected |
+Click on Confirm | product will be deleted, and confirmation message shown | Works as expected |
 
 16. As a site user, I want to be able to Delete one of my posts
 
@@ -602,38 +662,38 @@ Click on Delete | Post Delete Confirm Page will be displayed | Works as expected
 Click on Confirm | Post will be deleted, and confirmation message shown | Works as expected |
 
 ### Site admin
-17. As a site admin, I can create a project or post in the backend to manage site content
+17. As a site admin, I can create a product or post in the backend to manage site content
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Project add + button | Project add form is presented to user in backend | Works as expected |
-Fill out form with relevant details and click save | New project is added to database | Works as expected |
+Click on product add + button | product add form is presented to user in backend | Works as expected |
+Fill out form with relevant details and click save | New product is added to database | Works as expected |
 Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
 Click on Post add + button | Post add form is presented to user in backend | Works as expected |
 Fill out form with relevant details and click save | New post is added to database | Works as expected |
 
-18. As a site admin, I can update a project or post in the backend to manage site content
+18. As a site admin, I can update a product or post in the backend to manage site content
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Project table button | Project list is displayed | Works as expected |
-Click on Project you want to update | Project details are displayed | Works as expected |
-Update details and click save | Project is updated to database | Works as expected |
+Click on product table button | product list is displayed | Works as expected |
+Click on product you want to update | product details are displayed | Works as expected |
+Update details and click save | product is updated to database | Works as expected |
 Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
 Click on Post table button | Post list is displayed | Works as expected |
 Click on Post you want to update | Post details are displayed | Works as expected |
 Update details and click save | Post is updated to database | Works as expected |
 
-18. As a site admin, I can delete a project or post in the backend to manage site content
+18. As a site admin, I can delete a product or post in the backend to manage site content
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Project table button | Project list is displayed | Works as expected |
-Click on Project you want to delete | Project details are displayed | Works as expected |
-Click delete | Project is deleted from database | Works as expected |
+Click on product table button | product list is displayed | Works as expected |
+Click on product you want to delete | product details are displayed | Works as expected |
+Click delete | product is deleted from database | Works as expected |
 Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
 Click on Post table button | Post list is displayed | Works as expected |
 Click on Post you want to delete | Post details are displayed | Works as expected |
@@ -682,7 +742,7 @@ Click "Yes, I'm sure" | Category(s) deleted | Works as expected |
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to an Update page by adding ".../update" to post/project url | Reroute to a customised 403 page | Works as expected |
+Navigate to an Update page by adding ".../update" to post/product url | Reroute to a customised 403 page | Works as expected |
 
 22. As a site owner, I want the user to come to a custom 404 error page tha explains in simple language what has gone wrong if they enter a URL that does not exist
 
@@ -713,13 +773,13 @@ When the Peak Nutrition site was first tested with the [W3C HTML Markup Validati
 
 ![HTML Validation Test](media/readme/images/html_validator_test.jpg)
 
-- Projects Page
+- products Page
 
-![HTML Validation Test Projects Page](media/readme/images/html_validator_test_projects.jpg)
+![HTML Validation Test products Page](media/readme/images/html_validator_test_products.jpg)
 
 - Posts Page
 
-![HTML Validation Test Projects Page](media/readme/images/html_validator_test_posts.jpg)
+![HTML Validation Test products Page](media/readme/images/html_validator_test_posts.jpg)
 
 - Sign Up Page
 
@@ -766,11 +826,11 @@ Passed without error
 
 ## Input Validation Tests
 
-### Create project Form Tests
+### Create product Form Tests
 
 [Back to top](<#contents>)
 
-### Edit project Form Tests
+### Edit product Form Tests
 
 [Back to top](<#contents>)
 
@@ -786,7 +846,7 @@ Passed without error
 
 ### Automated Tests
 
-Three automated tests were set up in the file tests.py to test views: Home, Project and Post. All tests passed.
+Three automated tests were set up in the file tests.py to test views: Home, product and Post. All tests passed.
 
 [Back to top](<#contents>)
 
@@ -850,9 +910,9 @@ Site was developed on an Apple MacBook using iOS v13.2
 
 **Bug** | **Cause** | **Outcome**
 ------------ | ------------ | ------------ |
-Images were showing up tiny on Projects page | Missing semi-colon in CSS file | Resolved |
+Images were showing up tiny on products page | Missing semi-colon in CSS file | Resolved |
 All users were able to access CRUD functions  | Didn't have authentication set up across the site | Resolved |
-When updating project or post, crash occurred if you didn't add new image  | Image already in DB wasn't returned back when saving | Used request.files to pull image in and then sent back when saved. Resolved |
+When updating product or post, crash occurred if you didn't add new image  | Image already in DB wasn't returned back when saving | Used request.files to pull image in and then sent back when saved. Resolved |
 
 [Back to top](<#contents>)
 
@@ -877,7 +937,7 @@ _In GITHUB:_
 
 2. Create a requirements file --> pip3 freeze --local > requirements.txt
 
-3. Create your project: in this case adventures-with-wood
+3. Create your product: in this case adventures-with-wood
 
 4. Create an app using command --> python3 manage.py startapp APP_NAME
 
@@ -1013,7 +1073,7 @@ _IN GITPOD / ENV.PY_
 
 1. Set DEVELOPMENT variable to 0!
 2. Add a few more settings--> X_FRAME_OPTIONS = 'SAMEORIGIN'
-    * Without this, the summer note editor would no longer work when we deploy the project. This is due to Cross-Origin Resource Sharing, which tells the browser which resources are permitted to be loaded.
+    * Without this, the summer note editor would no longer work when we deploy the product. This is due to Cross-Origin Resource Sharing, which tells the browser which resources are permitted to be loaded.
 3. Save, add and commit as "deployment commit", and push to github.
 
 _IN HEROKU..._
@@ -1056,7 +1116,7 @@ All content that was copied from other sites such as Instructables https://www.i
 ## Readme
 Readme structure adapted from/inspired by:
 - Matthew Hurrell https://github.com/Matthew-Hurrell/viva-la-nacho/blob/main/README.md
-- John Constant https://github.com/johnConstant/CI_PP4_Projects_site/blob/main/README.md
+- John Constant https://github.com/johnConstant/CI_PP4_products_site/blob/main/README.md
 - Stephanie Crocker https://github.com/stephaniecrocker91/for-the-love-of-food/blob/main/README.md
 
 [Back to top](<#contents>)
@@ -1071,12 +1131,12 @@ The site logo/placeholder image was created using Canva https://www.canva.com/
 
 ## Code 
 
-I used the "I think therefore I blog" walk through project as a starting point and template. I created a blog like page that presented projects and posts. I added to the base code with custom views, models, html and CSS. I used the JS script for message timeouts from that blog and modified it for my own requirements.
+I used the "I think therefore I blog" walk through product as a starting point and template. I created a blog like page that presented products and posts. I added to the base code with custom views, models, html and CSS. I used the JS script for message timeouts from that blog and modified it for my own requirements.
 
 I watched a good few of Codemy videos for Django blog building https://www.youtube.com/watch?v=m3efqF9abyg
 
 The home page carousel was from bootstrap docs https://getbootstrap.com/docs/4.0/components/carousel/
 
-I got the idea for the MOST POPULAR projects in this CI PP4 project by John Constant https://ci-pp4-recipe-site.herokuapp.com/
+I got the idea for the MOST POPULAR products in this CI PP4 product by John Constant https://ci-pp4-recipe-site.herokuapp.com/
 
 [Back to top](<#contents>)

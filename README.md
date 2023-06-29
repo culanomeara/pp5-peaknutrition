@@ -14,8 +14,8 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
     * [Objective](<#objective>)
     * [Site User Goals](<#site-user-goals>)
     * [Site Owner Goals](<#site-owner-goals>)
-    * [**product Management**](<#product-management>)
-        * [GitHub product Board](<#github-product-board>)
+    * [**Project Management**](<#project-management>)
+        * [GitHub Projectt Board](<#github-project-board>)
         * [Database Schema](<#database-schema>)
 * [**User Experience UX**](<#user-experience-ux>)
     * [User Stories](<#user-stories>)
@@ -93,11 +93,16 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
         * [Resolved](<#resolved>)
         * [Unresolved](<#unresolved>)
 * [**Setup and Deployment**](<#setup-and-deployment>)
-    * [**Setup**](<#setup>)
-    * [**Deployment to Heroku**](<#deployment-to-heroku>)
-    * [**Final Production Deployment**](<#final-production-deployment>)
-    * [**Forking**](<#forking>)
-    * [**Cloning**](<#cloning>)
+    - [Deploying the site](#deploying-the-site)
+    - [Generate a SECRET KEY](#generate-a-secret-key)
+    - [Heroku app setup](#heroku-app-setup)
+    - [Preparation for deployment](#preparation-for-deployment)
+    - [Setting up AWS](#setting-up-aws)
+    - [Creating AWS groups, policies and users](#creating-aws-groups-policies-and-users)
+    - [Connecting Django to the AWS S3 bucket](#connecting-django-to-AWS-s3-bucket)
+    - [Stripe Setup](#stripe-setup)
+* [**Forking**](<#forking>)
+* [**Cloning**](<#cloning>)
 * [**Credits**](<#credits>)
     * [**Content**](<#content>)
     * [**Media**](<#media>)
@@ -128,9 +133,9 @@ This product was created for Portfolio product Five submission for the Full Stac
 
 [Back to top](<#contents>)
 
-## product Management
+## Project Management
 
-### Github product Board
+### Github Project Board
 
 Agile methodology was used to plan and design the Peak Nutrition application. User stories were created on GitHub and added to the board in the TODO section. They then moved across the board into IN PROGRESS when they were being actioned, and then into the DONE section when they were completed. This helped greatly in tracking progress and organising and allocating work.
 
@@ -922,167 +927,230 @@ There are no unresolved bugs that I am aware of!
 
 [Back to top](<#contents>)
 
-## Setup and Deployment
+## Deploying the site
 
-### Setup
+### Heroku app setup 
+- Click the New button in the top right corner of the Heroku dashboard and choose Create New App.
+- Give your app a name (this must be unique)
+- Select the region that is closest to you (EU)
+- Click the create app button bottom left.
 
-_In GITHUB:_
-
- Once the repository has been created using the Code Institute student template....
-
-1. Install Django and supporting libraries. 
-    * Django and gunicorn --> pip3 install 'django<4' gunicorn
-    * Supporting libraries --> pip3 install dj_database_url psycopg2
-    * Cloudinary libraries --> pip3 install dj3-cloudinary-storage
-
-2. Create a requirements file --> pip3 freeze --local > requirements.txt
-
-3. Create your product: in this case adventures-with-wood
-
-4. Create an app using command --> python3 manage.py startapp APP_NAME
-
-5. Add it to installed apps --> INSTALLED_APPS = [
-    …
-    'APP_NAME',
-]
-
-6. Save file and migrate changes using command --> python3 manage.py migrate
-
-7. Run server to test
-
-8. Commit and push changes to github
+- Set all the values of the Heroku settings from your env.py
+- The value of a new configuration variable called DATABASE URL is created in the settings tab
+- Copy this value from the elephantSQL console
+- Be careful to get the right variables for AWS and email, without any new lines/carriage returns, which could cause server failure 500.
 
 [Back to top](<#contents>)
 
-### Deployment to Heroku
-
-1. Create Heroku Account
-2. In Heroku dashboard: go to Create new app.
-3. Give your app a unique name.
-4. Select region --> EUROPE
-5. Click create App.
-6. Go to Database App/Resources/ Add-ons and search and click 'Heroku Postgres'.
-7. Go to the Settings tab, scroll down to Config Vars and select Reveal Config Vars and copy text.
-
-_IN GITPOD..._
-
-8. Create env.py file on top of level directory.
-9. Import os library
-10. set environment variables --> os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"
-11. Add in a secret key --> os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"
-
-_IN HEROKU ..._
-
-12. Add secret Key to config vars --> SECRET_KEY, “randomSecretKey”
-
-_IN GITPOD / IN SETTINGS.PY_
-
-13. Reference env.py file -->
-import os
-import dj_database_url
-
-if os.path.isfile("env.py"):
-   import env
-
-14. Remove the secret key and replace it with the following variable--> SECRET_KEY = os.environ.get('SECRET_KEY')
-
-15. Comment out the DataBases section -->
- DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': BASE_DIR / 'db.sqlite3',
-     }
- }
-
- 16. Add new database section -->
- DATABASES = {
-   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
-
-17. In the terminal, save files and make migrations --> python3 manage.py migrate
-
-_GETTING STATIC AND MEDIA FILES STORED ON CLOUDINARY..._
-
-18. Create a cloudinary account, and copy the CLOUDINARY_URL from the dashboard.
-
-19. Add url to env.py -->
-os.environ["CLOUDINARY_URL"] = "cloudinary://************************"
-
-_BACK IN HEROKU ..._
-
-20. Paste Cloudinary URL to Heroku Config Vars -->
-Add to Settings tab in Config Vars e.g. COUDINARY_URL, cloudinary://************************
-
-21. In config vars, add DISABLE_COLLECTSTATIC, 1. This will be rmeoved before final deployment.
-
-_IN GITPOD / SETTINGS.PY_
-
-22. Install Cloudinary libraries -->
-INSTALLED_APPS = [
-    …,
-    'cloudinary_storage',
-    'cloudinary',
-    …,
-]
-
-23. Tell Django to use Cloudinary to store media and static files -->
-STATIC_URL = '/static/'
-
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-23. Link file to templates -->
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-
-24. Change template directory to templates array -->
-TEMPLATES = [
-    {
-        …,
-        'DIRS': [TEMPLATES_DIR],
-       …,
-            ],
-        },
-    },
-]
-
-25. Add heroku hostname to ALLOWED_HOSTS-->
-ALLOWED_HOSTS = ["PROJ_NAME.herokuapp.com", "localhost"]
-
-_IN GITPOD..._
-
-26. Create 3 new folders: media, static and templates
-
-27. Create procfile and add code -->
-web: gunicorn PROJ_NAME.wsgi
-
-28. In terminal --> Add, Commit and Push
-
-_IN HEROKU ..._
-
-29. Deploy manually -->  Github as deployment method, on main branch
+### Preparation for deployment
+- Install dj_database_url and psycopg2, needed for connecting to your external ElephantSQL database 
+        pip3 install dj_database_url==0.5.0 psycopg2
+- Update your requirements.txt file
+        pip3 freeze > requirements.txt
+- In settings.py underneath import os, add import dj_database_url
+- Locate the section for DATABASES and comment out the code. Add the following code below the commented out code, and use the URL copied from elephantSQL for the value:
+        DATABASES = {
+        'default': dj_database_url.parse('paste-elephantsql-db-url-here')
+        }
+- In the terminal, run the show migrations command to confirm connection to the external database.
+        python3 manage.py showmigrations
+- If it is connected to the database, you will see a list of unchecked migrations
+- Now run migrations to migrate the models to the new database:
+        python3 manage.py migrate
+- Create a superuser for the new database.
+        python3 manage.py createsuperuser
+- Input a username, email and password when prompted.
+- You should now be able to go to the browser tab on the left of the page in elephantsql, click the table queries button and see the user you've just created by selecting the auth_user table.
 
 [Back to top](<#contents>)
 
-### Final Production Deployment
+- Now you can add an if/else statement for the databases in settings.py, so that so you can use the development database while in development and the external database on the live site
+        if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+      'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
+      }
+    }
+- Install gunicorn which will act as our web server and freeze this to the requirements.txt file.
+        pip3 install gunicorn pip3 freeze > requirements.txt
+- Create a Procfile in the root directory. This instructs Heroku to build a web dyno that serves our Django app and runs Gunicorn.
+- Add the following code in the procfile
+        web:  gunicorn policyshop.wsgi:application
+- Disable collectstatic by running the following command in the terminal
+        heroku config:set DISABLE_COLLECTSTATIC=1 --app heroku--your-app-name-here
+- Add the Heroku app and localhost by adding the following code in the settings.py
+        ALLOWED_HOSTS = ['{heroku deployed site URL here}', 'localhost' ]
+- Save, add, commit and push the changes to GitHub.
+        heroku git:remote -a {app name here}
+        git push heroku master
+- The deployed site is available to see now. You won't see any static file as we have not set that up yet.
+- To enable automatic deploys on Heroku, click enable automatic deploys at the bottom of the page.
 
-_IN GITPOD / ENV.PY_
+[Back to top](<#contents>)
 
-1. Set DEVELOPMENT variable to 0!
-2. Add a few more settings--> X_FRAME_OPTIONS = 'SAMEORIGIN'
-    * Without this, the summer note editor would no longer work when we deploy the product. This is due to Cross-Origin Resource Sharing, which tells the browser which resources are permitted to be loaded.
-3. Save, add and commit as "deployment commit", and push to github.
+### Generate a SECRET KEY
 
-_IN HEROKU..._
+- When you start a project in Django, a secret key is immediately generated
+- We should not use this key in our deployed version as it makes our website insecure.
+- And we should not commit this detail in github, so it should be an excluded file in any commits.
+- Same for other secret keys for AWS and Stripe below.
+- We can use a random key generator to create a new SECRET_KEY which we can then add to our Heroku config vars which will then keep the key protected.
+- [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) is where we can generate a secret key
+- Create a new key and copy the key
+- Create a new config var with the key SECRET KEY in the Heroku settings.
+- Update the SECRET_KEY in the settings.py
+    SECRET_KEY = os.environ.get('SECRET_KEY', ' ')
+- Update the debug variable to true if in development
+        DEBUG = 'DEVELOPMENT' in os.environ
+- Save, add, commit and push these changes.
 
-4. In reveal config vars, remove DISABLE_COLLECTSTATIC environment variable.
+[Back to top](<#contents>)
 
-5. Go to deploy tab, scroll down to the end and deploy our branch! 
+### Setting up AWS
 
-6. Your app has been deployed to heroku!
+- Sign up or login to your aws [amazon account](https://aws.amazon.com/) on the top right by using the manage my account button
+- Then navigate to S3 to create a new bucket. This bucket will store our project files.
+- Select the closest region to you (EU for us).
+- Selecting ACLs enabled and then bucket owner preferred are required in the object ownership section.
+- Uncheck the block public access box in the block public access section
+- Tick the acknowledge button to make the bucket public. Then click create bucket.
+- Select the properties tab from the bucket you just created
+- Find the static web hosting section and choose enable static web hosting.
+- Enter index.html and error.html for the index and error documents
+- Open the permissions tab and copy the ARN (Amazon Resource Name).
+- Go to the bucket policy section, select Edit, and then choose Policy Generator.
+- The policy type will be S3 bucket policy, we want to allow all principles by adding * to the input and the actions will be get object.
+- Click "add statement" after pasting the ARN we copied from the previous page into the ARN input.
+- Click generate policy and copy the policy that displays in a new pop up.
+- Paste this policy into the bucket policy editor and make the following changes: Add a /* at the end of the resource value. Click save.
+-  Edit the the cross-origin resource sharing (CORS) and paste in the following text:
+        [
+            {
+                "AllowedHeaders": [
+                    "Authorization"
+                ],
+                "AllowedMethods": [
+                    "GET"
+                ],
+                "AllowedOrigins": [
+                    "*"
+                ],
+                "ExposeHeaders": []
+            }
+        ]
+- Edit the access control list (ACL) section. Click edit and enable list for everyone(public access) and accept the warning box.
+
+[Back to top](<#contents>)
+
+### Creating AWS groups, policies and users
+
+- To manage access to AWS services, go to IAM by clicking the services icon in the top right corner of the page. Click User Groups from the left-hand navigation menu, and then click the Create Group button in the top-right corner. This will establish the group in which our user will be included. 
+- Choose a name for your group and click the create policy button on the right. This will open a new page.
+- To import managed policy, click the link in the top right corner of the page after selecting the JSON tab.
+- Search for S3 and select the one called AmazonS3FullAccess, then click import.
+- To make a change to the resources, we need to make resources an array and then change the value for the resources. Instead of a * which allows all access, we want to paste in our ARN. followed by a comma, and then paste the ARN in again on the next line with /* at the end. This permits all operations on our bucket and all of its resources.
+- Click the next: tags button and then the next - review
+- Give the policy a name and description (e.g. alltours-policy | Access to S3 bucket for seaside sewing static files.) Click the create policy button.
+- To attach policy click User Groups from the left-hand navigation menu, select the group, and then select the Permissions tab.
+- Select "attach policies" from the dropdown menu after clicking the add permissions button on the right.
+- Select the policy you just created and then click add permissions at the bottom.
+- Create a user for the group by clicking on the user link in the left hand navigation menu.
+- Click the add users button on the top right and giving our user a username (e.g. policyshop-staticfiles-user). 
+- Select programmatic access and then click the next: permissions button.
+- Add the user to the group you just created and then click next:tags button, next:review button and then create user button.
+- As we need to insert the user access key and secret access key into the Heroku config vars, you will now need to download the CSV file. You won't be able to view the CSV again, so be sure to download it now.
+
+[Back to top](<#contents>)
+
+### Connecting Django to AWS S3 bucket
+
+- Install boto3 and django storages 
+        pip3 install boto3
+        pip3 install django-storages
+- freeze them to the requirements.txt file
+        pip3 freeze > requirements.txt
+- Add storages to the installed apps in settings.py
+- Add the following code in settings.py to use our bucket
+        if 'USE_AWS' in os.environ:
+            AWS_S3_OBJECT_PARAMETERS = {
+                'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+                'CacheControl': 'max-age=9460800',
+            }
+       
+            AWS_STORAGE_BUCKET_NAME = 'enter your bucket name here'
+            AWS_S3_REGION_NAME = 'enter the region you selected here'
+            AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+            AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+            AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+            # Static and media files
+            STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+            STATICFILES_LOCATION = 'static'
+            DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+            MEDIAFILES_LOCATION = 'media'
+
+            # Override static and media URLs in production
+            STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+            MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+[Back to top](<#contents>)
+
+- We can now add these keys to our configuration variables in Heroku:
+
+    | KEY                       | VALUE         |
+    | -------------             | ------------- |
+    | `AWS_ACCESS_KEY_ID`       | PasteThe access key value from the amazon csv file downloaded in the last section         |
+    | `AWS_SECRET_ACCESS_KEY`   | Paste The secret access key from the amazon csv file downloaded in the last section         |
+    | `USE_AWS`                 | True         |
+
+- Remove the DISABLE_COLLECTSTATIC variable.
+- Create a file called custom_storages.py in the root directory.
+- import settings and S3Botot3Storage. Create a custom class for static files and one for media files.
+- Add the following code to file you created just now
+        """ Custom storages for AWS file storage. """
+        from django.conf import settings
+        from storages.backends.s3boto3 import S3Boto3Storage
+
+        class StaticStorage(S3Boto3Storage):
+            location = settings.STATICFILES_LOCATION
+
+        class MediaStorage(S3Boto3Storage):
+            location = settings.MEDIAFILES_LOCATION
+
+- In order to override the static and media URLs in production and update the app where to put static and media assets, add the following to settings.py.
+
+        STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+        STATICFILES_LOCATION = 'static'
+        DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+        MEDIAFILES_LOCATION = 'media'
+
+        STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+        MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+- Save everything, add, commit and push these changes to make a deployment to Heroku.
+- Navigate to S3 and open your bucket. 
+- Click the create folder button on the top right and naming the folder media. This is where we will save all out media files.
+
+[Back to top](<#contents>)
+
+### Stripe Setup
+
+- Log into Stripe, click developers and then API keys.
+- Copy the publishable key (STRIPE_PUBLIC_KEY) and the secret key (STRIPE_SECRET_KEY) 
+- Log in to heroku and create 2 new variables in Heroku's config vars, publishable key is STRIPE_PUBLIC_KEY and the secret key is STRIPE_SECRET_KEY and paste values copied from stripe
+- To add webhooks go to the WebHooks link in the menu on the left and select the add endpoint option.
+- Add the URL for our deployed sites WebHook, give it a description and then click the add events button and select all events. Click Create endpoint.
+- add the WebHook signing secret to our Heroku config variables as STRIPE_WH_SECRET.
+- Paste the following code in settings.py
+
+        STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+        STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+        STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 [Back to top](<#contents>)
 
@@ -1101,7 +1169,7 @@ You can Fork the Repository. This makes a copy of the original repository on our
 2. Under the repository name, click "Code" button which will produce a dropdown menu.
 3. Where it says Clone, copy the link below.
 
-[Link to deployed site](https://adventureswithwood.herokuapp.com/)
+[Link to deployed site](https://peak-nutrition.herokuapp.com/)
 
 [Back to top](<#contents>)
 
@@ -1109,34 +1177,28 @@ You can Fork the Repository. This makes a copy of the original repository on our
 
 ## Content
 
-All content that was copied from other sites such as Instructables https://www.instructables.com/ has been credited on the relevant page itself on the site.
+All content is original. Articles were generated by ChatGPT: (https://chat.openai.com/)
 
 [Back to top](<#contents>)
 
 ## Readme
 Readme structure adapted from/inspired by:
-- Matthew Hurrell https://github.com/Matthew-Hurrell/viva-la-nacho/blob/main/README.md
-- John Constant https://github.com/johnConstant/CI_PP4_products_site/blob/main/README.md
-- Stephanie Crocker https://github.com/stephaniecrocker91/for-the-love-of-food/blob/main/README.md
+- My own PP4: Adventures with Wood readme: (https://github.com/culanomeara/adventureswithwood/blob/main/README.md)
+- Jenny Delaney: (https://github.com/Code-Institute-Submissions/pp5-JennyDelaney/blob/main/documents/DEPLOYMENT.md)
 
 [Back to top](<#contents>)
 
 ## Media
 
-Images were sourced on Google from various sites including Instructables and Pinterest. Creative commons images were used where possible.
-
-The site logo/placeholder image was created using Canva https://www.canva.com/
+Free images were sourced on Pixabay. Creative commons images were used. (https://pixabay.com/accounts/collections/15375957/)
 
 [Back to top](<#contents>)
 
 ## Code 
 
-I used the "I think therefore I blog" walk through product as a starting point and template. I created a blog like page that presented products and posts. I added to the base code with custom views, models, html and CSS. I used the JS script for message timeouts from that blog and modified it for my own requirements.
+I used the "Boutique Ado" walk through product as a starting point and template. I created an ecommerce site that presented products and articles. I added to the base code with custom views, models, html and CSS. I used the JS script for toast messages from that blog and modified it for my own requirements.
 
-I watched a good few of Codemy videos for Django blog building https://www.youtube.com/watch?v=m3efqF9abyg
-
-The home page carousel was from bootstrap docs https://getbootstrap.com/docs/4.0/components/carousel/
-
-I got the idea for the MOST POPULAR products in this CI PP4 product by John Constant https://ci-pp4-recipe-site.herokuapp.com/
+I got the code for Hexagons from Paper Dreams (https://paper-dreams-uk.herokuapp.com/)
+I referenced Stack Overflow alot for code snippets where my code wasn't performing as required.
 
 [Back to top](<#contents>)

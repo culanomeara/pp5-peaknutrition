@@ -2,7 +2,7 @@ from django import forms
 from .models import ContactForm
 
 
-class ContactForm(forms.ModelForm):
+class Contact_Form(forms.ModelForm):
     """
     Customizes the display and functions of
     the ContactForm model.

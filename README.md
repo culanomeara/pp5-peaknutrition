@@ -665,57 +665,96 @@ Navigate to https://peak-nutrition.herokuapp.com/bag | When adding, adjusting or
 
 ### Shop Owner
 
-
-18. As a site admin, I can remove comments so that I can filter out objectionable comments
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigate to https://peak-nutrition.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Comments table | A list of all comments is displayed | Works as expected |
-Select the comment(s) for removal | Comment is selected | Works as expected |
-Select "delete selected comments" from dropdown menu and click "go" | Confirm delete notice appears | Works as expected |
-Click "Yes, I'm sure" | Comment(s) deleted | Works as expected |
-
-19. As a site admin, I can create categories to organise site content
+22. As a shop owner, I can add a new product
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://peak-nutrition.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Category Add+ button | Category add form is presented to user in backend | Works as expected |
-Fill out form with relevant details and click save | New category is added to database | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ logged in as superuser. Click on Shop Admin on nav bar and select Add Product | Add Product Form is displayed | Works as expected |
 
-19. As a site admin, I can update categories to organise site content
+23. As a shop owner, I can Update/Edit a product
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://peak-nutrition.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Category table | Category list appears | Works as expected |
-Click on Category you wish to update | Category name and type fields appear | Works as expected |
-Make updates and click save | Updated category is saved to database | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ logged in as superuser | On Products page or product details page, Edit Button can be clicked on. This will display the Edit product form | Works as expected |
 
-20. As a site admin, I can delete categories to organise site content
+24. As a shop owner, I can delete a product
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://peak-nutrition.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Category table | Category list appears | Works as expected |
-Select Category(s) you wish to delete | Category(s) are selected | Works as expected |
-Select "delete selected categorys" from dropdown menu and click "go" | Confirm delete notice appears | Works as expected |
-Click "Yes, I'm sure" | Category(s) deleted | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ logged in as superuser | On Products page or product details page, Delete Button can be clicked on | Works as expected |
 
-### Site Owner
-
-21. As a site owner, I want the user to come to a custom 403 error page tha explains in simple language what has gone wrong if they enter a URL that they don't have permission to access
+25. As a shop owner, I can create SALE/Offers
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to an Update page by adding ".../update" to post/product url | Reroute to a customised 403 page | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ logged in as superuser. Click on Shop Admin on nav bar and select Add Product and add a discount to new product | Add Product Form is displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ logged in as superuser | On Products page or product details page, Edit Button can be clicked on. This will display the Edit product form where owner can add a discount | Works as expected |
 
-22. As a site owner, I want the user to come to a custom 404 error page tha explains in simple language what has gone wrong if they enter a URL that does not exist
+31. As a shop owner, I can add a new article
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to a url that does not exist | Reroute to a customised 404 page | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ logged in as superuser. Click on Shop Admin on nav bar and select Add Article | Add Article Form is displayed | Works as expected |
+
+32. As a shop owner, I can Update/Edit an article
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/ logged in as superuser | On Articles page or article details page, Edit Button can be clicked on. This will display the Edit article form | Works as expected |
+
+33. As a shop owner, I can delete an article
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/ logged in as superuser | On Articles page or article details page, Delete Button can be clicked on.| Works as expected |
+
+34. Ensure only logged-in users can add,edit delete products and articles
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/ not logged in | Shop Admin nav item is no longer available. Edit, delete buttons are not visible. If you try to access url directly(e.g. https://peak-nutrition.herokuapp.com/accounts/login/?next=/articles/add/), it redirects to sign in page | Works as expected |
+
+36. As a shop owner, I want the user to come to a custom 404 error page tha explains in simple language what has gone wrong if they enter a URL that they don't have permission to access
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to a page that doesn't exist: (e.g. https://peak-nutrition.herokuapp.com/accrw) | A customised 404 page is displayed | Works as expected |
+
+### Site User
+
+11. As a site user, I want to be able to register an account
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/. Click on My Account -> Register | Sign Up Page displayed | Works as expected |
+
+13. As a site user, I want to be able to log in and out of my account
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/. Click on My Account -> Sign In | Sign In Page displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/. Click on Shop Admin -> Sign Out | Sign Out Page displayed | Works as expected |
+
+14. As a site user, I want to be reset my password
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/accounts/password/reset/ | Password reset form is displayed | Works as expected |
+
+15. As a site user, I want to receive confirmation of registration
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/accounts/signup/ | Once Sign Up is completed and email verified, toast success message appears confirming registration | Works as expected |
+
+
+35. As a site user, I want to be able to subscribe to website updates/newsletter
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/contact | Click Subscribe box at bottom of contact form and user is added to subscription list | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/contact/free | Click Subscribe box at bottom of the free consult form and user is added to subscription list | Works as expected |
+Click on Subscribe button in footer on any page | Enter details and user is added to subscription list | Works as expected |
 
 ### Automated testing
 

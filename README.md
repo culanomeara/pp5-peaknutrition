@@ -548,167 +548,129 @@ The testing approach is as follows:
 
 ### User Story Tests
 
-### Users
-1. I want to get inspiration for DIY wooden products
+### Shopper
+1. I want to be able to view product list
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/ | Home page main body loads with carousel, site introduction and most popular products | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ | Home page main body loads with unique hexagon styling displaying the product categories | Works as expected |
 
-2. As a user, I can view all products
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/products | All products should be visible | Works as expected |
-
-3. As a user, I can view all posts 
+2. I can view individual product details 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/posts | Posts page main body loads with all Posts displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/products/ | Select a product and click on the link image | Works as expected |
 
-4. As a site user I want to be able to view the most popular products
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/ and scroll down to most popular products section | products with likes appear in three panels on homepage | Works as expected |
-
-5. As a user, I want to be able to view details of a particular product
+3. I want to be able to easily find/see special offers/deals/promos
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/ and click on product image on carousel or most popular products section | click on any picture to be brought to details page | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/products/ and click on a product to see product details page | User can see products displayed and click on any picture to be brought to details page | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ | At top nav bar, you can click on the SALE link | Works as expected |
 
-6. As a user, I want to be able to view details of a particular post
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/posts/ and click on a post to see post details page | User can see posts displayed and click on any picture to be brought to details page | Works as expected |
-
-7. As a site user, I can log in
+4. I want to be able to see what I curently have in my basket and total cost
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ and submit user details | User is logged in | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ and click on basket icon in nav bar | Bag contents and cost will appear | Works as expected |
 
-8. As a site user, I want to be able to create a new product
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on Login nav link and submit user details | User is logged in | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/product_create or click on Create New product nav link | Create New product Form is displayed | Works as expected |
-Enter details on Create New product Form page then click submit| New product is created | Works as expected |
-
-9. As a site user, I want to be able to create a new Post
+5. I would like to get advice about what plan/product suits me best
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on Login nav link and submit user details | User is logged in | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/post_create or click on Create New Post nav link | Create New Post Form is displayed | Works as expected |
-Enter details on Create New Post Form page then click submit| New post is created | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ and click on Book A Free Consult | User will enter details to get a free 15 min consultation | Works as expected |
 
-10. As a site user, I can view comments on an individual product
+6. I want to check what qualifications/expertise/experience the provier has
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/products/ | products page loads | Works as expected |
-Click on products card for more information | products detail page loads with comments section at the bottom of the page | Works as expected |
-Logged in users can fill out the comment form and click submit button | Comment is submitted for approval | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/about | Information about nutritionist is displayed | Works as expected |
 
-11. As a site user, I can comment on products
------------- | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on Login nav link and submit user details | User is logged in | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/products/ | products page loads | Works as expected |
-Click on products card for more information | products detail page loads with comments section at the bottom of the page | Works as expected |
-Logged in users can fill out the comment form and click submit button | Comment is submitted | Works as expected |
-
-12. As a site user, I want to be aware of logged in status
+7. I want to sort all items by price, category, type
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to any page and check nav bar | Logged in users see sign out link | Works as expected |
-Navigate to any page and check nav bar | Unauthenticated users see nav bar with Sign Up and Sign In options | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/products | Use dropdown menu to sort products | Works as expected |
 
-13. As a site user, I want to be able to update one of my products
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on Login nav link and submit user details | User is logged in | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/products or navigate to product details page of specific product they want to update | Logged in user that is also author of that product will see Update option under product summary | Works as expected |
-Click on Update | product Update form will be displayed with pre-filled content shown | Works as expected |
-Click on Submit | product updates will be submitted, and confirmation message shown | Works as expected |
-
-14. As a site user, I want to be able to update one of my Posts
+8. I want to be able to filter items by category
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on Login nav link and submit user details | User is logged in | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/posts or navigate to post details page of specific post they want to update | Logged in user that is also author of that post will see Update option under post summary | Works as expected |
-Click on Update | Post Update form will be displayed with pre-filled content shown | Works as expected |
-Click on Submit | Post updates will be submitted, and confirmation message shown | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/products | Click on desired Product Category Tag and all items in that cateogry will be displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/| Click on desired Product Category Hexagon and all items in that cateogry will be displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/| Click on SHOP nav item, then select desired Product Category and all items in that cateogry will be displayed | Works as expected |
 
-15. As a site user, I want to be able to Delete one of my products
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on Login nav link and submit user details | User is logged in | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/products or navigate to product details page of specific product they want to delete | Logged in user that is also author of that product will see Delete option under product summary | Works as expected |
-Click on Delete | product Delete Confirm Page will be displayed | Works as expected |
-Click on Confirm | product will be deleted, and confirmation message shown | Works as expected |
-
-16. As a site user, I want to be able to Delete one of my posts
+9. I want to be able to search for an item
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/accounts/login/ or click on Login nav link and submit user details | User is logged in | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/posts or navigate to post details page of specific post they want to delete | Logged in user that is also author of that post will see Delete option under post summary | Works as expected |
-Click on Delete | Post Delete Confirm Page will be displayed | Works as expected |
-Click on Confirm | Post will be deleted, and confirmation message shown | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ , click on search icon in nav bar and ehter search term | Search results are displayed | Works as expected |
 
-### Site admin
-17. As a site admin, I can create a product or post in the backend to manage site content
+10. I want to be able to view all search results easily
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/ , click on search icon in nav bar and ehter search term | Search results are displayed in an easy to view way | Works as expected |
+
+16. I want to be able to select the quantity of a product when buying
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on product add + button | product add form is presented to user in backend | Works as expected |
-Fill out form with relevant details and click save | New product is added to database | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Post add + button | Post add form is presented to user in backend | Works as expected |
-Fill out form with relevant details and click save | New post is added to database | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ , select a product to buy, a quantity selector will appear | Clicking Plus or Minus will alter quantity. Typing in a number between 1 and 99 also possible. | Works as expected |
 
-18. As a site admin, I can update a product or post in the backend to manage site content
+17. I want to be able to view the items in my shopping cart
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on product table button | product list is displayed | Works as expected |
-Click on product you want to update | product details are displayed | Works as expected |
-Update details and click save | product is updated to database | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Post table button | Post list is displayed | Works as expected |
-Click on Post you want to update | Post details are displayed | Works as expected |
-Update details and click save | Post is updated to database | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/bag | Bag contents and cost will appear | Works as expected |
 
-18. As a site admin, I can delete a product or post in the backend to manage site content
+18. I want to be able to adjust the quantity or remove items from cart
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on product table button | product list is displayed | Works as expected |
-Click on product you want to delete | product details are displayed | Works as expected |
-Click delete | product is deleted from database | Works as expected |
-Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
-Click on Post table button | Post list is displayed | Works as expected |
-Click on Post you want to delete | Post details are displayed | Works as expected |
-Click delete | Post is deleted from database | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/bag  | User can click PLUS or MINUS then UPDATE or click REMOVE | Works as expected |
+
+19. I want to be able to easily enter payment information
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/bag then click in Secure Checkout | User can enter payment details using built-in Stripe element | Works as expected |
+
+20. I want to be able to see an order confirmation prior to confirming my order
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/checkout/ | User can view order summary on screen | Works as expected |
+
+21. I want to be able to receive an order confirmation email once an order is complete
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/checkout/ and complete purchase | Order confirmation is emailed to user once payment successfuly gone thru | Works as expected |
+
+26. I want to easily navigate the site
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/ | Navigate using the nav menu or search desired terms | Works as expected |
+
+29. I want to get notified when I add, adjust or remove items from my shopping bag
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/bag | When adding, adjusting or removing items a success toast message appears in top right of screen | Works as expected |
+
+30. I want to get a preview of my shopping bag when I add, adjust or remove an item
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://peak-nutrition.herokuapp.com/bag | When adding, adjusting or removing items a success toast message appears in top right of screen giving a preview of the bag also | Works as expected |
+
+### Shop Owner
+
 
 18. As a site admin, I can remove comments so that I can filter out objectionable comments
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
 Click on Comments table | A list of all comments is displayed | Works as expected |
 Select the comment(s) for removal | Comment is selected | Works as expected |
 Select "delete selected comments" from dropdown menu and click "go" | Confirm delete notice appears | Works as expected |
@@ -718,7 +680,7 @@ Click "Yes, I'm sure" | Comment(s) deleted | Works as expected |
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
 Click on Category Add+ button | Category add form is presented to user in backend | Works as expected |
 Fill out form with relevant details and click save | New category is added to database | Works as expected |
 
@@ -726,7 +688,7 @@ Fill out form with relevant details and click save | New category is added to da
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
 Click on Category table | Category list appears | Works as expected |
 Click on Category you wish to update | Category name and type fields appear | Works as expected |
 Make updates and click save | Updated category is saved to database | Works as expected |
@@ -735,7 +697,7 @@ Make updates and click save | Updated category is saved to database | Works as e
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://adventureswithwood.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/admin logged in as superuser | Admin dashboard is displayed | Works as expected |
 Click on Category table | Category list appears | Works as expected |
 Select Category(s) you wish to delete | Category(s) are selected | Works as expected |
 Select "delete selected categorys" from dropdown menu and click "go" | Confirm delete notice appears | Works as expected |

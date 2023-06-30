@@ -769,21 +769,27 @@ The website was tested on the following devices:
 
 ### W3C (HTML)
 
-When the Peak Nutrition site was first tested with the [W3C HTML Markup Validation Service](https://validator.w3.org/) it showed two errors and some info messages. The errors were missing alts for images. The info messages were all related to a stray semi-colon and a stray / after hr.
+When the Peak Nutrition site was first tested with the [W3C HTML Markup Validation Service](https://validator.w3.org/) it showed one error and one warning. The error was for a stray footer which was resolved by moving it inside body end tag. The warning was regarding script type attribute which I removed as was no longer required.
 
-[HTML link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fadventureswithwood.herokuapp.com%2F)
+[HTML link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpeak-nutrition.herokuapp.com%2F)
 
 ![HTML Validation Test](media/readme/images/html_validator_test.jpg)
 
-- products Page
+- All Products Page
+
+[HTML link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpeak-nutrition.herokuapp.com%2Fproducts%2F)
 
 ![HTML Validation Test products Page](media/readme/images/html_validator_test_products.jpg)
 
-- Posts Page
+- Articles Page
 
-![HTML Validation Test products Page](media/readme/images/html_validator_test_posts.jpg)
+[HTML link](https://peak-nutrition.herokuapp.com/articles/)
+
+![HTML Validation Test Articles Page]()
 
 - Sign Up Page
+
+[HTML link](https://peak-nutrition.herokuapp.com/accounts/login/)
 
 ![HTML Validation Test Sign Up Page](media/readme/images/html_validator_test_signup.jpg)
 

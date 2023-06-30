@@ -769,25 +769,25 @@ When the Peak Nutrition site was first tested with the [W3C HTML Markup Validati
 
 [HTML link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpeak-nutrition.herokuapp.com%2F)
 
-![HTML Validation Test](media/readme/images/html_validator_test.jpg)
+![HTML Validation Test](media/readme/w3c-html-validator-result.png)
 
 - All Products Page
 
 [HTML link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpeak-nutrition.herokuapp.com%2Fproducts%2F)
 
-![HTML Validation Test products Page](media/readme/images/html_validator_test_products.jpg)
+![HTML Validation Test products Page](media/readme/w3c-html-validator-products-result.png)
 
 - Articles Page
 
 [HTML link](https://peak-nutrition.herokuapp.com/articles/)
 
-![HTML Validation Test Articles Page]()
+![HTML Validation Test Articles Page](media/readme/w3c-html-validator-articles-result.png)
 
-- Sign Up Page
+- Sign In Page
 
 [HTML link](https://peak-nutrition.herokuapp.com/accounts/login/)
 
-![HTML Validation Test Sign Up Page](media/readme/images/html_validator_test_signup.jpg)
+![HTML Validation Test Sign Up Page](media/readme/w3c-html-validator-login-result.png)
 
 [Back to top](<#contents>)
 
@@ -797,7 +797,7 @@ The Peak Nutrition CSS stylesheet has been assessed using the [W3C CSS Validatio
 
 [CSS link](https://jigsaw.w3.org/css-validator/validator#css)
 
-![CSS Validation Test](media/readme/images/css_validator_test.jpg)
+![CSS Validation Test](media/readme/w3c-css-validator-result.png)
 
 [Back to top](<#contents>)
 
@@ -832,7 +832,7 @@ Passed without error
 
 The Peak Nutrition Javascript has been assessed using [JSHint](https://jshint.com/) by direct input. There were two warnings shown for stripe_elements.js: 'template literal syntax' is only available in ES6 (use 'esversion: 6'). As this is from stripe library code I ignored these.
 
-![JSHint Warnings]()
+![JSHint Warnings](/media/readme/jshint-warnings.png)
 
 ## Input Validation Tests
 

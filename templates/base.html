@@ -196,7 +196,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
         $(document).ready(function () {
             var path = window.location.pathname;
@@ -209,7 +209,7 @@
 
 
 </body>
-<footer class="my-5">
+<footer>
     <ul class="nav justify-content-center border-bottom pb-2">
         <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link px-2 text-muted">Contact</a></li>
         <li class="nav-item"><a href="{% url 'subscription_list' %}" class="nav-link px-2 text-muted">Subscribe</a></li>

@@ -754,11 +754,7 @@ Navigate to https://peak-nutrition.herokuapp.com/accounts/signup/ | Once Sign Up
 ------------ | ------------ | ------------ |
 Navigate to https://peak-nutrition.herokuapp.com/contact | Click Subscribe box at bottom of contact form and user is added to subscription list | Works as expected |
 Navigate to https://peak-nutrition.herokuapp.com/contact/free | Click Subscribe box at bottom of the free consult form and user is added to subscription list | Works as expected |
-Click on Subscribe button in footer on any page | Enter details and user is added to subscription list | Works as expected |
-
-### Automated testing
-
-Automated testing was done using the Django's TestCase module. 
+Click on Subscribe button in footer on any page | Enter details and user is added to subscription list | Works as expected | 
 
 ### Performing tests on various devices
 

@@ -207,22 +207,21 @@
     </script>
     {% endblock %}
 
-
+    <footer style="margin-top: 5rem">
+        <ul class="nav justify-content-center border-bottom pb-2">
+            <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link px-2 text-muted">Contact</a></li>
+            <li class="nav-item"><a href="{% url 'subscription_list' %}" class="nav-link px-2 text-muted">Subscribe</a></li>
+            <li class="nav-item"><a href="https://www.facebook.com/" class="nav-link px-2 text-muted" target="_blank"
+                    rel="noopener nofollow" aria-label="Visit our Facebook page (opens in a new tab)">
+                    <i class="fa-brands fa-facebook fa-xl"></i></a>
+            </li>
+            <li class="nav-item"><a href="https://www.instagram.com/" class="nav-link px-2 text-muted" target="_blank"
+                    rel="noopener nofollow" aria-label="Visit our Instagram page (opens in a new tab)">
+                    <i class="fa-brands fa-instagram-square fa-xl"></i></a>
+            </li>
+        </ul>
+        <p class="text-center text-muted mt-3">© 2023 Peak Nutrition</p>
+    </footer>
 </body>
-<footer>
-    <ul class="nav justify-content-center border-bottom pb-2">
-        <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link px-2 text-muted">Contact</a></li>
-        <li class="nav-item"><a href="{% url 'subscription_list' %}" class="nav-link px-2 text-muted">Subscribe</a></li>
-        <li class="nav-item"><a href="https://www.facebook.com/" class="nav-link px-2 text-muted" target="_blank"
-                rel="noopener nofollow" aria-label="Visit our Facebook page (opens in a new tab)">
-                <i class="fa-brands fa-facebook fa-xl"></i></a>
-        </li>
-        <li class="nav-item"><a href="https://www.instagram.com/" class="nav-link px-2 text-muted" target="_blank"
-                rel="noopener nofollow" aria-label="Visit our Instagram page (opens in a new tab)">
-                <i class="fa-brands fa-instagram-square fa-xl"></i></a>
-        </li>
-    </ul>
-    <p class="text-center text-muted mt-3">© 2023 Peak Nutrition</p>
-</footer>
 
 </html>

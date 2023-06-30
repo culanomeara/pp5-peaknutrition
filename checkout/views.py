@@ -69,19 +69,22 @@ def checkout(request):
 
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in your bag \
+                         wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "You have nothing in your bag. Let's go shopping!")
+            messages.error(request, "You have nothing in your bag. \
+                Let's go shopping!")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -102,7 +105,9 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'pk_test_51NITahFjSxUzQgBMerUrW98cor6UsNa0GKkY5eJmDPCdaiZZeTwROpGyV6OOzPiNuuE81pUINZTVYskq7R7A1436000TRMKot7',
+        'stripe_public_key': 'pk_test_51NITahFjSxUzQgBMerUrW98cor\
+            6UsNa0GKkY5eJmDPCdaiZZeTwROpGyV6OOzPiNuuE81pUINZTVYskq\
+                7R7A1436000TRMKot7',
         'client_secret': intent.client_secret,
     }
 

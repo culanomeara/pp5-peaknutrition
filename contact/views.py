@@ -48,19 +48,19 @@ def free_consult(request):
             contact_form = form.save()
             messages.success(
                 request,
-                'Thank you for requesting a FREE 15 minute consultation with Peak Nutrition!'
+                'Thank you for requesting a FREE 15 minute\
+                      consultation with Peak Nutrition!'
                 ' We will be in touch soon to schedule.'
                 )
             return redirect('home')
     else:
         form = Contact_Form(initial={
             'subject': 'I want to book my free 15 minute consultation',
-            'message': 'Hi, I would like to book my free 15 minute consultation with you. My preferred times are:',
+            'message': 'Hi, I would like to book my free 15 minute\
+                 consultation with you. My preferred times are:',
             },
             )
 
     template = 'free_consult.html'
     context = {'form': form}
     return render(request, template, context)
-
-    

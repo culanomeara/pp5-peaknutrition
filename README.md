@@ -542,10 +542,6 @@ This is a list of the Python / Django libraries used in this product.
 
 ## Testing
 
-The testing approach is as follows:
-1. Manual testing of user stories
-2. Automated testing
-
 ### User Story Tests
 
 ### Shopper
@@ -832,13 +828,19 @@ Passed without error
 
 [Back to top](<#contents>)
 
+## JSHint
+
+The Peak Nutrition Javascript has been assessed using [JSHint](https://jshint.com/) by direct input. There were two warnings shown for stripe_elements.js: 'template literal syntax' is only available in ES6 (use 'esversion: 6'). As this is from stripe library code I ignored these.
+
+![JSHint Warnings]()
+
 ## Input Validation Tests
 
-### Create product Form Tests
+### Add Product Form Tests
 
 [Back to top](<#contents>)
 
-### Edit product Form Tests
+### Edit Product Form Tests
 
 [Back to top](<#contents>)
 
@@ -846,17 +848,6 @@ Passed without error
 
 [Back to top](<#contents>)
 
-## Additional Tests
-
-### Manual Tests
-
-[Back to top](<#contents>)
-
-### Automated Tests
-
-Three automated tests were set up in the file tests.py to test views: Home, product and Post. All tests passed.
-
-[Back to top](<#contents>)
 
 ### Responsive Tests
 

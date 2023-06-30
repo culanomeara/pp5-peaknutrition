@@ -20,7 +20,6 @@ def cache_checkout_data(request):
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
             'bag': json.dumps(request.session.get('bag', {})),
-            # 'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
         return HttpResponse(status=200)
@@ -78,13 +77,14 @@ def checkout(request):
             return redirect(
                 reverse('checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. \
-                Please check your information.')
+            messages.error(request, 'There was an error with your form.'
+                           'Please check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "You have nothing in your bag. \
-                Let's go shopping!")
+            messages.error(request,
+                           "You have nothing in your bag"
+                           "Let's go shopping!")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -99,15 +99,13 @@ def checkout(request):
         order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+        messages.warning(request, 'Stripe public key is missing.'
+                         'Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'pk_test_51NITahFjSxUzQgBMerUrW98cor\
-            6UsNa0GKkY5eJmDPCdaiZZeTwROpGyV6OOzPiNuuE81pUINZTVYskq\
-                7R7A1436000TRMKot7',
+        'stripe_public_key': 'pk_test_51NITahFjSxUzQgBMerUrW98cor6UsNa0GKkY5eJmDPCdaiZZeTwROpGyV6OOzPiNuuE81pUINZTVYskq7R7A1436000TRMKot7',
         'client_secret': intent.client_secret,
     }
 
@@ -118,11 +116,10 @@ def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
-    save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    messages.success(request, f'Order successfully placed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+    messages.success(request, f'Order successfully placed!'
+                     'Your order number is {order_number}. A confirmation'
+                     'email will be sent to {order.email}.')
 
     if 'bag' in request.session:
         del request.session['bag']

@@ -4,7 +4,6 @@
 <html lang="en">
 
 <head>
-
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
@@ -192,8 +191,10 @@
     {% block page_header %}
     {% endblock %}
 
+    <main>
     {% block content %}
     {% endblock %}
+    </main>
 
     {% block postloadjs %}
     <script>

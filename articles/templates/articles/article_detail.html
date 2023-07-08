@@ -21,8 +21,8 @@
             <div class="image-container">
                 <img class="img-thumbnail" src=" {{ article.featured_image.url }}" alt="{{ article.title }}">
             </div>
-            <h3 class="card-title mt-2"><strong>{{ article.title }}</strong></h3>
-            <h5>by {{ article.author }}</h5>
+            <h1 class="card-title"><strong>{{ article.title }}</strong></h1>
+            <h2>by {{ article.author }}</h2>
             <p class="card-text ">{{ article.content | safe }}</p>
             <div class="col">
                 {% if request.user.is_superuser %}

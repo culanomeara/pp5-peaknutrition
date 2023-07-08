@@ -13,27 +13,47 @@ html {
 body {
     max-width: 1600px;
     margin: 0 auto;
-    background-color: rgba(86, 203, 249, 1);
+    background-color: rgba(86, 203, 249, 0.3);
     font-family: 'Raleway', sans-serif;
     color: #2f6690ff;
 }
 
-header {
+/* header {
     background: rgba(86, 203, 249, 1);
-}
+} */
 
-h1 {
-    font-size: 32px;
-}
-
-h2 {
+h1.main-title {
     font-weight: 700;
     color: #2f6690ff;
     font-size: 45px;
     margin-left: 10px;
     margin-top: 20px;
-    border-left: 5px solid #56CBF9;
     padding-left: 15px;
+}
+
+h1 {
+    font-weight: 700;
+    color: #2f6690ff;
+    font-size: 45px;
+    margin-top: 20px;
+}
+
+h2 {
+    font-weight: 400;
+    color: #2f6690ff;
+    font-size: 32px;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding-left: 15px;
+}
+
+h2.prod-name {
+    font-weight: 400;
+    color: #2f6690ff;
+    font-size: 16px;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 0;
 }
 
 #special {
@@ -41,7 +61,7 @@ h2 {
 }
 
 .collapse {
-    background-color: rgba(86, 203, 249, 1);
+    background-color: rgb(172, 230, 253);
 }
 
 a.dropdown-item.active {
@@ -51,7 +71,6 @@ a.dropdown-item.active {
 
 .navbar {
     max-width: 1600px;
-    background-color: rgba(86, 203, 249, 1);
 }
 
 

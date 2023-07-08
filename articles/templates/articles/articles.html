@@ -5,6 +5,12 @@
 <link rel="stylesheet" href="{% static 'articles/css/articles.css' %}">
 {% endblock %}
 
+{% block extra_meta %}
+<meta name="description" content="Get expert tips and advice about 
+sports and exercise nutrition with articles written by qualified nutritionist Trish Garrett,
+ at Peak Nutrition. ">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -17,7 +23,7 @@
 
 <div class="container-fluid">
     <div class="col text-center mt-3">
-        <h2 class="logo-font nav-item nav-link">Tips and Advice</h2>
+        <h1 class="logo-font nav-item nav-link">Tips and Advice</h1>
         <hr class="w-50 mb-1">
     </div>
     <div class="row">
@@ -31,8 +37,7 @@
                                 <img class="card-img-top img-fluid"
                                     src="{% get_media_prefix %}{{ article.featured_image }}" alt="{{ article.title }}">
                             </a>
-                            <h3 class="card-title ml-2">{{ article.title }}</h3>
-                            <p class="card-text ml-2">{{ article.excerpt }}</p>
+                            <h2 class="card-title ml-2">{{ article.title }}</h2>
                             <small class="author ml-2">Author: {{ article.author }}</small>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
@@ -73,38 +78,6 @@
                     {% endif %}
                     {% endfor %}
                 </div>
-
-                <!-- <div class="row">
-                {% for article in articles %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <a href="{% url 'article_detail' article.slug %}" class="p-link" style="text-decoration: none;">
-                                <div class="image-container">
-                                    {% if "placeholder" in article.featured_image.url %}
-                                    <img class="card-img-top img-thumbnail" src="default.jpg" alt="{{ article.title }}">
-                                    {% else %}
-                                    <img class="card-img-top" src=" {{ article.featured_image.url }}"
-                                        alt="{{ article.title }}">
-                                    {% endif %}
-                                    <div class="image-flash">
-                                        <p class="author">Author: {{ article.author }}</p>
-                                    </div>
-                                </div>
-                                <h3 class="card-title text-center">{{ article.title }}</h3>
-                                <p class="card-text text-center">{{ article.excerpt }}</p>
-                                <hr>
-                                <p class="card-text text-muted h6">{{ article.created_on}}</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div> -->
-                <!-- <div class="row">
-                {% endif %}
-                {% endfor %}
-            </div> -->
             </div>
         </div>
     </div>

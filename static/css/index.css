@@ -91,7 +91,7 @@
   font-weight: bold;
   text-align: center;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(22, 38, 47, 0.8);
   transition: opacity 0.3s;
 }
 
@@ -150,7 +150,7 @@
   }
 
   .hexagon-text {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(22, 38, 47, 0.8);
     transition: none;
     z-index: 2;
     /* Bring the hexagon-text in front of the img-wrapper */

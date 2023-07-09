@@ -54,19 +54,19 @@
             <div class="w-100 collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-3">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link active" href="{% url 'home' %}" data-path="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                        <a class="nav-link" href="{% url 'about' %}" data-path="/about/">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link" href="{% url 'contact' %}" data-path="/contact/">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'articles' %}">Tips & Advice</a>
+                        <a class="nav-link" href="{% url 'articles' %}" data-path="/articles/">Tips & Advice</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown"
                             aria-expanded="false">
                             Shop
                         </a>
@@ -82,7 +82,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'special_offers' %}" id="specials-link">SALE</a>
+                        <a class="nav-link" href="{% url 'special_offers' %}" id="specials-link" data-path="/products/special_offers/">SALE</a>
                     </li>
                 </ul>
                 <div class="w-100 col-12 col-lg-6 my-auto ml-auto py-1 py-lg-0">
@@ -157,13 +157,7 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
-            <!-- <div id="offer-banner" class="col text-center">
-                <div class="col bg-black text-white">
-                    <h4 class="logo-font my-1">Subscribe and get a free 15-minute consultation!</h4>                
-                </div>            
-            </div> -->
         </nav>
     </header>
 
@@ -202,13 +196,9 @@
         $(document).ready(function () {
             var path = window.location.pathname;
             $(".nav-link").removeClass("active").filter(function () {
-                return this.pathname === path;
+                return this.dataset.path === path;
             }).addClass("active");
         });
-        $("a.nav-link.dropdown-toggle.active").removeClass("active");
-        // $(".nav-item .nav-link:not(.nav-item.dropdown-toggle .nav-link), .dropdown-item").click(function () {
-        //     $(".dropdown-toggle.active").removeClass('active');
-        // });
     </script>
     {% endblock %}
 

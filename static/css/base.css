@@ -23,6 +23,9 @@ h1 {
     color: #2f6690ff;
     font-size: 45px;
     margin-top: 20px;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 0;
 }
 
 h1.main-title {
@@ -46,7 +49,7 @@ h2 {
 h2.prod-name {
     font-weight: 400;
     color: #2f6690ff;
-    font-size: 16px;
+    font-size: 24px;
     margin-left: 0;
     margin-top: 0;
     padding-left: 0;

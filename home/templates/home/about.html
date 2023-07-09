@@ -18,27 +18,37 @@
 {% block content %}
 <div class="container">
     <div class="col text-center mt-3">
-        <h2 class="logo-font nav-item nav-link">About Us</h2>
+        <h1 class="logo-font nav-item nav-link">About Us</h1>
         <hr class="w-50 mb-1">
     </div>
     <div class="row mt-5">
         <div class="col-md-6 mb-3">
             <img src="{{ MEDIA_URL }}trish_garrett_nutrition.jpeg" alt="Trish Garrett, Nutritionist">
         </div>
-        <!-- Text and button on the right -->
         <div class="col-md-6 d-flex flex-column justify-content-center">
-
-            <h3>Background, Qualifications and Experience</h3>
+            <h2>Background, Qualifications and Experience</h2>
             <p>
                 With 20 years experience teaching Physical Education in Ireland, I constantly came across students and
                 athletes who
-                were ill-informed about the proper nutrition needs and requirements for their own individual situation.
+                were ill-informed about the <strong>proper nutrition needs and requirements for their own individual situation.</strong>
                 So
                 often, I
-                heard stories of misguided coaches, parents giving advice that was not evidence-based. I completed a
+                heard stories of misguided coaches, parents giving advice that was not <strong>evidence-based.</strong> I completed a
                 Masters. I have
                 worked with Galway WFC, Galway Corinthians Rugby, Connacht Women's Rugby, Colga FC, Bray Emmets GAA,
                 individual athletes.
+            </p>
+            <p>
+                <strong>We offer detailed guidance on the following topics:</strong>
+                <ul>
+                    <li>Best foods for muscle recovery</li>
+                    <li>High protein diet for athletes</li>
+                    <li>Foods that boost endurance</li>
+                    <li>Carbohydrates for athletes</li>
+                    <li>Sports nutrition for teenage athletes</li>
+                    <li>Recovery protocol for athletes</li>
+                    <li>What to eat before a workout</li>
+                </ul>
             </p>
             <a href="{% url 'articles' %}" class="btn btn-black rounded">Read Tips and Advice on Nutrition</a>
         </div>

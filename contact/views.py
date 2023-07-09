@@ -34,7 +34,7 @@ def contact(request):
 
 def free_consult(request):
     """
-    Display a contact form and handle form submissions.
+    Display a custom free consultation contact form
     """
     if request.method == 'POST':
         form = Contact_Form(request.POST)

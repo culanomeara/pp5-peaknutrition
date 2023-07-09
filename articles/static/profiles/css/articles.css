@@ -1,17 +1,17 @@
-  .card-body {
-    background-color: #2f6690ff;
-  }
+.card-body {
+  background-color: #2f6690ff;
+}
 
-  .card-body a:hover {
-    text-decoration: none;
-  }
+.card-body a:hover {
+  text-decoration: none;
+}
 
-  /* Image Container Styling */
+/* Image Container Styling */
 .image-container {
   position: relative;
 }
 
-  /* Image Flash Styling */
+/* Image Flash Styling */
 .image-flash {
   position: absolute;
   bottom: 15%;
@@ -23,8 +23,8 @@
 /* Image flash heading Styling */
 .image-flash h3,
 .most-image-flash h3 {
-    padding: 0.6rem;
-    color: white;
-    font-weight: 120;
-    font-size: 1.6rem;
+  padding: 0.6rem;
+  color: white;
+  font-weight: 120;
+  font-size: 1.6rem;
 }

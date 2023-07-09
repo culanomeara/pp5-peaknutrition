@@ -40,7 +40,9 @@ def article_detail(request, slug):
 
 @login_required
 def add_article(request):
-    """ Add an article to the site """
+    """
+    Add an article to the site
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only shop owners can do that.')
         return redirect(reverse('home'))
@@ -68,7 +70,9 @@ def add_article(request):
 
 @login_required
 def edit_article(request, slug):
-    """ Edit a article in the store """
+    """
+    Edit an article on the site
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -99,7 +103,9 @@ def edit_article(request, slug):
 
 @login_required
 def delete_article(request, slug):
-    """ Delete an article from the store """
+    """
+    Delete an article from the site
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))

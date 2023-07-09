@@ -18,9 +18,12 @@ body {
     color: #2f6690ff;
 }
 
-/* header {
-    background: rgba(86, 203, 249, 1);
-} */
+h1 {
+    font-weight: 700;
+    color: #2f6690ff;
+    font-size: 45px;
+    margin-top: 20px;
+}
 
 h1.main-title {
     font-weight: 700;
@@ -29,13 +32,6 @@ h1.main-title {
     margin-left: 10px;
     margin-top: 20px;
     padding-left: 15px;
-}
-
-h1 {
-    font-weight: 700;
-    color: #2f6690ff;
-    font-size: 45px;
-    margin-top: 20px;
 }
 
 h2 {
@@ -73,7 +69,6 @@ a.dropdown-item.active {
     max-width: 1600px;
 }
 
-
 /* from Bulma via CI Boutique Ado Walkthru
 for Font Awesome icons */
 .icon {
@@ -97,9 +92,8 @@ for Font Awesome icons */
 
 .btn-outline-black {
     background: white;
-    color: #16262eff !important; /* use important to override link colors for <a> elements */
+    color: #16262eff !important;
     border: 1px solid #16262eff;
-    ;
 }
 
 .update-link,
@@ -220,7 +214,6 @@ a.category-badge > span.badge:hover {
       max-width: 1080px !important; 
     }
   }
-
 
 /* Allauth form formatting */
 

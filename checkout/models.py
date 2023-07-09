@@ -46,8 +46,8 @@ class Order(models.Model):
         self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.discount_total = self.lineitems.aggregate(
-            Sum('lineitem_discount_total'))['lineitem_discount_total__sum'] or 0
-        # need to add discount total here on next line when ready
+            Sum('lineitem_discount_total'))['lineitem_discount_total__sum'] \
+            or 0
         self.grand_total = self.order_total - self.discount_total
         self.save()
 

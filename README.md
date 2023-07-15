@@ -15,7 +15,7 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
     * [Site User Goals](<#site-user-goals>)
     * [Site Owner Goals](<#site-owner-goals>)
     * [**Project Management**](<#project-management>)
-        * [GitHub Projectt Board](<#github-project-board>)
+        * [GitHub Project Board](<#github-project-board>)
         * [Database Schema](<#database-schema>)
 * [**User Experience UX**](<#user-experience-ux>)
     * [User Stories](<#user-stories>)
@@ -153,29 +153,29 @@ Database scheme was drawn up using [App Diagrams.net](https://app.diagrams.net/)
 
 ## User Stories
 
-In terms of product management, user stories are an integral part of the software development creative process. Peak Nutrition consists of ?? user stories. 
+In terms of product management, user stories are an integral part of the software development creative process. Peak Nutrition consists of 34 user stories. 
 
-A full list of user stories can be found in the [Peak Nutrition GitHub product Board](https://github.com/users/culanomeara/products/4/views/1).
+A full list of user stories can be found in the [Peak Nutrition GitHub product Board](https://github.com/users/culanomeara/projects/4).
 
 [Back to top](<#contents>)
 
 ## Site Design 
 
-The Peak Nutrition app features a simple and user friendly design. Balsamiq was used to do some wireframe mock ups for the homepage and products/posts pages.
+The Peak Nutrition app features a simple and user friendly design. Balsamiq was used to do some wireframe mock ups for the homepage and articles pages.
 
 -Index.html wireframe
 
-![Peak Nutrition index.html](media/readme/images/aww_wireframe_index.png)
+![Peak Nutrition index.html](media/readme/homepage_wireframe.png)
 
--products.html wireframe
+-articles.html wireframe
 
-![Peak Nutrition products.html](media/readme/images/aww_wireframe_products_page.png)
+![Peak Nutrition products.html](media/readme/articles_wireframe.png)
 
 [Back to top](<#contents>)
 
 ## Site Structure 
 
-Site structure is one that users will be quite familiar with a top navigation bar. However, some content is hidden / restricted to users who are not logged in. The main pages / templates of Peak Nutrition include - Home, Products, About, Contact. Site users can freely and easily browse the various pages using the site navigation bar which is visible at the top of each page. The nav bar options automatically change depending on whether a user is signed in or not to allow for easy and intuitive site navigation.
+Site structure is one that users will be quite familiar with a top navigation bar. However, some content is hidden / restricted to users who are not logged in. The main pages / templates of Peak Nutrition include - Home, Articles, Products, About, Contact. Site users can freely and easily browse the various pages using the site navigation bar which is visible at the top of each page. The nav bar options automatically change depending on whether a user is signed in, is a superuser or not logged in at all to allow for easy and intuitive site navigation and to ensure security.
 
 [Back to top](<#contents>)
 
@@ -191,32 +191,32 @@ Peak Nutrition uses [Google Fonts](https://fonts.google.com/) for the site typog
 
 ### Homepage
 
-The homepage is the first page of the site that a user will see when they navigate to the [Peak Nutrition URL](https://peak-nutrition.herokuapp.com/). It's designed to be eye catching to users and to quickly summarise the intention of the site. It is also a central location for all users to view the various product categories. 
+The homepage is the first page of the site that a user will see when they navigate to the [Peak Nutrition URL](https://peak-nutrition.herokuapp.com/). It's designed to be eye catching to users and to quickly summarise the intention of the site. It is also a central location for all users to view the various product categories and with a call to action button for a free consultation.
 
-- Navigation bar
-
-![Navigation bar](media/readme/images/index.jpg)
+- Hexagons
+I wanted the homepage to be different and eye-catching. I came across another PP5 called Paper Dreams(https://paper-dreams-uk.herokuapp.com/) and used the hexagons from that website for my homepage.
+![Hexagons](media/readme/hexagons.png)
 
 - Free Consult Call
-![Free Consult Call](media/readme/images/index_most_popular_products.jpg)
+![Free Consult Call](media/readme/free_consult.png)
 
 [Back to top](<#contents>)
 
 #### Navigation
 
-Site navigation is present at all times on every page of the site in the form of header nav bars. These navigational elements change depending on whether a user is logged in or not. Non logged in users only have viewing access to products and posts. They are unable to comment or like a product. These elements are also fully responsive and the header collapses to become a mobile menu on small screen sizes.
+Site navigation is present at all times on every page of the site in the form of header nav bars. These navigational elements change depending on whether a user is logged in or not and if they are superusers or not. Non logged in users only have viewing access to products and posts. They are unable to comment or like a product. These elements are also fully responsive and the header collapses to become a mobile menu on small screen sizes.
 
-- Navigation Bar - Not Logged in - Full
+- Navigation Bar - Menu
 
-![Navigation Bar - Not Logged in - Full](media/readme/images/navbar_not_logged_in_full.png)
+![Navigation Bar - Menu](media/readme/navbar_menu.png)
 
-- Navigation Bar - Logged in - Full
+- Navigation Bar - My Account
 
-![Navigation Bar - Logged in - Full](media/readme/images/navbar_logged_in_full.png)
+![Navigation Bar - My Account](media/readme/navbar_myacc.png)
 
-- Navigation Bar - Mobile
+- Navigation Bar - Search
 
-![Navigation Bar - Mobile](media/readme/images/navbar_mobile.png)
+![Navigation Bar - Search](media/readme/navbar_search.png)
 
 [Back to top](<#contents>)
 
@@ -232,11 +232,11 @@ The homepage Free Consult Call-to-action is the large eye-catching section which
 
 #### Hexagon Product Display
 
-The unique styling draws the users attention. Each hexagon represents one category of product/service. Clicking on a hexagon will brign you directly to the product page for that specific cateogry.
+The unique styling draws the users attention. Each hexagon represents one category of product/service. Clicking on a hexagon will bring you directly to the product page for that specific cateogry.
 
 - Hexagons
 
-![Hexagons](media/readme/images/index_who_we_are.png)
+![Hexagons](media/readme/hexagons.png)
 
 [Back to top](<#contents>)
 
@@ -254,7 +254,7 @@ The product page is a template used to display the list of ALL products or a spe
 ### Product Details
 
 #### Product Details
-The product details page is a template used to display the full information on a product. Each product has a details page. These pages are available for all users to view, including non-logged in users. The main purpose of the page is to display the product information and price. Users will generally navigate to a full product page by clicking the product image on the product card either on the product page. As the user has now shown a specific interest in the product, all the information about the product is displayed here.
+The product details page is a template used to display the full information on a product. Each product has a details page. These pages are available for all users to view, including non-logged in users. The main purpose of the page is to display the product information and price. Users will generally navigate to a full product page by clicking the product image on the product card on the product page. As the user has now shown a specific interest in the product, all the information about the product is displayed here.
 
 - Product Details
 

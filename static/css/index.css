@@ -155,11 +155,7 @@
     /* Bring the hexagon-text in front of the img-wrapper */
   }
 
-  .hexagon .hexagon-text {
-    opacity: 0;
-  }
-
-  .hexagon:hover .hexagon-text {
-    opacity: 0;
+  .hexagon-text {
+    opacity: 1;
   }
 }

@@ -721,38 +721,22 @@ When the Peak Nutrition site was first tested with the [W3C HTML Markup Validati
 
 ### W3C (CSS)
 
-The Peak Nutrition CSS stylesheet has been assessed using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) by direct input. Unfortunately there were two errors shown for grid template areas proj1 and proj2. I removed the offending references and the site passed the test.
+The Peak Nutrition CSS stylesheet has been assessed using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) by direct input. Unfortunately there is an error that I was unable to resolve.
 
-[CSS link](https://jigsaw.w3.org/css-validator/validator#css)
+[CSS link](https://jigsaw.w3.org/css-validator/)
 
-![CSS Validation Test](media/readme/w3c-css-validator-result.png)
+![CSS Validation Test](media/readme/css_validator_error.png)
 
 [Back to top](<#contents>)
 
 ### PEP8 (PYTHON)
 
-I used the new [Code Institute Python Linter](https://pep8ci.herokuapp.com/) to test all of the Peak Nutrition python code files. 
-
-#### urls.py
-Passed without error
+I used the new [Code Institute Python Linter](https://pep8ci.herokuapp.com/) to test all of the Peak Nutrition python code files. All passed without error except for settings.py.
 
 #### settings.py
-Has two max line length errors
+Has four max line length errors
 
-#### forms.py
-Passed without error
-
-#### models.py
-Passed without error
-
-#### admin.py
-Passed without error
-
-#### views.py
-Passed without error
-
-#### tests.py
-Passed without error
+![Settings.py pep8 errors](media/readme/pep8_maxlength_settings.png)
 
 [Back to top](<#contents>)
 
@@ -769,10 +753,6 @@ The Peak Nutrition Javascript has been assessed using [JSHint](https://jshint.co
 [Back to top](<#contents>)
 
 ### Edit Product Form Tests
-
-[Back to top](<#contents>)
-
-### Comment Form Tests
 
 [Back to top](<#contents>)
 

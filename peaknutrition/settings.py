@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['peak-nutrition.herokuapp.com',
                  '8000-culanomeara-pp5peaknutr-06r9ptkluv2.ws-eu101.gitpod.io']

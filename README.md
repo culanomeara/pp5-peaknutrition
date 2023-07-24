@@ -25,14 +25,12 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
 * [**Features**](<#features>)
     * [**Existing Features**](<#existing-features>)
         * [**Homepage**](<#homepage>)
-            * [Navigation](<#navigation>)
-            * [Free Consult Call](<#free-consult-call>)
             * [Hexagon Product Display](<#hexagon-product-display>)
+            * [Free Consult Call](<#free-consult-call>)
+            * [Navigation](<#navigation>)
         * [**Product Pages**](<#product-pages>)
             * [Products](<#products>)
-        * [**Product Details**](<#product-details>)
             * [Product Details](<#product-details>)
-            * [Form Validation](<#form-validation>)
         * [**Add Product**](<#add-product>)
             * [Add Product Form](<#add-product-form>)
             * [Add Product Notification](<#add-product-notification>)
@@ -56,11 +54,8 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
             * [Delete Notification](<#delete-notification>)
         * [**Authorisation**](<#authorisation>)
             * [Sign Up](<#sign-up>)
-            * [Sign Up Notification](<#sign-up-notification>)
             * [Sign In](<#sign-in>)
-            * [Sign In Notification](<#sign-in-notification>)
-            * [Sign Out](<#sign-out>)
-            * [Sign Out Notification](<#sign-out-notification>)  
+            * [Sign Out](<#sign-out>) 
         * [**404 Page**](<#404-page>)
     * [**Future Features**](<#future-features>)
         * [Admin Area](<#admin-area>)
@@ -119,7 +114,22 @@ This product was created for Portfolio product Five submission for the Full Stac
 
 ## Site User Goals
 
-- To
+- To view a list of products
+- View individual product details
+- Be able to easily find/see special offers/deals/promos
+- See what i curently have in my basket and total cost
+- Get advice about what plan/product suits me best
+- Check what qualifications/expertise/experience the provider has
+- Sort all items by price, category, type
+- Filter items by category, type, price
+- Search for an item by name or product type
+- View all search results easily
+- select the quantity of a product when buying
+- View the items in my shopping cart
+- Adjust the quantity or remove items from cart
+- Easily enter payment information
+- See an order confirmation screen prior to confirming my order
+- Receive an order confirmation email with digital products attached where relevant
 
 [Back to top](<#contents>)
 
@@ -130,6 +140,10 @@ This product was created for Portfolio product Five submission for the Full Stac
 - Content should be high quality and well structured.
 - Provide fully responsive application with straightforward navigation
 - Ensure only authenticated and valid users have access to CRUD functionality
+- Add a Product
+- Update/Edit a product
+- Delete a product
+- Create SALE/Offers
 
 [Back to top](<#contents>)
 
@@ -193,18 +207,23 @@ Peak Nutrition uses [Google Fonts](https://fonts.google.com/) for the site typog
 
 The homepage is the first page of the site that a user will see when they navigate to the [Peak Nutrition URL](https://peak-nutrition.herokuapp.com/). It's designed to be eye catching to users and to quickly summarise the intention of the site. It is also a central location for all users to view the various product categories and with a call to action button for a free consultation.
 
-- Hexagons
+#### Hexagons
+
 I wanted the homepage to be different and eye-catching. I came across another PP5 called Paper Dreams(https://paper-dreams-uk.herokuapp.com/) and used the hexagons from that website for my homepage.
+
 ![Hexagons](media/readme/hexagons.png)
 
-- Free Consult Call
+#### Free Consult Call
+
+The homepage Free Consult Call-to-action is the large eye-catching section which is just underneath the site title. The call-to-action is only displayed on the homepage. It is used to catch the users attention, and to attract users to click. It features a large button and title.
+
 ![Free Consult Call](media/readme/free_consult.png)
 
 [Back to top](<#contents>)
 
 #### Navigation
 
-Site navigation is present at all times on every page of the site in the form of header nav bars. These navigational elements change depending on whether a user is logged in or not and if they are superusers or not. Non logged in users only have viewing access to products and posts. They are unable to comment or like a product. These elements are also fully responsive and the header collapses to become a mobile menu on small screen sizes.
+Site navigation is present at all times on every page of the site in the form of header nav bars. These navigational elements change depending on whether a user is logged in or not and if they are superusers or not. These elements are also fully responsive and the header collapses to become a mobile menu on small screen sizes.
 
 - Navigation Bar - Menu
 
@@ -220,98 +239,23 @@ Site navigation is present at all times on every page of the site in the form of
 
 [Back to top](<#contents>)
 
-#### Free Consult Call
-
-The homepage Free Consult Call-to-action is the large eye-catching section which is just underneath the site title. The call-to-action is only displayed on the homepage. It is used to catch the users attention, and to attract users to click. It features a large button and title.
-
-- Free Consult Call
-
-![Free Consult Call](media/readme/images/index_carousel.jpg)
-
-[Back to top](<#contents>)
-
-#### Hexagon Product Display
-
-The unique styling draws the users attention. Each hexagon represents one category of product/service. Clicking on a hexagon will bring you directly to the product page for that specific cateogry.
-
-- Hexagons
-
-![Hexagons](media/readme/hexagons.png)
-
-[Back to top](<#contents>)
-
 ### Product Pages
 
 #### Products
-The product page is a template used to display the list of ALL products or a specific category of products. Each product has a summary. These pages are available for all users to view, including non-logged in users. The main purpose of the page is to display the brief product overview. Users will generally navigate to a full product detail page by clicking on the product from the product card. As the user has now shown a specific interest in the product, all the information about the product is displayed on the details page.
+The product page is a template used to display the list of ALL products or a specific category of products. Each product has a summary. These pages are available for all users to view, including non-logged in users. The main purpose of the page is to display the brief product overview with price. Users will generally navigate to a full product detail page by clicking on the product from the product card. As the user has now shown a specific interest in the product, all the information about the product is displayed on the details page.
 
 - Product Page
 
-![Product page](media/readme/images/products_page.png)
+![Product page](media/readme/products_page.png)
 
 [Back to top](<#contents>)
-
-### Product Details
 
 #### Product Details
 The product details page is a template used to display the full information on a product. Each product has a details page. These pages are available for all users to view, including non-logged in users. The main purpose of the page is to display the product information and price. Users will generally navigate to a full product page by clicking the product image on the product card on the product page. As the user has now shown a specific interest in the product, all the information about the product is displayed here.
 
 - Product Details
 
-![Product Details](media/readme/images/product_details.png)
-
-[Back to top](<#contents>)
-
-#### Form Validation
-
-The built-in validation is used to validate the comment form. The form is checked for required fields and passwords require a level of difficulty. A notification appears on the users screen to advise them about the failure. The user can then rectify their mistake and submit the form again. When the comment form is filled out correctly the form submits successfully.
-
-- Form Validation: Field Required
-
-![Form Required Field](media/readme/images/form_validation_field_required.png)
-
-- Form Validation: Password
-
-![Form Password](media/readme/images/form_validation_password_issue.png)
-
-[Back to top](<#contents>)
-
-### Authorisation
-
-#### Sign Up
-
-A user can navigate to the sign-up page via the site navigation bars if they are not logged in. The Peak Nutrition sign up page is a built-in template from the [Django Allauth Package](https://django-allauth.readthedocs.io/en/latest/installation.html). Allauth provides the basic functionality for the user authorisation used in Peak Nutrition. Once a user submits the form correctly, they are redirected back to the homepage as a logged in user. For each action, they are notified of that action: via a message at the top of the page. These messages can be removed by clicking on the X.
-
-- Sign Up Form
-![Sign Up](media/readme/images/sign_up_form.png)
-
-- Sign Up Notification
-
-![Sign Up Notification](media/readme/images/sign_up_notification.png)
-
-[Back to top](<#contents>)
-
-#### Sign In
-
-A user can navigate to the Sign in page via the site navigation bars if they are not already signed in. As with the Sign-Up page, it's a built-in form. The styling of the sign in page is very similar to the rest of the user authorisation pages. The colour scheme and layout are consistent, but the form and page heading are different. Once the sign in form is submitted correctly the user is redirected to the homepage as a logged in user.
-
-- Sign In Form
-
-![Sign In](media/readme/images/sign_in_form.png)
-
-- Sign In Notification
-
-![Sign In Notification](media/readme/images/sign_in_notification.png)
-
-[Back to top](<#contents>)
-
-#### Sign Out
-
-A user can navigate to the Sign Out page via the site navigation bars if they are logged in. They are prompted on this page to confirm if wish to log out. Upon confirmation the user is logged out and redirected to the homepage. If they click on Cancel, they are brought back to the previous page.
-
-- Sign Out Notification
-
-![Sign Out Notification](media/readme/images/sign_out_notification.png)
+![Product Details](media/readme/product_details.png)
 
 [Back to top](<#contents>)
 
@@ -319,65 +263,31 @@ A user can navigate to the Sign Out page via the site navigation bars if they ar
 
 #### Add form
 
-The Add Product template form is a page which features a product form to enable users to add a product to the Peak Nutrition site. This page is only visible to logged in users and appears in the navigation menu. The page features similar styling to the rest of the site for consistency.
+The Add Product template form is a page which features a product form to enable users to add a product to the Peak Nutrition site. This page is only visible to logged in superusers and appears in the navigation menu ->Shop Admin. The page features similar styling to the rest of the site for consistency.
 
 - Product Add Form
 
-![Product Add Form](media/readme/images/product_create_form.png)
-
-[Back to top](<#contents>)
-
-#### Add product notification
-
-When a user adds a product successfully, a toast message appears confirming the submission of the product/post.
-
-- Add product notification
-
-![Add product notification](media/readme/images/product_create_notification.png)
+![Product Add Form](media/readme/add_product.png)
 
 [Back to top](<#contents>)
 
 ### Edit Product
 
-The Edit product page is available to logged in users. The Edit option appears below the summary on the list page and details page. When the Update option is clicked, the user is navigated to the edit product page. The page styling and content is exactly the same as the add page. The only difference is the form is prefilled out with the content. The user can then use this form to edit the content and submit the amendments to overwrite the previous content.
+The Edit product page is available to logged in superusers. The Edit option appears below the summary on the products page and product details page. When the Edit option is clicked, the user is navigated to the edit product page. The page styling and content is exactly the same as the add page. The only difference is the form is prefilled out with the content. The user can then use this form to edit the content and submit the amendments to overwrite the previous content.
 
 - Edit Product Form
 
-![Edit Product Form](media/readme/images/product_update_form.png)
-
-#### Edit Notification
-
-If a user successfully submits the update form the page is refreshed. A message is displayed to the user which confirms the successful form submission. The user is redirected to the list page for products.
-
-- Edit Product Notification
-
-![Edit Product Notification](media/readme/images/product_update_notification.png)
+![Edit Product Form](media/readme/edit_product.png)
 
 [Back to top](<#contents>)
 
 ### Delete Product
 
-A user can delete their product easily from the relevant list page or details page. This option is only visible to a superuser. If a user clicks on delete, a delete confirmation toast is displayed.
+A user can delete their product easily from the relevant product page or details page. This option is only visible to a superuser. If a user clicks on delete, a delete confirmation toast is displayed.
 
 - Delete Product
 
-![Delete Product](media/readme/images/update_delete.png)
-
-[Back to top](<#contents>)
-
-#### Delete Notification
-
-If a user deletes a product, a notification is displayed to the user at the top of the page. This notification confirms the deletion of the product. The user can hide this notification by clicking the x icon. 
-
-- Delete Confirmation Notification
-
-![Delete](media/readme/images/delete_notification.png)
-
-[Back to top](<#contents>)
-
-- Sign Out Notification
-
-![Sign Out Notification](media/readme/images/sign_out_notification.png)
+![Delete Product](media/readme/delete_product_toast.png)
 
 [Back to top](<#contents>)
 
@@ -385,59 +295,77 @@ If a user deletes a product, a notification is displayed to the user at the top 
 
 #### Add form
 
-The Add Article template form is a page which features a Article form to enable users to add a Article to the Peak Nutrition site. This page is only visible to logged in users and appears in the navigation menu. The page features similar styling to the rest of the site for consistency.
+The Add Article template form is a page which features a Article form to enable users to add a Article to the Peak Nutrition site. This page is only visible to logged in superusers and appears in the navigation menu. The page features similar styling to the rest of the site for consistency.
 
 - Article Add Form
 
-![Article Add Form](media/readme/images/product_create_form.png)
-
-[Back to top](<#contents>)
-
-#### Add Article notification
-
-When a user adds a Article successfully, a toast message appears confirming the submission of the product/post.
-
-- Add Article notification
-
-![Add Article notification](media/readme/images/product_create_notification.png)
+![Article Add Form](media/readme/add_article.png)
 
 [Back to top](<#contents>)
 
 ### Edit Article
 
-The Edit Article page is available to logged in users. The Edit option appears below the summary on the list page and details page. When the Update option is clicked, the user is navigated to the edit Article page. The page styling and content is exactly the same as the add page. The only difference is the form is prefilled out with the content. The user can then use this form to edit the content and submit the amendments to overwrite the previous content.
+The Edit Article page is available to logged in superusers. The Edit option appears below the summary on the list page and details page. When the Update option is clicked, the user is directed to the edit Article page. The page styling and content is exactly the same as the add page. The only difference is the form is prefilled out with the content. The user can then use this form to edit the content and submit the amendments to overwrite the previous content.
 
 - Edit Article Form
 
-![Edit Article Form](media/readme/images/product_update_form.png)
-
-#### Edit Notification
-
-If a user successfully submits the update form the page is refreshed. A message is displayed to the user which confirms the successful form submission. The user is redirected to the list page for Articles.
-
-- Edit Article Notification
-
-![Edit Article Notification](media/readme/images/product_update_notification.png)
+![Edit Article Form](media/readme/edit_article.png)
 
 [Back to top](<#contents>)
 
 ### Delete Article
 
-A user can delete their Article easily from the relevant list page or details page. This option is only visible to a superuser. If a user clicks on delete, a delete confirmation toast is displayed.
-
-- Delete Article
-
-![Delete Article](media/readme/images/update_delete.png)
+A user can delete their Article easily from the relevant article page or article details page. This option is only visible to a superuser. If a user clicks on delete, a delete confirmation toast is displayed.
 
 [Back to top](<#contents>)
 
-#### Delete Notification
+### Authorisation
 
-If a user deletes an article, a notification is displayed to the user at the top of the page. This notification confirms the deletion of the article. The user can hide this notification by clicking the x icon. 
+#### Sign Up
 
-- Delete Confirmation Notification
+A user can navigate to the sign-up page via the site navigation bars if they are not logged in. The Peak Nutrition sign up page is a built-in template from the [Django Allauth Package](https://django-allauth.readthedocs.io/en/latest/installation.html). Allauth provides the basic functionality for the user authorisation used in Peak Nutrition. Once a user submits the form correctly, they receive an verification request via email. Clicking on that link, will redirect to a confirmation page where they must click Confirm. If they do that, they will be successfully registered and receive a success toast with that message.
 
-![Delete](media/readme/images/delete_notification.png)
+- Sign Up Form
+![Sign Up](media/readme/regsiter_signup_form.png)
+
+- Verification message
+
+![Verification message](media/readme/verify_message.png)
+
+- Verification email
+
+![Verification email](media/readme/verify_email.png)
+
+- Confirm message
+
+![Confirm message](media/readme/confirm_email.png)
+
+- Registration success toast
+
+![Registration success toast](media/readme/register_cofirm_toast.png)
+
+[Back to top](<#contents>)
+
+#### Sign In
+
+A user can navigate to the Sign in page via the site navigation -> My Account if they are not already signed in. As with the Sign-Up page, it's a built-in form. The styling of the sign in page is very similar to the rest of the user authorisation pages. The colour scheme and layout are consistent, but the form and page heading are different. Once the sign in form is submitted correctly the user is redirected to the homepage as a logged in user and they receive a success toast.
+
+- Sign In Form
+
+![Sign In](media/readme/signin_form.png)
+
+[Back to top](<#contents>)
+
+#### Sign Out
+
+A user can navigate to the Sign Out page via the site navigation bars if they are logged in. They are prompted on this page to confirm if wish to log out. Upon confirmation the user is logged out and redirected to the homepage. If they click on Cancel, they are brought back to the previous page.
+
+- Sign Out Page
+
+![Sign Out Notification](media/readme/signout_page.png)
+
+[Back to top](<#contents>)
+
 
 ### 404 Page
 

@@ -373,7 +373,7 @@ The 404 page is triggered when a user navigates to a site URL which doesn't exis
 
 - 404 Page
 
-![404 Page](media/readme/images/403.png)
+![404 Page](media/readme/404_page.png)
 
 [Back to top](<#contents>)
 
@@ -707,7 +707,7 @@ When the Peak Nutrition site was first tested with the [W3C HTML Markup Validati
 
 - Articles Page
 
-[HTML link](https://peak-nutrition.herokuapp.com/articles/)
+[HTML link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpeak-nutrition.herokuapp.com%2Farticles%2F)
 
 ![HTML Validation Test Articles Page](media/readme/w3c-html-validator-articles-result.png)
 

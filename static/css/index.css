@@ -49,8 +49,7 @@
   width: calc(var(--s) / 2 + var(--m));
   float: left;
   height: 120%;
-  shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px),
-      #000 0 var(--f));
+  shape-outside: repeating-linear-gradient(black 0 calc(var(--f) - 3px), black 0 var(--f));
 }
 
 .hexagon a {

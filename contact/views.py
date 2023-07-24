@@ -56,7 +56,7 @@ def free_consult(request):
     else:
         form = Contact_Form(initial={
             'subject': 'I want to book my free 15 minute consultation',
-            'message': 
+            'message':
             'Hi, I would like to book my free 15 minute consultation with you.'
             ' My preferred times are:',
             },

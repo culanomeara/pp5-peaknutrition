@@ -6,10 +6,6 @@ register = template.Library()
 
 # https://stackoverflow.com/questions/39021159/django-template-send-two-arguments-to-template-tag
 
-# @register.simple_tag
-# def calc_item_subtotal(price, quantity):
-#     # Function for calculating subtotal for each line item in bag
-
 
 @register.simple_tag
 def calc_item_discount_price(price, discount):
@@ -36,15 +32,9 @@ def calc_item_subtotal(price, discount, quantity):
     return item_total
 
 
-# @register.simple_tag
-# def calc_item_total():
-#     # Function for calculating subtotal for each line item in bag
-#     item_total = 
-#     return item_total
-
-
 @register.simple_tag
 def strike(text):
+    # Function for striking thru full product price numbers
     str_text = str(text)
     result = ''
     for c in str_text:

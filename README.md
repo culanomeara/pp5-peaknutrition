@@ -863,13 +863,19 @@ Site was developed on an Apple MacBook using iOS v13.2
 ------------ | ------------ | ------------ |
 Images were showing up tiny on products page | Missing semi-colon in CSS file | Resolved |
 All users were able to access CRUD functions  | Didn't have authentication set up across the site | Resolved |
-When updating product or post, crash occurred if you didn't add new image  | Image already in DB wasn't returned back when saving | Used request.files to pull image in and then sent back when saved. Resolved |
+Checkout toast message showed code {order.email} | Missing f in front of line | Resolved |
+About.html image was not scaling | Added width = 100% | Resolved |
+
 
 [Back to top](<#contents>)
 
 ### Unresolved
 
-There are no unresolved bugs that I am aware of!
+**Bug** | **Cause** | **Outcome**
+------------ | ------------ | ------------ |
+HTML validator error | Stray </p> tag on About.html | Unable to resolve. No stray tag found. Mentor checked it to no avail |
+HTML validator error | Stray </p> tag on About.html | Unable to resolve. No stray tag found. Mentor checked it to no avail |
+
 
 [Back to top](<#contents>)
 

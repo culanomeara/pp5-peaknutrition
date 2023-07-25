@@ -894,6 +894,7 @@ Images were showing up tiny on products page | Missing semi-colon in CSS file | 
 All users were able to access CRUD functions  | Didn't have authentication set up across the site | Resolved |
 Checkout toast message showed code {order.email} | Missing f in front of line | Resolved |
 About.html image was not scaling | Added width = 100% | Resolved |
+Default image wasn't loading for articles | Media path not included in src path | Resolvedx
 
 [Back to top](<#contents>)
 

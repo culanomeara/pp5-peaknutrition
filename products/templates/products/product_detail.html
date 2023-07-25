@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block extra_meta %}
-<meta name="description" content="Detailed outline of the Products and services for schools, teams, clubs, wellbeing, elite athletes, companies, organisations, individuals and elite athletes, with free consultations available at Peak Nutrition. ">
+<meta name="description"
+    content="Detailed outline of the Products and services for schools, teams, clubs, wellbeing, elite athletes, companies, organisations, individuals and elite athletes, with free consultations available at Peak Nutrition. ">
 {% endblock %}
 
 {% block page_header %}
@@ -19,10 +20,8 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
-                <a href="{% get_media_prefix %}{{ product.featured_image }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{% get_media_prefix %}{{ product.featured_image }}"
-                        alt="{{ product.name }}">
-                </a>
+                <img class="card-img-top img-fluid" src="{% get_media_prefix %}{{ product.featured_image }}"
+                    alt="{{ product.name }}">
             </div>
             {% if request.user.is_superuser %}
             <hr>

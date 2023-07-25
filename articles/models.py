@@ -12,7 +12,7 @@ class Article(models.Model):
         User, on_delete=models.CASCADE, related_name="article"
     )
     excerpt = models.TextField(blank=True)
-    featured_image = models.ImageField(default='media/default.jpg')
+    featured_image = models.ImageField(default='default.jpg')
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 

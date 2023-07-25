@@ -14,9 +14,13 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
     * [Objective](<#objective>)
     * [Site User Goals](<#site-user-goals>)
     * [Site Owner Goals](<#site-owner-goals>)
-    * [**Project Management**](<#project-management>)
-        * [GitHub Project Board](<#github-project-board>)
-        * [Database Schema](<#database-schema>)
+* [**Project Management**](<#project-management>)
+    * [GitHub Project Board](<#github-project-board>)
+    * [Database Schema](<#database-schema>)
+* [**Ecommerce Business Model**](<#ecommerce-business-model>)
+    * [Services to Customers](<#services-to-customers>)
+    * [Value of Services](<#value-of-services>)
+    * [Marketing Strategies](<#marketing-strategies>)
 * [**User Experience UX**](<#user-experience-ux>)
     * [User Stories](<#user-stories>)
     * [Site Design](<#site-design>)
@@ -160,6 +164,46 @@ Agile methodology was used to plan and design the Peak Nutrition application. Us
 Database scheme was drawn up using [App Diagrams.net](https://app.diagrams.net/). The scheme was used to plan the database models and fields. It also helped to display the relationships between the models and how they interact. Peak Nutrition consists of five custom models and one generic - Product, Article, Contact, Subscription, Category and User. I did not include Keywords or Userlevels in my final design.
 
 ![Peak Nutrition Database Scheme](media/readme/images/db_model_design.jpg)
+
+[Back to top](<#contents>)
+
+# Ecommerce Business Model
+
+## Services to Customers
+
+### Our services include:
+- Bespoke Nutrition Services: We provide customised nutrition plans tailored to the specific requirements of sports teams, clubs, schools, corporate clients, individual clients, and elite athletes. These plans are developed based on individual goals, dietary preferences, and performance objectives.
+- Free 15-Minute Consultation: To ensure personalised attention and establish a strong client relationship, we offer a free 15-minute consultation. During this session, clients can discuss their goals, concerns, and requirements with our experienced nutritionists.
+- Online Ordering and Payment: Through our website, customers can conveniently search for and find services that align with their needs. They can then order and pay for these services online, ensuring a seamless and efficient process.
+- Subscription for Updates: Customers have the option to subscribe to our business updates. By doing so, they can stay informed about new services, promotions, and relevant industry insights. This allows us to maintain a strong connection with our clients and provide them with valuable information.
+
+[Back to top](<#contents>)
+
+## Value of Services
+
+- Expertise and Customisation: Our experienced sports and performance nutritionists possess in-depth knowledge and expertise in designing customised nutrition plans. This ensures that customers receive tailored solutions to meet their specific needs, taking into account their goals, preferences, and sports requirements.
+- Convenience and Accessibility: With our online platform, customers can access our services from anywhere at any time. The ease of ordering and payment enhances convenience and accessibility for our clients.
+- Performance Enhancement: Our nutrition services are designed to optimise performance, aid recovery, and improve overall well-being. By focusing on individual needs and goals, we help customers achieve their maximum potential and enhance their athletic performance.
+
+[Back to top](<#contents>)
+
+## Marketing Strategies
+
+- Facebook Business Page: We have established a Facebook business page to engage with our customers, share valuable content, and promote our services. Through this platform, we provide informative articles, success stories, and updates to create awareness and build a community of health-conscious individuals.
+
+![FB Business Page](media/readme/facebook_page_1.png)
+![FB Business Page](media/readme/facebook_page_2.png)
+
+- SEO and Keyword Optimization: We employ both long and short keywords for search engine optimization (SEO) purposes. We also ensure meta tags are worded using keywords and phrases. This helps potential customers find our website when searching for sports and performance nutrition services online. By ranking higher in search results, we increase our visibility and attract more organic traffic.
+
+![SEO Meta tags](media/readme/seo_meta_1.png)
+![SEO Meta tags](media/readme/seo_meta_2.png)
+![SEO Keywords](media/readme/seo_keywords.png)
+
+- Content Marketing: We will develop high-quality content in the form of articles, and in future, videos that provide valuable information on sports nutrition. This content is optimised for search engines to increase our website's visibility and attract organic traffic.
+- Social Media Engagement: In addition to Facebook, we will use other social media platforms like Instagram, Twitter, and LinkedIn to connect with our target audience, share educational content, and engage in high quality, meaningful conversations.
+- Testimonials: Ensuring that we obtain high-quality testimonials will help expand our credibility. We will proactively engage with teams and individuals who have a high profile and have a strong presence in the sports and fitness community.
+- Email Marketing: We will implement an email marketing strategy to build a subscriber base and nurture relationships with potential and existing clients. Our emails will provide valuable content, exclusive offers, and updates on new services.
 
 [Back to top](<#contents>)
 

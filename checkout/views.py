@@ -113,7 +113,7 @@ def checkout(request):
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'pk_test_51NITahFjSxUzQgBMerUrW98cor6UsNa0GKkY5eJmDPCdaiZZeTwROpGyV6OOzPiNuuE81pUINZTVYskq7R7A1436000TRMKot7',
+        'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
 
@@ -126,8 +126,8 @@ def checkout_success(request, order_number):
     """
     order = get_object_or_404(Order, order_number=order_number)
     messages.success(request, f'Order successfully placed!'
-                     'Your order number is {order_number}. A confirmation'
-                     'email will be sent to {order.email}.')
+                     f'Your order number is {order_number}. A confirmation'
+                     f'email will be sent to {order.email}.')
 
     if 'bag' in request.session:
         del request.session['bag']

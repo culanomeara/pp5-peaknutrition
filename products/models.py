@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Category(models.Model):
+    """
+    Category Model for products
+    """
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -12,6 +15,9 @@ class Category(models.Model):
 
 
 class Type(models.Model):
+    """
+    Type Model for products
+    """
     name = models.CharField(max_length=254)
 
     def __str__(self):
@@ -22,6 +28,9 @@ class Type(models.Model):
 
 
 class Product(models.Model):
+    """
+    Product Model
+    """
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     type = models.ForeignKey(

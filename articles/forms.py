@@ -3,7 +3,9 @@ from .models import Article
 
 
 class ArticleForm(forms.ModelForm):
-
+    """
+    A view to show article form
+    """
     class Meta:
         model = Article
         fields = ('title', 'excerpt',

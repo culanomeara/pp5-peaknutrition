@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 
 
 class Article(models.Model):
+    """
+    Article model
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(

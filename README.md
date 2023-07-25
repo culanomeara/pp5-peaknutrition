@@ -60,7 +60,9 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
             * [Sign Up](<#sign-up>)
             * [Sign In](<#sign-in>)
             * [Sign Out](<#sign-out>) 
-        * [**404 Page**](<#404-page>)
+        * [**Custom Error Pages**](<#custom-error-pages>)
+            * [404 Page](<#404-page>)
+            * [500 Page](<#500-page>)
     * [**Future Features**](<#future-features>)
         * [Admin Area](<#admin-area>)
         * [User Profile](<#user-profile>)
@@ -370,7 +372,7 @@ A user can delete their Article easily from the relevant article page or article
 A user can navigate to the sign-up page via the site navigation bars if they are not logged in. The Peak Nutrition sign up page is a built-in template from the [Django Allauth Package](https://django-allauth.readthedocs.io/en/latest/installation.html). Allauth provides the basic functionality for the user authorisation used in Peak Nutrition. Once a user submits the form correctly, they receive an verification request via email. Clicking on that link, will redirect to a confirmation page where they must click Confirm. If they do that, they will be successfully registered and receive a success toast with that message.
 
 - Sign Up Form
-![Sign Up](media/readme/regsiter_signup_form.png)
+![Sign Up](media/readme/register_signup_form.png)
 
 - Verification message
 
@@ -386,7 +388,7 @@ A user can navigate to the sign-up page via the site navigation bars if they are
 
 - Registration success toast
 
-![Registration success toast](media/readme/register_cofirm_toast.png)
+![Registration success toast](media/readme/register_confirm_toast.png)
 
 [Back to top](<#contents>)
 
@@ -411,13 +413,17 @@ A user can navigate to the Sign Out page via the site navigation bars if they ar
 [Back to top](<#contents>)
 
 
-### 404 Page
+#### 404 Page
 
 The 404 page is triggered when a user navigates to a site URL which doesn't exist. This could be because of a number of reasons, mainly if they mistype something.
 
 - 404 Page
 
 ![404 Page](media/readme/404_page.png)
+
+#### 500 Page
+
+The 500 page is a catch-all error page where there is an unexplained communication breakdown between the server and user.
 
 [Back to top](<#contents>)
 
@@ -763,6 +769,14 @@ When the Peak Nutrition site was first tested with the [W3C HTML Markup Validati
 
 [Back to top](<#contents>)
 
+- About Page
+
+This gave a stray p tag error which was unresolved as there was no stray tag found in the code.
+
+[HTML link](https://peak-nutrition.herokuapp.com/about/)
+
+![HTML Validation Test About Page](media/readme/w3c-validator-test-about.png)
+
 ### W3C (CSS)
 
 The Peak Nutrition CSS stylesheet has been assessed using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) by direct input. Unfortunately there is an error that I was unable to resolve.
@@ -794,12 +808,19 @@ The Peak Nutrition Javascript has been assessed using [JSHint](https://jshint.co
 
 ### Add Product Form Tests
 
+![Form validation](/media/readme/inputvalidationtest_addproduct.png)
+
+### Edit Product Form Tests
+
+![Form validation](/media/readme/inputvalidationtest_editproduct.png)
+
+
+
 [Back to top](<#contents>)
 
 ### Edit Product Form Tests
 
 [Back to top](<#contents>)
-
 
 ### Responsive Tests
 
@@ -813,19 +834,19 @@ The Peak Nutrition Javascript has been assessed using [JSHint](https://jshint.co
 
 - Google Chrome
 
-![Google Chrome](media/readme/images/browser_test_chrome.jpg)
+![Google Chrome](media/readme/browsertest_chrome.png)
 
 - Apple Safari
 
-![Apple Safari](media/readme/images/browser_test_safari.jpg)
+![Apple Safari](media/readme/browsertest_safari.png)
 
 - Mozilla Firefox
 
-![Mozilla Firefox](media/readme/images/browser_test_firefox.jpg)
+![Mozilla Firefox](media/readme/browsertest_firefox.png)
 
 - Microsoft Edge
 
-![Microsoft Edge](media/readme/images/browser_test_edge.jpg)
+![Microsoft Edge](media/readme/browsertest_edge.png)
 
 [Back to top](<#contents>)
 
@@ -837,7 +858,7 @@ Site was developed on an Apple MacBook using iOS v13.2
 
 - Windows 10 PRO
 
-![Windows 10 PRO](media/readme/images/os_test_windows.jpg)
+![Windows 10 PRO](media/readme/ostest_windows.png)
 
 [Back to top](<#contents>)
 
@@ -845,15 +866,21 @@ Site was developed on an Apple MacBook using iOS v13.2
 
 #### Mobile
 
-[Mobile Link](https://pagespeed.web.dev/analysis/https-adventureswithwood-herokuapp-com/mx8dwnnzdu?form_factor=mobile)
+[Mobile Link](https://pagespeed.web.dev/analysis/https-peak-nutrition-herokuapp-com/efkpd2vz35?form_factor=mobile)
 
-![Screenshot Mobile](media/readme/images/lighthouse_test_mobile.jpg)
+![Screenshot Mobile](media/readme/pagespeedtest_mobile.png)
+
+Page speed on mobile is 56. When looking at the detailed breakdown it give the following:
+
+![Screenshot Mobile Details](media/readme/pagespeedmobile_detail.png)
+
+These are connected to the JS scripts related to stripe which we have no control over.
 
 #### Desktop
 
-[Desktop link](https://pagespeed.web.dev/analysis/https-adventureswithwood-herokuapp-com/mx8dwnnzdu?form_factor=desktop)
+[Desktop link](https://pagespeed.web.dev/analysis/https-peak-nutrition-herokuapp-com/efkpd2vz35?form_factor=desktop)
 
-![Screenshot Desktop](media/readme/images/lighthouse_test_desktop.jpg)
+![Screenshot Desktop](media/readme/pagespeedtest.png)
 
 [Back to top](<#contents>)
 

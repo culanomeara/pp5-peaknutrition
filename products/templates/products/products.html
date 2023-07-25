@@ -89,11 +89,11 @@
                                     {% else %}
                                     <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
                                     {% endif %}
-                                    <small class="text-muted"><i class="fa-regular fa-file"></i> File Type:
+                                    <small class="text-body"><i class="fa-regular fa-file"></i> File Type:
                                         {{ product.type }}</small>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
-                                        <a class="text-muted"
+                                        <a class="text-body"
                                             href="{% url 'products' %}?category={{ product.category.name }}">
                                             <i class="fas fa-tag mr-1"></i>{{ product.category.name }}
                                         </a>

@@ -803,6 +803,8 @@ The Peak Nutrition Javascript has been assessed using [JSHint](https://jshint.co
 
 ### Responsive Tests
 
+![Am I responsive](media/readme/Responsive_mockup.png)
+
 [Back to top](<#contents>)
 
 ### Browser Tests
@@ -866,7 +868,6 @@ All users were able to access CRUD functions  | Didn't have authentication set u
 Checkout toast message showed code {order.email} | Missing f in front of line | Resolved |
 About.html image was not scaling | Added width = 100% | Resolved |
 
-
 [Back to top](<#contents>)
 
 ### Unresolved
@@ -874,8 +875,6 @@ About.html image was not scaling | Added width = 100% | Resolved |
 **Bug** | **Cause** | **Outcome**
 ------------ | ------------ | ------------ |
 HTML validator error | Stray </p> tag on About.html | Unable to resolve. No stray tag found. Mentor checked it to no avail |
-HTML validator error | Stray </p> tag on About.html | Unable to resolve. No stray tag found. Mentor checked it to no avail |
-
 
 [Back to top](<#contents>)
 

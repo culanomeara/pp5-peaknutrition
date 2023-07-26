@@ -1,6 +1,6 @@
 # **Peak Nutrition**
 
-Peak Nutrition is a full stack ecommerce application that provides a platform for the nutritionist, Trish Garrett to sell and marklet her services and products. The intention of the site is to provide a simple, intuitive, visually appealing and user-friendly platform for users. The intended target audience is anyone with an interest in general nutrition, sports performance nutrition. The target audience will mostly be individuals, coaches, teachers, athletes, team managers.
+Peak Nutrition is a full stack e-commerce application that provides a platform for the nutritionist, Trish Garrett to sell and market her services and products. The intention of the site is to provide a simple, intuitive, visually appealing and user-friendly platform for users. The intended target audience is anyone with an interest in general nutrition, sports performance nutrition. The target audience will mostly be individuals, coaches, teachers, athletes, team managers.
 
 The application implements user authorisation and full CRUD functionality, allowing users to create, update, read and delete products and articles stored in a relational database management system.
 
@@ -80,9 +80,8 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
         * [W3C (CSS)](<#w3c-css>)
         * [PEP8 (Python)](<#pep8-python>)
     * [**Input Validation Tests**](<#input-validation-tests>)
-        * [Add Product Form Tests](<#post-product-form-tests>)
-        * [Edit product Form Tests](<#edit-product-form-tests>)
-        * [Comment Form Tests](<#comment-form-tests>)
+        * [Add Form Tests](<#post-product-form-tests>)
+        * [Edit Form Tests](<#edit-product-form-tests>)
     * [**Additional Tests**](<#additional-tests>)
         * [Manual Tests](<#manual-tests>)
         * [Automated Tests](<#automated-tests>)
@@ -113,7 +112,7 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
 
 ## Objective
 
-This product was created for Portfolio product Five submission for the Full Stack Software Development Higher National Diploma at [Code Institute](https://codeinstitute.net/). Amongst other assessment criteria, the product had to be built using HTML, CSS, JavaScript, Python and Django and feature full ecommerce ability, CRUD functionality and user authorisation. The product also had to be planned and designed using Agile methodologies. 
+This product was created for Portfolio product Five submission for the Full Stack Software Development Higher National Diploma at [Code Institute](https://codeinstitute.net/). Amongst other assessment criteria, the product had to be built using HTML, CSS, JavaScript, Python and Django and feature full e-commerce ability, CRUD functionality and user authorisation. The product also had to be planned and designed using Agile methodologies. 
 
 
 [Back to top](<#contents>)
@@ -123,7 +122,7 @@ This product was created for Portfolio product Five submission for the Full Stac
 - To view a list of products
 - View individual product details
 - Be able to easily find/see special offers/deals/promos
-- See what i curently have in my basket and total cost
+- See what I currently have in my basket and total cost
 - Get advice about what plan/product suits me best
 - Check what qualifications/expertise/experience the provider has
 - Sort all items by price, category, type
@@ -196,7 +195,7 @@ Database scheme was drawn up using [App Diagrams.net](https://app.diagrams.net/)
 ![FB Business Page](media/readme/facebook_page_1.png)
 ![FB Business Page](media/readme/facebook_page_2.png)
 
-- SEO and Keyword Optimization: We employ both long and short keywords for search engine optimization (SEO) purposes. We also ensure meta tags are worded using keywords and phrases. This helps potential customers find our website when searching for sports and performance nutrition services online. By ranking higher in search results, we increase our visibility and attract more organic traffic.
+- SEO and Keyword Optimisation: We employ both long and short keywords for search engine optimisation (SEO) purposes. We also ensure meta tags are worded using keywords and phrases. This helps potential customers find our website when searching for sports and performance nutrition services online. By ranking higher in search results, we increase our visibility and attract more organic traffic.
 
 ![SEO Meta tags](media/readme/seo_meta_1.png)
 ![SEO Meta tags](media/readme/seo_meta_2.png)
@@ -319,7 +318,7 @@ The Add Product template form is a page which features a product form to enable 
 
 ### Edit Product
 
-The Edit product page is available to logged in superusers. The Edit option appears below the summary on the products page and product details page. When the Edit option is clicked, the user is navigated to the edit product page. The page styling and content is exactly the same as the add page. The only difference is the form is prefilled out with the content. The user can then use this form to edit the content and submit the amendments to overwrite the previous content.
+The Edit product page is available to logged in superusers. The Edit option appears below the summary on the products page and product details page. When the Edit option is clicked, the user is navigated to the edit product page. The page styling and content is exactly the same as the add page. The only difference is the form is pre-filled out with the content. The user can then use this form to edit the content and submit the amendments to overwrite the previous content.
 
 - Edit Product Form
 
@@ -479,7 +478,7 @@ I would like to add enhanced form validation above the built-in ones. Validation
 * [GitHub](https://github.com/) - An internet hosting service used for version control. Used to host the Peak Nutrition repository and for the product board used for product management and user stories.
 * [GitPod](https://www.gitpod.io/) - A cloud development environment used as the primary site code editor.
 * [Heroku](https://dashboard.heroku.com/) - A cloud platform used to host the Peak Nutrition full stack application.
-* [Stripe](https://stripe.com/) - Ecommerce software and APIs to accept payments, send payouts, and manage shop orders
+* [Stripe](https://stripe.com/) - E-commerce software and APIs to accept payments, send payouts, and manage shop orders
 * [Amazon Web Services](https://aws.amazon.com/) - a cloud platform that allows you to store and retrieve static files
 * [Slack](https://slack.com/intl/en-gb/) - An online instant messaging program used for site feedback and guidance from the [Code Institute](https://codeinstitute.net/) community.
 * [App Diagrams](https://app.diagrams.net/) - An online diagram software used for the database schemas.
@@ -510,7 +509,7 @@ This is a list of the Python / Django libraries used in this product.
 * [oauthlib](https://github.com/oauthlib/oauthlib) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
 * [psycopg2](https://pypi.org/product/psycopg2/) - A PostgreSQL database adapter for Python.
 * [Pillow](https://pypi.org/product/Pillow/) - The Python Imaging Library adds image processing capabilities to your Python interpreter.
-* [python3-openid](https://pypi.org/product/python3-openid/) - A set of Python packages to support use of the OpenID decentralized identity system.
+* [python3-openid](https://pypi.org/product/python3-openid/) - A set of Python packages to support use of the OpenID decentralised identity system.
 * [pytz](https://pypi.org/product/pytz/) - A Python package for world timezone definitions, modern and historical.
 * [requests-oauthlib](https://pypi.org/product/requests-oauthlib/) - A Python package for OAuthlib authentication support for Requests.
 * [sqlparse](https://pypi.org/product/sqlparse/) - A non-validating SQL parser for Python.
@@ -541,7 +540,7 @@ Navigate to https://peak-nutrition.herokuapp.com/products/ | Select a product an
 ------------ | ------------ | ------------ |
 Navigate to https://peak-nutrition.herokuapp.com/ | At top nav bar, you can click on the SALE link | Works as expected |
 
-4. I want to be able to see what I curently have in my basket and total cost
+4. I want to be able to see what I currently have in my basket and total cost
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -553,7 +552,7 @@ Navigate to https://peak-nutrition.herokuapp.com/ and click on basket icon in na
 ------------ | ------------ | ------------ |
 Navigate to https://peak-nutrition.herokuapp.com/ and click on Book A Free Consult | User will enter details to get a free 15 min consultation | Works as expected |
 
-6. I want to check what qualifications/expertise/experience the provier has
+6. I want to check what qualifications/expertise/experience the provider has
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -569,19 +568,19 @@ Navigate to https://peak-nutrition.herokuapp.com/products | Use dropdown menu to
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://peak-nutrition.herokuapp.com/products | Click on desired Product Category Tag and all items in that cateogry will be displayed | Works as expected |
-Navigate to https://peak-nutrition.herokuapp.com/| Click on desired Product Category Hexagon and all items in that cateogry will be displayed | Works as expected |
-Navigate to https://peak-nutrition.herokuapp.com/| Click on SHOP nav item, then select desired Product Category and all items in that cateogry will be displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/products | Click on desired Product Category Tag and all items in that category will be displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/| Click on desired Product Category Hexagon and all items in that category will be displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/| Click on SHOP nav item, then select desired Product Category and all items in that category will be displayed | Works as expected |
 
 9. I want to be able to search for an item
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://peak-nutrition.herokuapp.com/ , click on search icon in nav bar and ehter search term | Search results are displayed | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ , click on search icon in nav bar and enter search term | Search results are displayed | Works as expected |
 
 10. I want to be able to view all search results easily
 ------------ | ------------ | ------------ |
-Navigate to https://peak-nutrition.herokuapp.com/ , click on search icon in nav bar and ehter search term | Search results are displayed in an easy to view way | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/ , click on search icon in nav bar and enter search term | Search results are displayed in an easy to view way | Works as expected |
 
 16. I want to be able to select the quantity of a product when buying
 
@@ -617,7 +616,7 @@ Navigate to https://peak-nutrition.herokuapp.com/checkout/ | User can view order
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://peak-nutrition.herokuapp.com/checkout/ and complete purchase | Order confirmation is emailed to user once payment successfuly gone thru | Works as expected |
+Navigate to https://peak-nutrition.herokuapp.com/checkout/ and complete purchase | Order confirmation is emailed to user once payment successfully gone thru | Works as expected |
 
 26. I want to easily navigate the site
 
@@ -682,13 +681,13 @@ Navigate to https://peak-nutrition.herokuapp.com/ logged in as superuser | On Ar
 ------------ | ------------ | ------------ |
 Navigate to https://peak-nutrition.herokuapp.com/ logged in as superuser | On Articles page or article details page, Delete Button can be clicked on.| Works as expected |
 
-34. Ensure only logged-in users can add,edit delete products and articles
+34. Ensure only logged-in users can add, edit, delete products and articles
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Navigate to https://peak-nutrition.herokuapp.com/ not logged in | Shop Admin nav item is no longer available. Edit, delete buttons are not visible. If you try to access url directly(e.g. https://peak-nutrition.herokuapp.com/accounts/login/?next=/articles/add/), it redirects to sign in page | Works as expected |
 
-36. As a shop owner, I want the user to come to a custom 404 error page tha explains in simple language what has gone wrong if they enter a URL that they don't have permission to access
+36. As a shop owner, I want the user to come to a custom 404 error page that explains in simple language what has gone wrong if they enter a URL that they don't have permission to access
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -806,21 +805,13 @@ The Peak Nutrition Javascript has been assessed using [JSHint](https://jshint.co
 
 ## Input Validation Tests
 
-### Add Product Form Tests
+### Add Form Tests
 
 ![Form validation](/media/readme/inputvalidationtest_addproduct.png)
 
-### Edit Product Form Tests
+### Edit Form Tests
 
 ![Form validation](/media/readme/inputvalidationtest_editproduct.png)
-
-
-
-[Back to top](<#contents>)
-
-### Edit Product Form Tests
-
-[Back to top](<#contents>)
 
 ### Responsive Tests
 
@@ -894,7 +885,7 @@ Images were showing up tiny on products page | Missing semi-colon in CSS file | 
 All users were able to access CRUD functions  | Didn't have authentication set up across the site | Resolved |
 Checkout toast message showed code {order.email} | Missing f in front of line | Resolved |
 About.html image was not scaling | Added width = 100% | Resolved |
-Default image wasn't loading for articles | Media path not included in src path | Resolvedx
+Default image wasn't loading for articles | Correct media path not included in src path | Resolved
 
 [Back to top](<#contents>)
 
@@ -1175,9 +1166,9 @@ Free images were sourced on Pixabay. Creative commons images were used. (https:/
 
 ## Code 
 
-I used the "Boutique Ado" walk through product as a starting point and template. I created an ecommerce site that presented products and articles. I added to the base code with custom views, models, html and CSS. I used the JS script for toast messages from that blog and modified it for my own requirements.
+I used the "Boutique Ado" walk through product as a starting point and template. I created an e-commerce site that presented products and articles. I added to the base code with custom views, models, html and CSS. I used the JS script for toast messages from that blog and modified it for my own requirements.
 
 I got the code for Hexagons from Paper Dreams (https://paper-dreams-uk.herokuapp.com/)
-I referenced Stack Overflow alot for code snippets where my code wasn't performing as required.
+I referenced Stack Overflow for code snippets where my code wasn't performing as required.
 
 [Back to top](<#contents>)

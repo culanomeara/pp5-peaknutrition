@@ -1,10 +1,10 @@
 # **Peak Nutrition**
 
-Peak Nutrition is a full stack e-commerce application that provides a platform for the nutritionist, Trish Garrett to sell and market her services and products. The intention of the site is to provide a simple, intuitive, visually appealing and user-friendly platform for users. The intended target audience is anyone with an interest in general nutrition, sports performance nutrition. The target audience will mostly be individuals, coaches, teachers, athletes, team managers.
+Peak Nutrition is a full stack e-commerce application that provides a platform for the nutritionist, Trish Garrett to sell and market her services and products. The intention of the site is to provide a simple, intuitive, visually appealing and user-friendly platform for users. The intended target audience is anyone with an interest in general nutrition, sports performance nutrition. The target audience will mostly be individuals, coaches, teachers, athletes, team managers. Site users can view and buy products/services directly through the site. They can also read tips and advice from the site owner which encoruage engagement, increase customer confidence and ultimately lead to more visibilty online, improve SEO and increased sales.
 
-The application implements user authorisation and full CRUD functionality, allowing users to create, update, read and delete products and articles stored in a relational database management system.
+The application implements user authorisation and full CRUD functionality, allowing superusers to create, update, read and delete  products and articles stored in a relational database management system from the front-end.
 
-The site also features a back-end admin dashboard that allows a superuser to monitor, edit, delete products, articles, orders, users. 
+The site also features a back-end admin dashboard that allows a superuser to monitor, edit and delete products, articles, orders, users. 
 
 Link to the live site - https://peak-nutrition.herokuapp.com/
 
@@ -967,11 +967,6 @@ else:
 
 ### Generate a SECRET KEY
 
-- When you start a project in Django, a secret key is immediately generated
-- We should not use this key in our deployed version as it makes our website insecure.
-- And we should not commit this detail in github, so it should be an excluded file in any commits.
-- Same for other secret keys for AWS and Stripe below.
-- We can use a random key generator to create a new SECRET_KEY which we can then add to our Heroku config vars which will then keep the key protected.
 - [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) is where we can generate a secret key
 - Create a new key and copy the key
 - Create a new config var with the key SECRET KEY in the Heroku settings.
@@ -985,8 +980,8 @@ else:
 
 ### Setting up AWS
 
-- Sign up or login to your aws [amazon account](https://aws.amazon.com/) on the top right by using the manage my account button
-- Then navigate to S3 to create a new bucket. This bucket will store our project files.
+- Sign up or login to your AWS [Amazon account](https://aws.amazon.com/).
+- Then navigate to S3 to create a new bucket. This bucket will store the project files.
 - Select the closest region to you (EU for us).
 - Selecting ACLs enabled and then bucket owner preferred are required in the object ownership section.
 - Uncheck the block public access box in the block public access section

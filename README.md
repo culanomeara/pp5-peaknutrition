@@ -29,7 +29,7 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
 * [**Features**](<#features>)
     * [**Existing Features**](<#existing-features>)
         * [**Homepage**](<#homepage>)
-            * [Hexagon Product Display](<#hexagon-product-display>)
+            * [Hexagons](<#hexagons>)
             * [Free Consult Call](<#free-consult-call>)
             * [Navigation](<#navigation>)
         * [**Product Pages**](<#product-pages>)
@@ -37,25 +37,14 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
             * [Product Details](<#product-details>)
         * [**Add Product**](<#add-product>)
             * [Add Product Form](<#add-product-form>)
-            * [Add Product Notification](<#add-product-notification>)
         * [**Edit Product**](<#edit-product>)
             * [Edit Product Form](<#edit-product-form>)
-            * [Edit Product Notification](<#edit-product-notification>)
         * [**Delete Product**](<#delete-product>)
-            * [Delete Notification](<#delete-notification>)
-        * [**Article Pages**](<#article-pages>)
-            * [Articles](<#articles>)
-        * [**Article Details**](<#article-details>)
-            * [Article Details](<#article-details>)
-            * [Form Validation](<#form-validation>)
         * [**Add Article**](<#add-article>)
             * [Add Article Form](<#add-article-form>)
-            * [Add Article Notification](<#add-article-notification>)
         * [**Edit Article**](<#edit-article>)
             * [Edit Article Form](<#edit-article-form>)
-            * [Edit Article Notification](<#edit-article-notification>)
         * [**Delete Article**](<#delete-article>)
-            * [Delete Notification](<#delete-notification>)
         * [**Authorisation**](<#authorisation>)
             * [Sign Up](<#sign-up>)
             * [Sign In](<#sign-in>)
@@ -63,6 +52,8 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
         * [**Custom Error Pages**](<#custom-error-pages>)
             * [404 Page](<#404-page>)
             * [500 Page](<#500-page>)
+        * [**Toasts**](<#toasts>)
+            * [Success Toasts](<#success-toasts>)
     * [**Future Features**](<#future-features>)
         * [Admin Area](<#admin-area>)
         * [User Profile](<#user-profile>)
@@ -74,17 +65,17 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
     * [Software](<#software>)
     * [Libraries](<#libraries>)
 * [**Testing**](<#testing>)
+    * [**Performing tests on various devices**](<#performing-tests-on-various-devices>)
     * [**User Story Tests**](<#user-story-tests>)
     * [**Validator Tests**](<#validator-tests>)
         * [W3C (HTML)](<#w3c-html>)
         * [W3C (CSS)](<#w3c-css>)
         * [PEP8 (Python)](<#pep8-python>)
     * [**Input Validation Tests**](<#input-validation-tests>)
-        * [Add Form Tests](<#post-product-form-tests>)
-        * [Edit Form Tests](<#edit-product-form-tests>)
+        * [Add Form Tests](<#add-form-tests>)
+        * [Edit Form Tests](<#edit-form-tests>)
     * [**Additional Tests**](<#additional-tests>)
         * [Manual Tests](<#manual-tests>)
-        * [Automated Tests](<#automated-tests>)
         * [Responsive Tests](<#responsive-tests>)
         * [Browser Tests](<#browser-tests>)
         * [OS Tests](<#os-tests>)
@@ -93,10 +84,9 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
         * [Resolved](<#resolved>)
         * [Unresolved](<#unresolved>)
 * [**Setup and Deployment**](<#setup-and-deployment>)
-    - [Deploying the site](#deploying-the-site)
-    - [Generate a SECRET KEY](#generate-a-secret-key)
     - [Heroku app setup](#heroku-app-setup)
-    - [Preparation for deployment](#preparation-for-deployment)
+    - [Deployment](#deployment)
+    - [Generate a SECRET KEY](#generate-a-secret-key)
     - [Setting up AWS](#setting-up-aws)
     - [Creating AWS groups, policies and users](#creating-aws-groups-policies-and-users)
     - [Connecting Django to the AWS S3 bucket](#connecting-django-to-AWS-s3-bucket)
@@ -107,6 +97,7 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
     * [**Content**](<#content>)
     * [**Media**](<#media>)
     * [**Code**](<#code>)
+    * [**Mentors**](<#mentors>)
 
 # Portfolio Five
 
@@ -162,9 +153,9 @@ Agile methodology was used to plan and design the Peak Nutrition application. Us
 
 ### Database Schema
 
-Database scheme was drawn up using [App Diagrams.net](https://app.diagrams.net/). The scheme was used to plan the database models and fields. It also helped to display the relationships between the models and how they interact. Peak Nutrition consists of five custom models and one generic - Product, Article, Contact, Subscription, Category and User. I did not include Keywords or Userlevels in my final design.
+Peak Nutrition consists of seven custom models and one generic - Product, Article, Order, OrderlineItem, Contact, Subscription, Category and User.
 
-![Peak Nutrition Database Scheme](media/readme/images/db_model_design.jpg)
+![Peak Nutrition Database Scheme](media/readme/database_design.jpg)
 
 [Back to top](<#contents>)
 
@@ -304,9 +295,9 @@ The product details page is a template used to display the full information on a
 
 [Back to top](<#contents>)
 
-### Add a new product
+### Add Product
 
-#### Add form
+#### Add Product form
 
 The Add Product template form is a page which features a product form to enable users to add a product to the Peak Nutrition site. This page is only visible to logged in superusers and appears in the navigation menu ->Shop Admin. The page features similar styling to the rest of the site for consistency.
 
@@ -317,6 +308,8 @@ The Add Product template form is a page which features a product form to enable 
 [Back to top](<#contents>)
 
 ### Edit Product
+
+#### Edit Product form
 
 The Edit product page is available to logged in superusers. The Edit option appears below the summary on the products page and product details page. When the Edit option is clicked, the user is navigated to the edit product page. The page styling and content is exactly the same as the add page. The only difference is the form is pre-filled out with the content. The user can then use this form to edit the content and submit the amendments to overwrite the previous content.
 
@@ -336,9 +329,9 @@ A user can delete their product easily from the relevant product page or details
 
 [Back to top](<#contents>)
 
-### Add a new Article
+### Add Article
 
-#### Add form
+#### Add Article Form
 
 The Add Article template form is a page which features a Article form to enable users to add a Article to the Peak Nutrition site. This page is only visible to logged in superusers and appears in the navigation menu. The page features similar styling to the rest of the site for consistency.
 
@@ -349,6 +342,8 @@ The Add Article template form is a page which features a Article form to enable 
 [Back to top](<#contents>)
 
 ### Edit Article
+
+#### Edit Article Form
 
 The Edit Article page is available to logged in superusers. The Edit option appears below the summary on the list page and details page. When the Update option is clicked, the user is directed to the edit Article page. The page styling and content is exactly the same as the add page. The only difference is the form is prefilled out with the content. The user can then use this form to edit the content and submit the amendments to overwrite the previous content.
 
@@ -411,6 +406,7 @@ A user can navigate to the Sign Out page via the site navigation bars if they ar
 
 [Back to top](<#contents>)
 
+### Custom Error Pages
 
 #### 404 Page
 
@@ -518,6 +514,17 @@ This is a list of the Python / Django libraries used in this product.
 [Back to top](<#contents>)
 
 ## Testing
+
+### Performing tests on various devices
+
+The website was tested using Google Chrome Developer Tools Toggle Device Toolbar to simulate viewports of different devices.
+
+The website was tested on the following devices:
+- MacBook Pro with macOS 13.2
+- MS Surface Pro Windows 10
+- Samsung s20 with Android v13
+
+[Back to top](<#contents>)
 
 ### User Story Tests
 
@@ -729,14 +736,7 @@ Navigate to https://peak-nutrition.herokuapp.com/contact | Click Subscribe box a
 Navigate to https://peak-nutrition.herokuapp.com/contact/free | Click Subscribe box at bottom of the free consult form and user is added to subscription list | Works as expected |
 Click on Subscribe button in footer on any page | Enter details and user is added to subscription list | Works as expected | 
 
-### Performing tests on various devices
-
-The website was tested using Google Chrome Developer Tools Toggle Device Toolbar to simulate viewports of different devices.
-
-The website was tested on the following devices:
-- MacBook Pro with macOS 13.2
-- MS Surface Pro Windows 10
-- Samsung s20 with Android v13
+[Back to top](<#contents>)
 
 ## Validator Tests
 
@@ -813,6 +813,12 @@ The Peak Nutrition Javascript has been assessed using [JSHint](https://jshint.co
 
 ![Form validation](/media/readme/inputvalidationtest_editproduct.png)
 
+## Additional Tests
+
+## Manual Tests
+
+Throughout the development process, I repeatedly tested the functionality of the site as I went along. Once completed, I then checked every feature, page and process to ensure that nothing had broken along the way. Details of bugs found, resolved and unresolved are detailed in the bug section. There were many more bugs found and repaired. The ones listed were those that were foudn during the official testing phase.
+
 ### Responsive Tests
 
 ![Am I responsive](media/readme/Responsive_mockup.png)
@@ -844,8 +850,6 @@ The Peak Nutrition Javascript has been assessed using [JSHint](https://jshint.co
 ### OS Tests
 
 Site was developed on an Apple MacBook using iOS v13.2
-
-#### Site tested in:
 
 - Windows 10 PRO
 
@@ -897,7 +901,7 @@ HTML validator error | Stray </p> tag on About.html | Unable to resolve. No stra
 
 [Back to top](<#contents>)
 
-## Deploying the site
+## Setup and Deployment
 
 ### Heroku app setup 
 - Click the New button in the top right corner of the Heroku dashboard and choose Create New App.
@@ -912,7 +916,7 @@ HTML validator error | Stray </p> tag on About.html | Unable to resolve. No stra
 
 [Back to top](<#contents>)
 
-### Preparation for deployment
+### Deployment
 - Install dj_database_url and psycopg2, needed for connecting to your external ElephantSQL database 
         pip3 install dj_database_url==0.5.0 psycopg2
 - Update your requirements.txt file
@@ -931,8 +935,6 @@ HTML validator error | Stray </p> tag on About.html | Unable to resolve. No stra
         python3 manage.py createsuperuser
 - Input a username, email and password when prompted.
 - You should now be able to go to the browser tab on the left of the page in elephantsql, click the table queries button and see the user you've just created by selecting the auth_user table.
-
-[Back to top](<#contents>)
 
 - Now you can add an if/else statement for the databases in settings.py, so that so you can use the development database while in development and the external database on the live site
         if 'DATABASE_URL' in os.environ:
@@ -1166,9 +1168,17 @@ Free images were sourced on Pixabay. Creative commons images were used. (https:/
 
 ## Code 
 
-I used the "Boutique Ado" walk through product as a starting point and template. I created an e-commerce site that presented products and articles. I added to the base code with custom views, models, html and CSS. I used the JS script for toast messages from that blog and modified it for my own requirements.
+- I used the "Boutique Ado" walk through product as a starting point and template. I created an e-commerce site that presented products and articles. I added to the base code with custom views, models, html and CSS. I used the JS script for toast messages from that blog and modified it for my own requirements.
 
-I got the code for Hexagons from Paper Dreams (https://paper-dreams-uk.herokuapp.com/)
-I referenced Stack Overflow for code snippets where my code wasn't performing as required.
+- I got the code for Hexagons from Paper Dreams (https://paper-dreams-uk.herokuapp.com/)
+- I referenced Stack Overflow for troubleshooting and for code snippets where my code wasn't performing as required.
+- I references Codemy.com and these videos (https://www.youtube.com/watch?v=B40bteAMM_M) for support at times.
+- I used the Code Institute tutor support service a number of times which was a lifesaver!
+- I referred to W3Schools multiple times also (https://www.w3schools.com/)
+- Bootstraps own official site (https://getbootstrap.com/) helped alot also.
+
+## Mentors
+
+- Thanks to my mentors Chris and Daisy. Both cool, calm and knowledgeable!
 
 [Back to top](<#contents>)

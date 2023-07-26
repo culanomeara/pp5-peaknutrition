@@ -52,8 +52,6 @@ Link to the live site - https://peak-nutrition.herokuapp.com/
         * [**Custom Error Pages**](<#custom-error-pages>)
             * [404 Page](<#404-page>)
             * [500 Page](<#500-page>)
-        * [**Toasts**](<#toasts>)
-            * [Success Toasts](<#success-toasts>)
     * [**Future Features**](<#future-features>)
         * [Admin Area](<#admin-area>)
         * [User Profile](<#user-profile>)
